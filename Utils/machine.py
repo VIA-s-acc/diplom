@@ -210,10 +210,10 @@ class WateringMachine:
             plt.show()   
             
         analys_table[f"Watering Data"][f"Watering info"] = place_time
-        analys_table[f"Harvest Data"][f"HC PLUS"] = [total_profit, (end_coeff - start_coeff / start_coeff) * 100]
+        analys_table[f"Harvest Data"][f"HC PLUS"] = total_profit
         analys_table[f"Harvest Data"][f"HC"] = {"Start": start_coeff, "End": end_coeff}
         analys_table[f"Harvest Data"][f"Prognosed HR"] = {"Start": str(start_HR)+(" Ton"), "End": str(end_HR)+(" Ton")}
-        analys_table[f"Harvest Data"][f"BOOST"] = {"HC": end_coeff - start_coeff, "HR": end_HR - start_HR, "HC %": (end_coeff - start_coeff) / start_coeff * 100, "HR %": end_HR / start_HR * 100}
+        analys_table[f"Harvest Data"][f"BOOST"] = {"HC": end_coeff - start_coeff, "HR": end_HR - start_HR, "HC %": (end_coeff - start_coeff) / start_coeff * 100, "HR %": (end_HR - start_HR) / start_HR * 100}
         analys_table[f"Harvest Data"][f"Total time"] = tt
         analys_table[f"Harvest Data"][f"AVG moisture"] = {"Start": avg_water_start, "End": avg_water_end}
     
