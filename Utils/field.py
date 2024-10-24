@@ -1,5 +1,5 @@
 import random
-
+from copy import deepcopy
 class Field:
     def __init__ (self, rows, cols, length_m, width_m, max_water_level = 1.0, grid = None ):
         self.max_water_level = max_water_level
@@ -19,6 +19,7 @@ class Field:
             self.cols = len(grid[0])
             self.cell_length_m = length_m / cols  
             self.cell_width_m = width_m / rows 
+            
     
     def __getitem__(self, index):
         return self.grid[index]
@@ -94,15 +95,7 @@ class Field:
         
     @staticmethod
     def copy_from(field):
-        new = Field.empty()
-        new.rows = field.rows
-        new.cols = field.cols
-        new.max_water_level = field.max_water_level
-        new.grid = field.grid
-        new.length_m = field.length_m
-        new.width_m = field.width_m
-        new.cell_length_m = field.cell_length_m
-        new.cell_width_m = field.cell_width_m
+        new = deepcopy(field)
         return new
 
 
