@@ -22,7 +22,7 @@ def m1(max_speed, param_a = 0, param_b = 0, param_c = 0):
         max_speed (float) : max speed
         param_a (float) : param_a -> water_per_sec of Watering Machine
         param_b (float) : param_b -> watering_coeff 
-        param_c (float) : param_c -> total_devicite (sum_{y=-R}^{R} D(X,Y), where D is deficite function -> D(X,Y) = optimal_water_level - current_level)
+        param_c (float) : param_c -> total_deficite (sum_{y=-R}^{R} D(X,Y), where D is deficite function -> D(X,Y) = optimal_water_level - current_level)
     """
     return min(max_speed, param_a * param_b / param_c)
 

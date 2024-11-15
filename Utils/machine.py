@@ -3,7 +3,7 @@ from .metrics import Metrics
 import concurrent.futures
 from copy import deepcopy
 class WateringMachine:
-    def __init__(self, max_speed_mps, water_per_sec, watering_coeff, rad_x_m, rad_y_m, field, max_water_level=1.0, optimal_water_level=0.5, METRIC = Metrics.WHEAT, delta_t = 0.1):
+    def __init__(self, max_speed_mps, water_per_sec, watering_coeff, rad_x_m, rad_y_m, field, max_water_level=1.0, optimal_water_level=0.5, METRIC = Metrics.WHEAT, delta_t = 0.1, beta = 0, alpha = 0, lambda_ = 0):
         """
 
         Args:
@@ -139,9 +139,10 @@ class WateringMachine:
             tt (list): time table
         """
         current_col = int(t * self.speed_cells_per_sec)
-        start_col = max(0, current_col - self.rad_x_cells)
-        end_col = min(self.field.cols, current_col + self.rad_x_cells + 1)
-        
+        start_col = max(0, current_col - self.rad_x_cells) #+1
+        end_col = min(self.field.cols, current_col + self.rad_x_cells + 1) 
+        if start_col == end_col: 
+            start_col -= self.rad_x_cells       
         potential_profit = 0
         prev_profit = 0
         time_delay = 0  
@@ -158,16 +159,14 @@ class WateringMachine:
                     if current_level < self.max_water_level:
                         potential_profit += self.calculate_profit(current_level, water_per_delta_t)
 
-            # Если прибыль увеличивается, задерживаем машину для дополнительного полива
             if potential_profit > 0 and potential_profit >= prev_profit:
                 time_delay += delta_t
                 if str(t) not in place_time.keys():
-                    place_time[f"{t}"] = {1: [t, current_col, delta_t, potential_profit, (t+time_delay) * self.max_speed_mps + 1 - 0.5]}
+                    place_time[f"{t}"] = {1: [t, current_col, delta_t, potential_profit, (t+time_delay) * self.max_speed_mps ]}
                 else:
-                    place_time[f"{t}"][max(place_time[f"{t}"].keys()) + 1 ] = ([t, current_col, delta_t, potential_profit, (t+time_delay) * self.max_speed_mps + 1 - 0.5])
+                    place_time[f"{t}"][max(place_time[f"{t}"].keys()) + 1 ] = ([t, current_col, delta_t, potential_profit, (t+time_delay) * self.max_speed_mps ])
        
             
-                # Обновляем уровень воды для всех клеток в радиусе
                 for r in range(max(0, self.field.rows // 2 - self.rad_y_cells), min(self.field.rows, self.field.rows // 2 + self.rad_y_cells + 1)):
                     for c in range(start_col, end_col):
                         current_level = self.field.get_water_level(r, c)
@@ -177,7 +176,6 @@ class WateringMachine:
                             new_level = min(current_level + water_per_delta_t, self.max_water_level)
                             self.field.set_water_level(r, c, new_level)
 
-                # Визуализируем, если требуется
                 if visualize:
                     ax.clear()
                     im = ax.imshow(self.field.get_grid(), cmap='YlGnBu', vmin=0, vmax=1)
@@ -191,7 +189,6 @@ class WateringMachine:
                     plt.draw()
                     plt.pause(1 / anim_speed)
 
-            # Если прибыль не растет, прекращаем задержку и продолжаем движение
             if potential_profit < prev_profit:
                 total_profit[0] += prev_profit
                 tt[0] += time_delay

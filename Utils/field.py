@@ -2,6 +2,9 @@ import random
 from copy import deepcopy
 class Field:
     def __init__ (self, rows, cols, length_m, width_m, max_water_level = 1.0, grid = None ):
+        """
+        # NOTE !!! length_m / cols and width_m / rows must be integer
+        """
         self.max_water_level = max_water_level
         self.length_m = length_m
         self.width_m = width_m
