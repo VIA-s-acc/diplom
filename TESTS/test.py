@@ -10,12 +10,14 @@ Wp = 0 # давление
 Ms = 10 # максимальная скорость 
 Mr = 0.1 # максимальное изменение скорости
 Wm = 10 # максимальный объем воды
-alpha = 0.1 # Коэффициент влияния скорости
+alpha = 0.1 # Коэффициент влияния скорости на полив ( отрицательный рост W*Wm * e^(-alpha*v) )
+# ( чем больше Wm тем больше W*Wm -> alpha надо брать больше, для большего влияния скорости на полив, для 
+# более строгого контролая скоростю) 
 beta = 0 # Коэффициент распределения воды 
 lmbda = 0.5 # Коэффициент учета времени
 eta = 1e-4 #  Коэффициент учета расхода воды 
-gamma = 0.5 # Коэффициент затухания времени 
-delta = 0.1 # Коэффициент затухания площади полива
+gamma = 0.3 # Коэффициент затухания времени 
+delta = 0 # Коэффициент затухания площади полива
 Deltat = 0.1
 l_r = 1e-3
 eps = 1e-5
@@ -25,11 +27,11 @@ def choose_cols(length_m, eps):
     return int(length_m / eps)
 
 length_m = 100
-width_m = 10
+width_m = 11
 rows = 11
 cols = 100
 rx = 0.1 # радиус полива по оси x в метрах
-ry = 50 # радиус полива по оси y в метрах
+ry = 5 # радиус полива по оси y в метрах
 
 cell_length_m = length_m / cols  
 cell_width_m = width_m / rows  
@@ -54,12 +56,13 @@ def avg_field(Field):
 
 
 
-def dGkdw(Field, x_cur, w, v, t_k):
+def dGkdw(Field, x_cur, w, v, t_k, Water = 0):
+    
     start_col = max(0, x_cur) #+1
     end_col = min(cols, x_cur + rx_cells + 1) 
     Base = 0
     Time = 0
-    Water = 4*eta*Wm*Deltat*e**(-delta*v) *rx*ry
+    Water += 4*eta*Wm*Deltat*e**(-delta*v) *rx*ry
     
     exp_alpha_v = e**(-alpha*v)
     if start_col == end_col: 
@@ -74,9 +77,9 @@ def dGkdw(Field, x_cur, w, v, t_k):
                 term = Wm*Deltat/(d_rc**2+1)**beta * exp_alpha_v
                 Base += -2*a*(Field[r, c] + w*term - b) * term
     
-    return Base - Water
+    return Base - Water, Water
 
-def dGkdv(Field, x_cur, w, v, t_k):
+def dGkdv(Field, x_cur, w, v, t_k, Water):
     start_col = max(0, x_cur - rx_cells) #+1
     end_col = min(cols, x_cur + 1) 
     if start_col == end_col: 
@@ -84,7 +87,7 @@ def dGkdv(Field, x_cur, w, v, t_k):
     Base = 0
     Time = -gamma * lmbda * t_k * e**(-gamma*v) 
     
-    Water = -delta * 4 * eta * rx * ry * w * Wm * Deltat * e**(-delta*v)
+    Water += -delta * 4 * eta * rx * ry * w * Wm * Deltat * e**(-delta*v)
     
     exp_alpha_v = e**(-alpha*v)
     for r in range(max(0, Line - ry_cells), min(rows, Line + ry_cells + 1)):
@@ -94,7 +97,7 @@ def dGkdv(Field, x_cur, w, v, t_k):
             else:
                 d_rc = ((r - Line) ** 2 + (c - x_cur) ** 2) ** 0.5
                 Base += -2*a*(Field[r, c] + w * ((Wm * Deltat)/(d_rc**2+1)**beta) * exp_alpha_v - b) * (-alpha*Deltat*w*Wm*exp_alpha_v/(d_rc**2+1)**beta)
-    return Base - Time - Water
+    return Base - Time - Water, Water
     
 
 
@@ -102,12 +105,15 @@ def dGkdv(Field, x_cur, w, v, t_k):
 
 def Gradient_Max_step(Field, x_cur, w, v, t_k, l_r = 0.01, max_iter = 100, eps = 0.00001):
     start_v = v
-
+    Water1, Water2 = 0, 0
     for i in range(max_iter):
         # print(f"Iteration {i}: w = {w}, v = {v}")
-
-        w_new = w + dGkdw(Field, x_cur, w, v, t_k) * l_r 
-        v_new = v + dGkdv(Field, x_cur, w, v, t_k) * l_r
+        
+        dgkdw, Water1 = dGkdw(Field, x_cur, w, v, t_k, Water1)
+        dgkdv, Water2 = dGkdv(Field, x_cur, w, v, t_k, Water2)
+        
+        w_new = w + dgkdw * l_r 
+        v_new = v + dgkdv * l_r
         if w_new > 1:
             w_new = 1
         if v_new > Ms:
@@ -188,25 +194,25 @@ def Gradien_max_Field(Field, x, w, v, t_k, l_r = 0.1, max_iter = 1000, eps = 0.0
         else:
             counter = 0
         x_met += change
-        
+        print(f"t_k = {t_k:.2f}, w = {w:.4f}, v = {v:.4f}, x = {x}, x_met = {x_met}")
         x = int(round(x_met / cell_length_m))
         t_k += Deltat
     return steps
 
 
 
-print(avg_field(Field))
-steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
-# pprint.pprint(steps)
-print(avg_field(Field))
+# print(avg_field(Field))
+# steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
+# # pprint.pprint(steps)
+# print(avg_field(Field))
 
-# for i in range(5):
-#     Field  = np.random.uniform(0, 0, (rows, cols))
+for i in range(5):
+    Field  = np.random.uniform(0, 0.1513, (rows, cols))
 
-#     avg = avg_field(Field)
+    avg = avg_field(Field)
     
-#     steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
-#     # pprint.pprint(steps)
+    steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
+    # pprint.pprint(steps)
     
-#     print(f"eta: {eta} | avg: {avg} -> {avg_field(Field)}")
-#     eta *= 10
+    print(f"eta: {eta} | avg: {avg} -> {avg_field(Field)}")
+    eta *= 10
