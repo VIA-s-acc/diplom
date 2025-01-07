@@ -4,3 +4,7 @@ __pycache__/
 *.code-workspace
 /data
 /venv
+/LaTeX-LIB
+media/
+co/
+/optimization-methods

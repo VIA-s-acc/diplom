@@ -7,16 +7,16 @@ a = 2 # коэффициент F(X) зависимотси от влажност
 b = 0.3 # пороговая влажность
 c = 3 # коэфициент F(X) базовая урожайность
 Wp = 0 # давление 
-Ms = 10 # максимальная скорость 
+Ms = 15 # максимальная скорость 
 Mr = 0.1 # максимальное изменение скорости
 Wm = 10 # максимальный объем воды
-alpha = 0.1 # Коэффициент влияния скорости на полив ( отрицательный рост W*Wm * e^(-alpha*v) )
+alpha = 0.15 # Коэффициент влияния скорости на полив ( отрицательный рост W*Wm * e^(-alpha*v) )
 # ( чем больше Wm тем больше W*Wm -> alpha надо брать больше, для большего влияния скорости на полив, для 
-# более строгого контролая скоростю) 
+# более строгого контроля над скоростю) 
 beta = 0 # Коэффициент распределения воды 
-lmbda = 0.5 # Коэффициент учета времени
+lmbda = 0.3 # Коэффициент учета времени
 eta = 1e-4 #  Коэффициент учета расхода воды 
-gamma = 0.3 # Коэффициент затухания времени 
+gamma = 2.0 # Коэффициент затухания времени 
 delta = 0 # Коэффициент затухания площади полива
 Deltat = 0.1
 l_r = 1e-3
@@ -201,18 +201,18 @@ def Gradien_max_Field(Field, x, w, v, t_k, l_r = 0.1, max_iter = 1000, eps = 0.0
 
 
 
-# print(avg_field(Field))
-# steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
-# # pprint.pprint(steps)
-# print(avg_field(Field))
+print(avg_field(Field))
+steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
+# pprint.pprint(steps)
+print(avg_field(Field))
 
-for i in range(5):
-    Field  = np.random.uniform(0, 0.1513, (rows, cols))
+# for i in range(5):
+#     Field  = np.random.uniform(0, 0.1513, (rows, cols))
 
-    avg = avg_field(Field)
+#     avg = avg_field(Field)
     
-    steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
-    # pprint.pprint(steps)
+#     steps = Gradien_max_Field(Field, 0, 0, 0, 0, l_r, max_iter, eps)
+#     # pprint.pprint(steps)
     
-    print(f"eta: {eta} | avg: {avg} -> {avg_field(Field)}")
-    eta *= 10
+#     print(f"eta: {eta} | avg: {avg} -> {avg_field(Field)}")
+#     eta *= 10
