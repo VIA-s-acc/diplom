@@ -1,5 +1,5 @@
 from manim import *
-
+from manim.utils.rate_functions import *
 class AnimateParabola(Scene):
     def construct(self):
         # Constants
@@ -44,7 +44,7 @@ class AnimateParabola(Scene):
         a_label.next_to(graph, UP)
         
         # Create the scene
-        self.play(Create(axes), Write(axes_labels), run_time = 1)
+        self.play(Create(axes), Write(axes_labels), run_time = 1, rate_func=linear)
         
         self.play(Create(graph), Write(graph_label), Write(a_label), run_time = 1.5)
         
@@ -81,7 +81,8 @@ class AnimateParabola(Scene):
                 Transform(graph, new_graph),
                 Transform(graph_label, new_graph_label),
                 Transform(a_label, new_a_label),
-                run_time=run_time  # Reduced run_time for faster transition
+                run_time=run_time,
+                rate_func=double_smooth,
             )
 
         self.play(FadeOut(arrow), FadeOut(arrow_label))
@@ -129,3 +130,4 @@ class AnimateParabola(Scene):
         self.play(Create(arrow_2), Write(arrow_2_label), Create(arrow_1), Write(arrow_1_label), run_time = 1.5)
         
         self.wait(1)
+

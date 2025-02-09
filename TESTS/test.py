@@ -6,7 +6,7 @@ import multiprocessing
 a = 2 # коэффициент F(X) зависимотси от влажности
 b = 0.3 # пороговая влажность
 c = 3 # коэфициент F(X) базовая урожайность
-Wp = 0 # давление 
+Wp = 0 # давление inital
 Ms = 15 # максимальная скорость 
 Mr = 0.1 # максимальное изменение скорости
 Wm = 10 # максимальный объем воды
@@ -26,12 +26,12 @@ max_iter = 1000
 def choose_cols(length_m, eps):
     return int(length_m / eps)
 
-length_m = 100
-width_m = 11
-rows = 11
-cols = 100
+length_m = 1000
+width_m = 100
+rows = 100
+cols = 1000
 rx = 0.1 # радиус полива по оси x в метрах
-ry = 5 # радиус полива по оси y в метрах
+ry = 50 # радиус полива по оси y в метрах
 
 cell_length_m = length_m / cols  
 cell_width_m = width_m / rows  
@@ -46,6 +46,7 @@ Field = np.random.uniform(0, 0.1513, (rows, cols))
 Line = rows // 2
 Field[Line] = [-1 for _ in range(cols)]
 
+print(Field)
 
 
 
@@ -79,7 +80,7 @@ def dGkdw(Field, x_cur, w, v, t_k, Water = 0):
     
     return Base - Water, Water
 
-def dGkdv(Field, x_cur, w, v, t_k, Water):
+def dGkdv(Field, x_cur, w, v, t_k, Water    ):
     start_col = max(0, x_cur - rx_cells) #+1
     end_col = min(cols, x_cur + 1) 
     if start_col == end_col: 
