@@ -2,6 +2,8 @@ from concurrent.futures import ThreadPoolExecutor
 import multiprocessing
 import numpy as np
 
+
+
 class Field:
     def __init__(self, length_m, width_m, rows, cols, rx, ry, alpha, beta, Wm, Deltat, line = None, field=None):
         
@@ -57,6 +59,27 @@ class Field:
         self.rx_cells = int(self.rx / self.cell_length_m)
         self.ry_cells = int(self.ry / self.cell_width_m)
 
+
+    
+    def calc_base(self, func, a = 2, b = 0.3, c = 3):
+        return func(self, a=a, b=b, c=c)
+
+
+    def __getitem__(self, index):
+        if isinstance(index, int):
+            return self.field[index]
+        row, col = index
+        return self.field[row][col]
+    
+    def __setitem__(self, index, value):
+        if isinstance(index, int):
+            self.field[index] = value
+        else:
+            row, col = index
+            self.field[row][col] = value
+        
+    
+    
     def __str__(self):
         base = f"Field with {self.rows} rows and {self.cols} columns\n" + f"Cell length: {self.cell_length_m} m, Cell width: {self.cell_width_m} m\n" + \
             f"Rx: {self.rx} m, Ry: {self.ry} m\n" + f"rx_cells: {self.rx_cells}, ry_cells: {self.ry_cells}\n"
@@ -76,7 +99,7 @@ class Field:
 
         field = np.random.uniform(MIN_V, MAX_V, (self.rows, self.cols))
         field[self.line] = [-1 for _ in range(self.cols)]
-        return field
+        self.field = field
     
     
     def avg_field(self, field = None):

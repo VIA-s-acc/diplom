@@ -2,6 +2,25 @@ from Field import Field
 from math import e
 
 
+def exp_step(l_0, step, lmbda=0.05):
+    return l_0 * e**(-lmbda*step)
+
+
+def poly_step(l_0, step, alpha=0.5, beta=1):
+    return l_0 * (beta * step + 1)**(-alpha)
+    
+
+def base(Field, a, b, c):
+    res = 0 
+    for i in range(Field.rows):
+        for j in range(Field.cols):
+            if Field.field[i][j] == -1:
+                continue
+            else:
+                
+                res += -a*(Field.field[i][j] - b)**2 + c
+    return res
+
 def Gk(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, a, b, c_, alpha, beta, gamma, lmbda, Water = 0):
     """
     The function Gk calculates a component of the gradient of the goal function.
@@ -61,7 +80,7 @@ def Gk(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, 
     end_col = min(Field.cols, x_cur + Field.rx_cells + 1) 
     Base = 0
     Time = -gamma*t_k*e**(-gamma * v)
-    Water += 4*eta*rx*ry*w*Wm*Deltat*e**(-delta*v)
+    Water = 4*eta*rx*ry*w*Wm*Deltat*e**(-delta*v)
     
     exp_alpha_v = e**(-alpha*v)
     if start_col == end_col: 
@@ -84,7 +103,7 @@ def dGkdw(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Lin
     end_col = min(Field.cols, x_cur + Field.rx_cells + 1) 
     Base = 0
     Time = 0
-    Water += 4*eta*Wm*Deltat*e**(-delta*v) *rx*ry
+    Water = 4*eta*Wm*Deltat*e**(-delta*v) *rx*ry
     
     exp_alpha_v = e**(-alpha*v)
     if start_col == end_col: 
@@ -109,7 +128,7 @@ def dGkdv(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Lin
     Base = 0
     Time = -gamma * lmbda * t_k * e**(-gamma*v) 
     
-    Water += -delta * 4 * eta * rx * ry * w * Wm * Deltat * e**(-delta*v)
+    Water = -delta * 4 * eta * rx * ry * w * Wm * Deltat * e**(-delta*v)
     
     exp_alpha_v = e**(-alpha*v)
     for r in range(max(0, Line - ry_cells), min(Field.rows, Line + ry_cells + 1)):

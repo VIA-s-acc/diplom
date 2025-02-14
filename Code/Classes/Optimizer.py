@@ -42,6 +42,16 @@ class GradientOptimizer:
         self.info['start_time'] = time.time()
         self.info['end_time'] = None
         self.info["duration"] = None
+        self.params = params
+        if "field" in list(params.keys()) and "a" in list(params.keys()) and "b" in list(params.keys()) and "c" in list(params.keys()) and "base" in list(params.keys()):
+            self.info["start_base"] = params["field"].calc_base(params["base"], params["a"], params["b"], params["c"])
+            self.info['start_avg'] = params["field"].avg_field()
+        else:
+            self.info["start_base"] = None
+            self.info['start_avg'] = None
+        self.info['end_base'] = None
+        self.info['end_avg'] = None
+        
                 
     
     def Gradient_Max_step(self, Field, x_cur, w, v, t_k, Ms, Mr, eta, delta,a,b, gamma, lmbda):
@@ -55,8 +65,14 @@ class GradientOptimizer:
             dgkdw, Water1 = dGkdw(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, Water1)
             dgkdv, Water2 = dGkdv(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, gamma, lmbda, Water2)
             
-            w_new = w + dgkdw * self.l_r 
-            v_new = v + dgkdv * self.l_r 
+            # w_new = w + dgkdw * poly_step(self.l_r, i)
+            # v_new = v + dgkdv * poly_step(self.l_r, i)
+            
+            w_new = w + dgkdw * exp_step(self.l_r, i)
+            v_new = v + dgkdv * exp_step(self.l_r, i)
+            
+            # w_new = w + dgkdw * self.l_r
+            # v_new = v + dgkdv * self.l_r
             
             
             if w_new > 1:
@@ -114,6 +130,7 @@ class GradientOptimizer:
                 start_col -= Field.rx_cells
              
             res = Field.parallel_update_field(x, w, v)
+            
             Water+=sum(res)
             if self.save:
                 if t_k not in self.info["Optimization"]:
@@ -154,12 +171,13 @@ class GradientOptimizer:
         self.info["end_time"] = time.time()
         self.info["Water"] = Water
         self.info["duration"] = self.info["end_time"] - self.info["start_time"]
-                
+        self.info["end_avg"] = Field.avg_field()
+        if 'base' in list(self.params.keys()) and 'a' in list(self.params.keys()) and 'b' in list(self.params.keys()) and 'c' in list(self.params.keys()):
+            self.info['end_base'] = self.params["field"].calc_base(self.params["base"], self.params["a"], self.params["b"], self.params["c"])
         return 1
 
 
 if __name__ == "__main__":
-
     Loader = ConfigLoader('../config.ini')   
     Loader.print_config() 
     a,b,c,wp,v,ms,mr,wm,alpha,beta,lmbda,eta,gamma,delta = Loader.getfloat("Model", "a"), Loader.getfloat("Model", "b"), Loader.getfloat("Model", "c"), Loader.getfloat("Model", "wp"), Loader.getfloat("Model", "v"), Loader.getfloat("Model", "ms"), Loader.getfloat("Model", "mr"), Loader.getfloat("Model", "wm"), Loader.getfloat("Model", "alpha"), Loader.getfloat("Model", "beta"), Loader.getfloat("Model", "lmbda"), Loader.getfloat("Model", "eta"), Loader.getfloat("Model", "gamma"), Loader.getfloat("Model", "delta"), 
@@ -170,30 +188,43 @@ if __name__ == "__main__":
     
 
     field = Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
-    
-    field.randomize_field(0, 0.531)
-    
-    print(field.avg_field())
+
+    field.randomize_field(MAX_V=0.07694, MIN_V=0.07694)
+
     
     l_r, eps, max_iter = Loader.getfloat("Optimization", "l_r"), Loader.getfloat("Optimization", "eps"), Loader.getint("Optimization", "max_iter")
     
-    gd = GradientOptimizer(l_r, eps, max_iter, save=True)
+    gd = GradientOptimizer(l_r, eps, max_iter, save=False, field = field, a = a, b = b, c = c, base = base)
+    # st = time.time()  
+    # print(field.calc_base(base))
     
     gd.Gradien_max_Field(field, 0, 0, 0, 0, mr, ms, eta, delta,a,b, gamma, lmbda)
     
-    print(field.avg_field())
-    print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result'])
-    plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[0], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['v'])])
+    # print(time.time() - st)
+
+    # opt_key = list(gd.info["Optimization"].keys())[0]
+    # start_field = gd.info["Optimization"][opt_key]["field"]
+
+    # print(f"start_base: {gd.info['start_base']}\nend_base: {gd.info['end_base']}")
+    # print(f"start_avg: {start_field.avg_field()}\nend_avg: {field.avg_field()}")
+    from pprint import pprint
+    pprint(gd.info)
+    # print(start_field[0])
+    # print(field[0])
+    # print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result'])
+    # plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[0], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[0]]['result']['v'])])
     
-    print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result'])
-    plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[1], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['v'])])
+    # print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result'])
+    # plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[1], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[1]]['result']['v'])])
     
-    print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result'])
-    plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[5], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['v'])])
+    # print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result'])
+    # plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[5], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[5]]['result']['v'])])
     
-    print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result'])
-    plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[15], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['v'])])
+    # print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result'])
+    # plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[15], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[15]]['result']['v'])])
     
-    print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result'])
-    plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[-1], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['v'])])
+    # print(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result'])
+    # plot_Gk(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['field'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['x (cell)'], list(gd.info["Optimization"].keys())[-1], eta, wm, Deltat, delta, rx, ry, field.ry_cells, field.line, a, b, c, alpha, beta, gamma, lmbda, points=[(gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['w'], gd.info["Optimization"][list(gd.info["Optimization"].keys())[-1]]['result']['v'])])
+    
+    
     
