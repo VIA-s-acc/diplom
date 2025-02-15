@@ -2,46 +2,45 @@ from concurrent.futures import ThreadPoolExecutor
 import multiprocessing
 import numpy as np
 
-
+##
+# @file Field.py
+# @brief This file contains the Field class, which is used to represent a field with a grid of cells.
+# @version v1a
+# @date 15.02.2025
+# @package Field
+# @brief Class for representing a field with a grid of cells
+#
 
 class Field:
+    
+    """!
+    Field class.
+    
+    @brief Class for representing a field with a grid of cells.
+    """
     def __init__(self, length_m, width_m, rows, cols, rx, ry, alpha, beta, Wm, Deltat, line = None, field=None):
         
+        """!
+        
+        Constructor for Field class.
+        
+        @param length_m Length of the field in meters.
+        @param width_m Width of the field in meters.
+        @param rows Number of rows in the field.
+        @param cols Number of columns in the field.
+        @param rx Radius of watering in meters.
+        @param ry Radius of watering in meters.
+        @param alpha Coefficient for watering.
+        @param beta Coefficient for watering.
+        @param Wm Maximum watering in meters.
+        @param Deltat Time step.
+        @param line Line index of watering machine.
+        @param field 2D np.array, optional
+        @details Initializes the field with the given parameters and sets the moisture level of each cell to a random value between 0 and 1.
+        
         """
-        Constructor for Field class
-
-        Parameters
-        ----------
-        length_m : float
-            Length of the field in meters
-        width_m : float
-            Width of the field in meters
-        rows : int
-            Number of rows in the field
-        cols : int
-            Number of columns in the field
-        rx : float
-            radius of watering in meters
-        ry : float
-            radius of watering in meters
-        alpha : float
-            coefficient for watering
-        beta : float
-            coefficient for watering
-        Wm : float
-            maximum watering in meters
-        Deltat : float
-            time step
-        line : int, optional
-            line index of watering machine
-        field : 2D np.array, optional
-            preinitialized field
-
-        Returns
-        -------
-        Field
-            A Field object
-        """
+        
+        # Initializing the field
         self.rows = rows
         self.cols = cols
         self.rx = rx
@@ -62,6 +61,15 @@ class Field:
 
     
     def calc_base(self, func, a = 2, b = 0.3, c = 3):
+        """!
+        Calculate the base value of the field.
+
+        @param func Function to calculate the base value.
+        @param a Parameter a.
+        @param b Parameter b.
+        @param c Parameter c.
+        """
+        
         return func(self, a=a, b=b, c=c)
 
 
@@ -88,13 +96,11 @@ class Field:
         return base
 
     def randomize_field(self, MAX_V = 0.4123, MIN_V = 0.0):
-        """
-        Randomize the field values
+        """!
+        Randomize the field.
 
-        Returns
-        -------
-        2D array of floats
-            The randomized field
+        @param MAX_V Maximum water level.
+        @param MIN_V Minimum water level.
         """
 
         field = np.random.uniform(MIN_V, MAX_V, (self.rows, self.cols))
@@ -103,13 +109,14 @@ class Field:
     
     
     def avg_field(self, field = None):
-        """
+        """!
+        
         Calculate the average water level in the field
 
-        Returns
-        -------
-        float
-            The average water level
+        @param field 2D np.array, optional
+        @details Calculates the average water level in the field.
+
+        @return float
         """
         if field is None:
             field = self.field
@@ -117,26 +124,19 @@ class Field:
         return np.mean(valid_cells)
     
     def update_cell(self, r, c, x, w, v):
-        """
-        Update the cell at the specified row and column
+        """!
+        
+        Update the moisture level of a cell in the field
 
-        Parameters
-        ----------
-        r : int
-            Row index
-        c : int
-            Column index
-        x : int
-            Current position of watering machine
-        w : float
-            Watering intensity
-        v : float
-            Water level
+        @param r Row index of the cell.
+        @param c Column index of the cell.
+        @param x Current position of watering machine.
+        @param w Watering intensity.
+        @param v Water level.
 
-        Returns
-        -------
-        float
-            The updated water level of the cell
+        @return float
+        @details Updates the moisture level of a cell in the field based on the current position of the watering machine, the watering intensity, and the water level.
+        
         """
         if self.field[r][c] == -1:
             return 0
@@ -147,21 +147,12 @@ class Field:
 
     def parallel_update_field(self, x, w, v):
         """
-        Update the field in parallel
-
-        Parameters
-        ----------
-        x : int
-            Current position of watering machine
-        w : float
-            Watering intensity
-        v : float
-            Water level
-
-        Returns
-        -------
-        list
-            The list of changes of water level of the cells
+        @param x Current position of watering machine.
+        @param w Watering intensity.
+        @param v Water level.
+        @return List of changes in the field.
+        @details Updates the moisture level of cells in the field based on the current position of the watering machine, the watering intensity, and the water level.
+        
         """
         start_col = max(0, x - self.rx_cells)
         end_col = min(self.cols, x + 1)

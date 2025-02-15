@@ -1,32 +1,62 @@
+
+# === IMPORTS ===
 from Funcs import *
 from ConfigLoader import ConfigLoader
 from Field import Field
-from multiprocessing import Pool
-from multiprocessing import cpu_count
-from multiprocessing import Manager
-import numpy as np
-import time
-import os
-import sys
-import pickle
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from matplotlib import cm
-from matplotlib.colors import ListedColormap, LinearSegmentedColormap
-from matplotlib.ticker import MaxNLocator, FormatStrFormatter
-from matplotlib import rcParams
-import matplotlib.patches as patches
-import matplotlib.gridspec as gridspec
-import matplotlib.lines as mlines
-from matplotlib.animation import FuncAnimation, writers
-import matplotlib.ticker as ticker
 import time
 from copy import deepcopy
+  
+
+##  
+#   @mainpage 
+#    
+#  @section toc Table of Contents  
+#  - @ref ConfigLoader  
+#  - @ref Funcs
+#  - @ref Field
+#  - @ref Optimizer
+#   @author Georgii
+#   @version v1a
+#  
 
 
+##
+# @package Optimizer
+# @brief Class for gradient optimization
+# @author Georgii
+# @file     Optimizer.py
+# @author   Georgii 
+# @brief    Class for gradient optimization
+# @version v1a
+# @date 15.02.2025
+#
 
+# === CLASSES ===
 class GradientOptimizer:
+    """!
+    GradientOptimizer class.
+    
+    @brief Class for gradient optimization.
+    """
     def __init__(self, l_r, eps, max_iter, save=False, **params):
+        """!
+        Constructor.
+
+        @param l_r Learning rate.
+        @param eps Epsilon.
+        @param max_iter Maximum number of iterations.
+        @param save Save optimization info.
+        @param params Parameters for optimization. - Field, a, b, c, base
+        @Field Field
+        @a a
+        @b b
+        @c c
+        @base base function
+        """
+        
+        
+        
+        # === ATTRIBUTES ===
         self.l_r = l_r
         self.eps = eps
         self.max_iter = max_iter
@@ -53,8 +83,27 @@ class GradientOptimizer:
         self.info['end_avg'] = None
         
                 
-    
+    # === METHODS ===
     def Gradient_Max_step(self, Field, x_cur, w, v, t_k, Ms, Mr, eta, delta,a,b, gamma, lmbda):
+        """!
+        Gradient Max step.
+
+        @param Field Field.
+        @param x_cur Current x.
+        @param w Current w.
+        @param v Current v.
+        @param t_k Current t_k.
+        @param Ms Maximum value for v.
+        @param Mr Maximum relative change for v.
+        @param eta Eta.
+        @param delta Delta.
+        @param a A.
+        @param b B.
+        @param gamma Gamma.
+        @param lmbda Lambda.
+        @return New w and v.
+        
+        """
         if self.save:
             Steps_WV = [(w,v,0,0)]
         start_v = v
@@ -62,6 +111,7 @@ class GradientOptimizer:
         for i in range(self.max_iter):
             # print(f"Iteration {i}: w = {w}, v = {v}")
             
+            # dgkdw, dgkdv
             dgkdw, Water1 = dGkdw(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, Water1)
             dgkdv, Water2 = dGkdv(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, gamma, lmbda, Water2)
             
@@ -75,14 +125,8 @@ class GradientOptimizer:
             # v_new = v + dgkdv * self.l_r
             
             
-            if w_new > 1:
-                w_new = 1
-            if v_new > Ms:
-                v_new = Ms
-            if w_new < 0:   
-                w_new = 0
-            if v_new < 0:
-                v_new = 0
+            w_new = max(0, min(1, w_new))
+            v_new = max(0, min(Ms, v_new))
                 
             if abs(v_new - start_v) > Mr:
                 if v_new > start_v:
@@ -119,7 +163,25 @@ class GradientOptimizer:
         return w, v
 
     def Gradien_max_Field(self, Field, x, w, v, t_k, Mr, Ms, eta, delta,a,b, gamma, lmbda, Water=0):
+        """!
+        Gradient max field.
 
+        @param Field Field.
+        @param x Current x.
+        @param w Current w.
+        @param v Current v.
+        @param t_k Current t_k.
+        @param Mr Maximum relative change for v.
+        @param Ms Maximum value for v.
+        @param eta Eta.
+        @param delta Delta.
+        @param a A.
+        @param b B.
+        @param gamma Gamma.
+        @param lmbda Lambda.
+        @param Water Water.
+        @return Water
+        """
         x_met = 0
         counter = 0
         while x <= cols+Field.rx_cells:
@@ -189,7 +251,8 @@ if __name__ == "__main__":
 
     field = Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
 
-    field.randomize_field(MAX_V=0.07694, MIN_V=0.07694)
+    field.randomize_field(MAX_V=0.412, MIN_V=0.07694)
+
 
     
     l_r, eps, max_iter = Loader.getfloat("Optimization", "l_r"), Loader.getfloat("Optimization", "eps"), Loader.getint("Optimization", "max_iter")

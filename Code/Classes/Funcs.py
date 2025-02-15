@@ -1,16 +1,47 @@
 from Field import Field
 from math import e
 
+##
+# @file Funcs.py
+# @brief This file contains functions for the optimization of the goal function.
+# @version v1a
+# @date 15.02.2025
+# @package Funcs
+# @brief Functions for the optimization of the goal function
+#
 
 def exp_step(l_0, step, lmbda=0.05):
+    """!
+    Exponential step.
+
+    @param l_0 Initial value.
+    @param step Step.
+    @param lmbda Lambda.
+    """
     return l_0 * e**(-lmbda*step)
 
 
 def poly_step(l_0, step, alpha=0.5, beta=1):
+    """!
+    Polynomial step.
+
+    @param l_0 Initial value.
+    @param step Step.
+    @param alpha Alpha.
+    @param beta Beta.
+    """
     return l_0 * (beta * step + 1)**(-alpha)
     
 
 def base(Field, a, b, c):
+    """!
+    Base function.
+
+    @param Field Field.
+    @param a A.
+    @param b B.
+    @param c C.
+    """
     res = 0 
     for i in range(Field.rows):
         for j in range(Field.cols):
@@ -22,58 +53,31 @@ def base(Field, a, b, c):
     return res
 
 def Gk(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, a, b, c_, alpha, beta, gamma, lmbda, Water = 0):
-    """
-    The function Gk calculates a component of the gradient of the goal function.
+    """!
+    Goal function.
     
-    Parameters
-    ----------
-    Field : Field
-        The field object
-    x_cur : int
-        The current x-coordinate of the machine
-    w : float
-        The watering intensity
-    v : float
-        The machine speed
-    t_k : float
-        The time step
-    eta : float
-        The water price coefficient
-    Wm : float
-        The water supply coefficient
-    Deltat : float
-        The time step
-    delta : float
-        The water price intensity coefficient
-    rx : float
-        The horizontal radius of watering in meters
-    ry : float
-        The vertical radius of watering in meters
-    ry_cells : int
-        The number of rows in the vertical radius of watering
-    Line : int
-        The line number of the machine
-    a : float
-        The watering intensity coefficient
-    b : float
-        The desired moisture level
-    c_ : float
-        The constant term in the goal function
-    alpha : float
-        The watering range coefficient
-    beta : float
-        The watering intensity coefficient
-    gamma : float
-        The time intensity coefficient
-    lmbda : float
-        The time penalty coefficient
-    Water : float, optional
-        The water usage at the previous time step
-    
-    Returns
-    -------
-    float
-        The value of the Gk component of the gradient
+    @param Field Field.
+    @param x_cur Current x.
+    @param w W.
+    @param v V.
+    @param t_k T_k.
+    @param eta Eta.
+    @param Wm Wm.
+    @param Deltat Delta t.
+    @param delta Delta.
+    @param rx Rx.
+    @param ry Ry.
+    @param ry_cells Ry cells.
+    @param Line Line.
+    @param a A.
+    @param b B.
+    @param c_ C.
+    @param alpha Alpha.
+    @param beta Beta.
+    @param gamma Gamma.
+    @param lmbda Lambda.
+    @param Water Water.
+    @return Goal function.
     """
 
     start_col = max(0, x_cur) #+1
@@ -99,6 +103,29 @@ def Gk(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, 
 
 
 def dGkdw(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, a, b, alpha, beta, Water = 0):
+    """!
+    Derivative of the goal function.
+    
+    @param Field Field.
+    @param x_cur Current x.
+    @param w W.
+    @param v V.
+    @param t_k T_k.
+    @param eta Eta.
+    @param Wm Wm.
+    @param Deltat Delta t.
+    @param delta Delta.
+    @param rx Rx.
+    @param ry Ry.
+    @param ry_cells Ry cells.
+    @param Line Line.
+    @param a A.
+    @param b B.
+    @param alpha Alpha.
+    @param beta Beta.
+    @param Water Water.
+    @return Derivative of the goal function.
+    """
     start_col = max(0, x_cur) #+1
     end_col = min(Field.cols, x_cur + Field.rx_cells + 1) 
     Base = 0
@@ -121,6 +148,32 @@ def dGkdw(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Lin
     return Base - Water, Water
 
 def dGkdv(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, a, b, alpha, beta, gamma, lmbda, Water = 0):
+    """!
+    Derivative of the goal function.
+
+    @param Field Field.
+    @param x_cur Current x.
+    @param w W.
+    @param v V.
+    @param t_k T_k.
+    @param eta Eta.
+    @param Wm Wm.
+    @param Deltat Delta t.
+    @param delta Delta.
+    @param rx Rx.
+    @param ry Ry.
+    @param ry_cells Ry cells.
+    @param Line Line.
+    @param a A.
+    @param b B.
+    @param alpha Alpha.
+    @param beta Beta.
+    @param gamma Gamma.
+    @param lmbda Lambda.
+    @param Water Water.
+    @return Derivative of the goal function.
+    
+    """
     start_col = max(0, x_cur - Field.rx_cells) #+1
     end_col = min(Field.cols, x_cur + 1) 
     if start_col == end_col: 
@@ -143,6 +196,30 @@ def dGkdv(Field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Lin
 import matplotlib.pyplot as plt
 import numpy as np
 def plot_Gk(Field, x_cur, t_k, eta, Wm, Deltat, delta, rx, ry, ry_cells, Line, a, b, c_, alpha, beta, gamma, lmbda, points = None):
+    """!
+    Plot the goal function.
+
+    @param Field Field.
+    @param x_cur Current x.
+    @param t_k T_k.
+    @param eta Eta.
+    @param Wm Wm.
+    @param Deltat Delta t.
+    @param delta Delta.
+    @param rx Rx.
+    @param ry Ry.
+    @param ry_cells Ry cells.
+    @param Line Line.
+    @param a A.
+    @param b B.
+    @param c_ C.
+    @param alpha Alpha.
+    @param beta Beta.
+    @param gamma Gamma.
+    @param lmbda Lambda.
+    @param points Points to plot.
+    @return None.
+    """
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ws = np.linspace(0, 1, 100)

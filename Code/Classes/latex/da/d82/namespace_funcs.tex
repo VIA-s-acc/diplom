@@ -1,0 +1,645 @@
+\doxysection{Funcs Namespace Reference}
+\hypertarget{namespace_funcs}{}\label{namespace_funcs}\index{Funcs@{Funcs}}
+
+
+Functions for the optimization of the goal function.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_funcs_a9b2b0e99d261b02ee529c42d8ab7814f}{exp\+\_\+step}} (l\+\_\+0, step, lmbda=0.\+05)
+\begin{DoxyCompactList}\small\item\em Exponential step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_a12f0b5c7405890358431b8a83a82819f}{poly\+\_\+step}} (l\+\_\+0, step, alpha=0.\+5, beta=1)
+\begin{DoxyCompactList}\small\item\em Polynomial step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}{base}} (\mbox{\hyperlink{class_field_1_1_field}{Field}}, a, b, c)
+\begin{DoxyCompactList}\small\item\em Base function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_a4386136e854f2da3c3f181e880884fb0}{Gk}} (\mbox{\hyperlink{class_field_1_1_field}{Field}}, x\+\_\+cur, w, v, t\+\_\+k, eta, Wm, Deltat, delta, rx, ry, ry\+\_\+cells, Line, a, b, c\+\_\+, alpha, beta, gamma, lmbda, Water=0)
+\begin{DoxyCompactList}\small\item\em Goal function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_ae5c9974d6e485df93dd2249ed6cd801a}{d\+Gkdw}} (\mbox{\hyperlink{class_field_1_1_field}{Field}}, x\+\_\+cur, w, v, t\+\_\+k, eta, Wm, Deltat, delta, rx, ry, ry\+\_\+cells, Line, a, b, alpha, beta, Water=0)
+\begin{DoxyCompactList}\small\item\em Derivative of the goal function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_a80b93b6b7e1123f89ffad64a72acbc06}{d\+Gkdv}} (\mbox{\hyperlink{class_field_1_1_field}{Field}}, x\+\_\+cur, w, v, t\+\_\+k, eta, Wm, Deltat, delta, rx, ry, ry\+\_\+cells, Line, a, b, alpha, beta, gamma, lmbda, Water=0)
+\begin{DoxyCompactList}\small\item\em Derivative of the goal function. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_funcs_aed47335ae230f8da8b0b9b068c56d29d}{plot\+\_\+\+Gk}} (\mbox{\hyperlink{class_field_1_1_field}{Field}}, x\+\_\+cur, t\+\_\+k, eta, Wm, Deltat, delta, rx, ry, ry\+\_\+cells, Line, a, b, c\+\_\+, alpha, beta, gamma, lmbda, points=None)
+\begin{DoxyCompactList}\small\item\em Plot the goal function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_funcs_a3bc2d0e8f37ddc0ea3186354712daaed}{Loader}} = \mbox{\hyperlink{class_config_loader_1_1_config_loader}{Config\+Loader}}(\textquotesingle{}../config.\+ini\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_funcs_a4124bc0a9335c27f086f24ba207a4912}{a}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a21ad0bd836b90d08f4cf640b4c298e7c}{b}}
+\item 
+\mbox{\hyperlink{namespace_funcs_ae0323a9039add2978bf5b49550572c7c}{c}}
+\item 
+\mbox{\hyperlink{namespace_funcs_acf832a343a823969c5d60ff6266f5220}{wp}}
+\item 
+\mbox{\hyperlink{namespace_funcs_ac4055e3a20b6b3af3d10590ea446ef6c}{v}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a530ae7f580da3d1bccd408b028226620}{ms}}
+\item 
+\mbox{\hyperlink{namespace_funcs_af5d4b8680dad54363c7ec1232eb7d21d}{mr}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a9f463fc1e78c10b047a540fae8f7ce20}{wm}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a62197192f0fbf4e0675eb37be1c4c175}{alpha}}
+\item 
+\mbox{\hyperlink{namespace_funcs_ab146b9cbab6e73e7588b240dc709fe01}{beta}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a526719d1fe61114dd2eed9b78695b6b3}{lmbda}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a28acc4a90fe6ffb907aa145b7b01326a}{eta}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a8d00631c9622112f1877fdb1222c242e}{gamma}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}
+\item 
+\mbox{\hyperlink{namespace_funcs_aafb872fd0652cd371ec28b8053b6cec5}{length\+\_\+m}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a06211f93b6ee4a017b04f095fe476f5c}{width\+\_\+m}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a74742cb5c8e2ac354a60cb73383d8176}{rows}}
+\item 
+\mbox{\hyperlink{namespace_funcs_aaed057ed424ced7429016ec18c2edbb6}{cols}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a8e5b33bf1e98bb467edc31c48fde245f}{rx}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a44e6641f3ca0341724a1e46d2883529d}{ry}}
+\item 
+\mbox{\hyperlink{namespace_funcs_a3b64b79b66d63d36333c250fa32eeb32}{Deltat}} = Loader.\+getfloat("{}Model"{}, "{}deltat"{})
+\item 
+\mbox{\hyperlink{namespace_funcs_ad62af17df5486963eef933792624216d}{field}} = \mbox{\hyperlink{class_field_1_1_field}{Field}}(length\+\_\+m=length\+\_\+m, width\+\_\+m=width\+\_\+m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for the optimization of the goal function. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}\index{Funcs@{Funcs}!base@{base}}
+\index{base@{base}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{base()}{base()}}
+{\footnotesize\ttfamily \label{namespace_funcs_a91667077074ca6ae6e541474cd832ffa} 
+base (\begin{DoxyParamCaption}\item[{}]{Field}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Base function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em c} & C. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00036}{36}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a80b93b6b7e1123f89ffad64a72acbc06}\index{Funcs@{Funcs}!dGkdv@{dGkdv}}
+\index{dGkdv@{dGkdv}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{dGkdv()}{dGkdv()}}
+{\footnotesize\ttfamily \label{namespace_funcs_a80b93b6b7e1123f89ffad64a72acbc06} 
+d\+Gkdv (\begin{DoxyParamCaption}\item[{}]{Field}{, }\item[{}]{x\+\_\+cur}{, }\item[{}]{w}{, }\item[{}]{v}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{eta}{, }\item[{}]{Wm}{, }\item[{}]{Deltat}{, }\item[{}]{delta}{, }\item[{}]{rx}{, }\item[{}]{ry}{, }\item[{}]{ry\+\_\+cells}{, }\item[{}]{Line}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{alpha}{, }\item[{}]{beta}{, }\item[{}]{gamma}{, }\item[{}]{lmbda}{, }\item[{}]{Water}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Derivative of the goal function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x\+\_\+cur} & Current x. \\
+\hline
+{\em w} & W. \\
+\hline
+{\em v} & V. \\
+\hline
+{\em t\+\_\+k} & T\+\_\+k. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em Wm} & Wm. \\
+\hline
+{\em Deltat} & Delta t. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em rx} & Rx. \\
+\hline
+{\em ry} & Ry. \\
+\hline
+{\em ry\+\_\+cells} & Ry cells. \\
+\hline
+{\em Line} & Line. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em alpha} & Alpha. \\
+\hline
+{\em beta} & Beta. \\
+\hline
+{\em gamma} & Gamma. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+{\em Water} & Water. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Derivative of the goal function. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00150}{150}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+Optimizer.\+Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{namespace_funcs_ae5c9974d6e485df93dd2249ed6cd801a}\index{Funcs@{Funcs}!dGkdw@{dGkdw}}
+\index{dGkdw@{dGkdw}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{dGkdw()}{dGkdw()}}
+{\footnotesize\ttfamily \label{namespace_funcs_ae5c9974d6e485df93dd2249ed6cd801a} 
+d\+Gkdw (\begin{DoxyParamCaption}\item[{}]{Field}{, }\item[{}]{x\+\_\+cur}{, }\item[{}]{w}{, }\item[{}]{v}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{eta}{, }\item[{}]{Wm}{, }\item[{}]{Deltat}{, }\item[{}]{delta}{, }\item[{}]{rx}{, }\item[{}]{ry}{, }\item[{}]{ry\+\_\+cells}{, }\item[{}]{Line}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{alpha}{, }\item[{}]{beta}{, }\item[{}]{Water}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Derivative of the goal function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x\+\_\+cur} & Current x. \\
+\hline
+{\em w} & W. \\
+\hline
+{\em v} & V. \\
+\hline
+{\em t\+\_\+k} & T\+\_\+k. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em Wm} & Wm. \\
+\hline
+{\em Deltat} & Delta t. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em rx} & Rx. \\
+\hline
+{\em ry} & Ry. \\
+\hline
+{\em ry\+\_\+cells} & Ry cells. \\
+\hline
+{\em Line} & Line. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em alpha} & Alpha. \\
+\hline
+{\em beta} & Beta. \\
+\hline
+{\em Water} & Water. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Derivative of the goal function. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00105}{105}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+Optimizer.\+Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{namespace_funcs_a9b2b0e99d261b02ee529c42d8ab7814f}\index{Funcs@{Funcs}!exp\_step@{exp\_step}}
+\index{exp\_step@{exp\_step}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{exp\_step()}{exp\_step()}}
+{\footnotesize\ttfamily \label{namespace_funcs_a9b2b0e99d261b02ee529c42d8ab7814f} 
+exp\+\_\+step (\begin{DoxyParamCaption}\item[{}]{l\+\_\+0}{, }\item[{}]{step}{, }\item[{}]{lmbda}{ = {\ttfamily 0.05}}\end{DoxyParamCaption})}
+
+
+
+Exponential step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+0} & Initial value. \\
+\hline
+{\em step} & Step. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00013}{13}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+Optimizer.\+Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{namespace_funcs_a4386136e854f2da3c3f181e880884fb0}\index{Funcs@{Funcs}!Gk@{Gk}}
+\index{Gk@{Gk}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{Gk()}{Gk()}}
+{\footnotesize\ttfamily \label{namespace_funcs_a4386136e854f2da3c3f181e880884fb0} 
+Gk (\begin{DoxyParamCaption}\item[{}]{Field}{, }\item[{}]{x\+\_\+cur}{, }\item[{}]{w}{, }\item[{}]{v}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{eta}{, }\item[{}]{Wm}{, }\item[{}]{Deltat}{, }\item[{}]{delta}{, }\item[{}]{rx}{, }\item[{}]{ry}{, }\item[{}]{ry\+\_\+cells}{, }\item[{}]{Line}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c\+\_\+}{, }\item[{}]{alpha}{, }\item[{}]{beta}{, }\item[{}]{gamma}{, }\item[{}]{lmbda}{, }\item[{}]{Water}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Goal function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x\+\_\+cur} & Current x. \\
+\hline
+{\em w} & W. \\
+\hline
+{\em v} & V. \\
+\hline
+{\em t\+\_\+k} & T\+\_\+k. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em Wm} & Wm. \\
+\hline
+{\em Deltat} & Delta t. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em rx} & Rx. \\
+\hline
+{\em ry} & Ry. \\
+\hline
+{\em ry\+\_\+cells} & Ry cells. \\
+\hline
+{\em Line} & Line. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em c\+\_\+} & C. \\
+\hline
+{\em alpha} & Alpha. \\
+\hline
+{\em beta} & Beta. \\
+\hline
+{\em gamma} & Gamma. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+{\em Water} & Water. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Goal function. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00055}{55}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_funcs_8py_source_l00198}{plot\+\_\+\+Gk()}}.
+
+\Hypertarget{namespace_funcs_aed47335ae230f8da8b0b9b068c56d29d}\index{Funcs@{Funcs}!plot\_Gk@{plot\_Gk}}
+\index{plot\_Gk@{plot\_Gk}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{plot\_Gk()}{plot\_Gk()}}
+{\footnotesize\ttfamily \label{namespace_funcs_aed47335ae230f8da8b0b9b068c56d29d} 
+plot\+\_\+\+Gk (\begin{DoxyParamCaption}\item[{}]{Field}{, }\item[{}]{x\+\_\+cur}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{eta}{, }\item[{}]{Wm}{, }\item[{}]{Deltat}{, }\item[{}]{delta}{, }\item[{}]{rx}{, }\item[{}]{ry}{, }\item[{}]{ry\+\_\+cells}{, }\item[{}]{Line}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{c\+\_\+}{, }\item[{}]{alpha}{, }\item[{}]{beta}{, }\item[{}]{gamma}{, }\item[{}]{lmbda}{, }\item[{}]{points}{ = {\ttfamily None}}\end{DoxyParamCaption})}
+
+
+
+Plot the goal function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x\+\_\+cur} & Current x. \\
+\hline
+{\em t\+\_\+k} & T\+\_\+k. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em Wm} & Wm. \\
+\hline
+{\em Deltat} & Delta t. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em rx} & Rx. \\
+\hline
+{\em ry} & Ry. \\
+\hline
+{\em ry\+\_\+cells} & Ry cells. \\
+\hline
+{\em Line} & Line. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em c\+\_\+} & C. \\
+\hline
+{\em alpha} & Alpha. \\
+\hline
+{\em beta} & Beta. \\
+\hline
+{\em gamma} & Gamma. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+{\em points} & Points to plot. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00198}{198}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+References \mbox{\hyperlink{_funcs_8py_source_l00055}{Gk()}}, and \mbox{\hyperlink{_funcs_8py_source_l00198}{plot\+\_\+\+Gk()}}.
+
+
+
+Referenced by \mbox{\hyperlink{_funcs_8py_source_l00198}{plot\+\_\+\+Gk()}}.
+
+\Hypertarget{namespace_funcs_a12f0b5c7405890358431b8a83a82819f}\index{Funcs@{Funcs}!poly\_step@{poly\_step}}
+\index{poly\_step@{poly\_step}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{poly\_step()}{poly\_step()}}
+{\footnotesize\ttfamily \label{namespace_funcs_a12f0b5c7405890358431b8a83a82819f} 
+poly\+\_\+step (\begin{DoxyParamCaption}\item[{}]{l\+\_\+0}{, }\item[{}]{step}{, }\item[{}]{alpha}{ = {\ttfamily 0.5}, }\item[{}]{beta}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+Polynomial step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+0} & Initial value. \\
+\hline
+{\em step} & Step. \\
+\hline
+{\em alpha} & Alpha. \\
+\hline
+{\em beta} & Beta. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00024}{24}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_funcs_a4124bc0a9335c27f086f24ba207a4912}\index{Funcs@{Funcs}!a@{a}}
+\index{a@{a}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \label{namespace_funcs_a4124bc0a9335c27f086f24ba207a4912} 
+a}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a62197192f0fbf4e0675eb37be1c4c175}\index{Funcs@{Funcs}!alpha@{alpha}}
+\index{alpha@{alpha}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespace_funcs_a62197192f0fbf4e0675eb37be1c4c175} 
+alpha}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a21ad0bd836b90d08f4cf640b4c298e7c}\index{Funcs@{Funcs}!b@{b}}
+\index{b@{b}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \label{namespace_funcs_a21ad0bd836b90d08f4cf640b4c298e7c} 
+b}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_ab146b9cbab6e73e7588b240dc709fe01}\index{Funcs@{Funcs}!beta@{beta}}
+\index{beta@{beta}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}}
+{\footnotesize\ttfamily \label{namespace_funcs_ab146b9cbab6e73e7588b240dc709fe01} 
+beta}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_ae0323a9039add2978bf5b49550572c7c}\index{Funcs@{Funcs}!c@{c}}
+\index{c@{c}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \label{namespace_funcs_ae0323a9039add2978bf5b49550572c7c} 
+c}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_aaed057ed424ced7429016ec18c2edbb6}\index{Funcs@{Funcs}!cols@{cols}}
+\index{cols@{cols}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily \label{namespace_funcs_aaed057ed424ced7429016ec18c2edbb6} 
+cols}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a66db7c5e4e9699c54207ab857ae72cb7}\index{Funcs@{Funcs}!delta@{delta}}
+\index{delta@{delta}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{namespace_funcs_a66db7c5e4e9699c54207ab857ae72cb7} 
+delta}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a3b64b79b66d63d36333c250fa32eeb32}\index{Funcs@{Funcs}!Deltat@{Deltat}}
+\index{Deltat@{Deltat}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{Deltat}{Deltat}}
+{\footnotesize\ttfamily \label{namespace_funcs_a3b64b79b66d63d36333c250fa32eeb32} 
+Deltat = Loader.\+getfloat("{}Model"{}, "{}deltat"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00258}{258}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a28acc4a90fe6ffb907aa145b7b01326a}\index{Funcs@{Funcs}!eta@{eta}}
+\index{eta@{eta}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{eta}{eta}}
+{\footnotesize\ttfamily \label{namespace_funcs_a28acc4a90fe6ffb907aa145b7b01326a} 
+eta}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_ad62af17df5486963eef933792624216d}\index{Funcs@{Funcs}!field@{field}}
+\index{field@{field}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily \label{namespace_funcs_ad62af17df5486963eef933792624216d} 
+field = \mbox{\hyperlink{class_field_1_1_field}{Field}}(length\+\_\+m=length\+\_\+m, width\+\_\+m=width\+\_\+m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00261}{261}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a8d00631c9622112f1877fdb1222c242e}\index{Funcs@{Funcs}!gamma@{gamma}}
+\index{gamma@{gamma}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \label{namespace_funcs_a8d00631c9622112f1877fdb1222c242e} 
+gamma}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_aafb872fd0652cd371ec28b8053b6cec5}\index{Funcs@{Funcs}!length\_m@{length\_m}}
+\index{length\_m@{length\_m}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{length\_m}{length\_m}}
+{\footnotesize\ttfamily \label{namespace_funcs_aafb872fd0652cd371ec28b8053b6cec5} 
+length\+\_\+m}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a526719d1fe61114dd2eed9b78695b6b3}\index{Funcs@{Funcs}!lmbda@{lmbda}}
+\index{lmbda@{lmbda}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{lmbda}{lmbda}}
+{\footnotesize\ttfamily \label{namespace_funcs_a526719d1fe61114dd2eed9b78695b6b3} 
+lmbda}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a3bc2d0e8f37ddc0ea3186354712daaed}\index{Funcs@{Funcs}!Loader@{Loader}}
+\index{Loader@{Loader}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{Loader}{Loader}}
+{\footnotesize\ttfamily \label{namespace_funcs_a3bc2d0e8f37ddc0ea3186354712daaed} 
+Loader = \mbox{\hyperlink{class_config_loader_1_1_config_loader}{Config\+Loader}}(\textquotesingle{}../config.\+ini\textquotesingle{})}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00252}{252}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_af5d4b8680dad54363c7ec1232eb7d21d}\index{Funcs@{Funcs}!mr@{mr}}
+\index{mr@{mr}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{mr}{mr}}
+{\footnotesize\ttfamily \label{namespace_funcs_af5d4b8680dad54363c7ec1232eb7d21d} 
+mr}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a530ae7f580da3d1bccd408b028226620}\index{Funcs@{Funcs}!ms@{ms}}
+\index{ms@{ms}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{ms}{ms}}
+{\footnotesize\ttfamily \label{namespace_funcs_a530ae7f580da3d1bccd408b028226620} 
+ms}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a74742cb5c8e2ac354a60cb73383d8176}\index{Funcs@{Funcs}!rows@{rows}}
+\index{rows@{rows}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily \label{namespace_funcs_a74742cb5c8e2ac354a60cb73383d8176} 
+rows}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a8e5b33bf1e98bb467edc31c48fde245f}\index{Funcs@{Funcs}!rx@{rx}}
+\index{rx@{rx}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{rx}{rx}}
+{\footnotesize\ttfamily \label{namespace_funcs_a8e5b33bf1e98bb467edc31c48fde245f} 
+rx}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a44e6641f3ca0341724a1e46d2883529d}\index{Funcs@{Funcs}!ry@{ry}}
+\index{ry@{ry}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{ry}{ry}}
+{\footnotesize\ttfamily \label{namespace_funcs_a44e6641f3ca0341724a1e46d2883529d} 
+ry}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_ac4055e3a20b6b3af3d10590ea446ef6c}\index{Funcs@{Funcs}!v@{v}}
+\index{v@{v}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \label{namespace_funcs_ac4055e3a20b6b3af3d10590ea446ef6c} 
+v}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a06211f93b6ee4a017b04f095fe476f5c}\index{Funcs@{Funcs}!width\_m@{width\_m}}
+\index{width\_m@{width\_m}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{width\_m}{width\_m}}
+{\footnotesize\ttfamily \label{namespace_funcs_a06211f93b6ee4a017b04f095fe476f5c} 
+width\+\_\+m}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00256}{256}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_a9f463fc1e78c10b047a540fae8f7ce20}\index{Funcs@{Funcs}!wm@{wm}}
+\index{wm@{wm}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{wm}{wm}}
+{\footnotesize\ttfamily \label{namespace_funcs_a9f463fc1e78c10b047a540fae8f7ce20} 
+wm}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+
+\Hypertarget{namespace_funcs_acf832a343a823969c5d60ff6266f5220}\index{Funcs@{Funcs}!wp@{wp}}
+\index{wp@{wp}!Funcs@{Funcs}}
+\doxysubsubsection{\texorpdfstring{wp}{wp}}
+{\footnotesize\ttfamily \label{namespace_funcs_acf832a343a823969c5d60ff6266f5220} 
+wp}
+
+
+
+Definition at line \mbox{\hyperlink{_funcs_8py_source_l00254}{254}} of file \mbox{\hyperlink{_funcs_8py_source}{Funcs.\+py}}.
+

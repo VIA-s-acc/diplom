@@ -1,23 +1,32 @@
 from configparser import ConfigParser, NoSectionError, NoOptionError
 import os
 
-
+## @file ConfigLoader.py
+# @brief This file contains the ConfigLoader class, which is used to load and manage configuration files.
+# @version v1a
+# @date 15.02.2025
+# @package ConfigLoader
+# @brief Class for loading and managing configuration files
+# 
 class ConfigLoader:
+    """!
+    ConfigLoader class.
+    
+    @brief Class for loading and managing configuration files.
+                    
+    """
     def __init__(self, config_file: str):
-        """
-        Initialize the ConfigLoader with a config file.
-
-        Args:
-            config_file (str): Path to the configuration file to load.
-
-        Raises:
-            FileNotFoundError: If the specified config file does not exist.
-
-        """
+        """!
+        Constructor.
         
+        @param config_file Path to the configuration file.
+        
+        """
+
         if not os.path.exists(config_file):
             raise FileNotFoundError(f"Config file {config_file} not found")
         
+        # Read the configuration file
         self.config_file = config_file
         self.config = ConfigParser()
         self.config.read(config_file, encoding='utf-8')
@@ -26,14 +35,12 @@ class ConfigLoader:
             setattr(self, section, self._get_section(section))
 
     def _get_section(self, section: str):
-        """
-        Helper method to retrieve a section of the configuration.
+        """!
+        Retrieve all key-value pairs in a section of the configuration file.
 
-        Args:
-            section (str): The section in the configuration file.
+        @param section The section name to retrieve the key-value pairs for.
 
-        Returns:
-            dict: A dictionary containing the key-value pairs of the section.
+        @return A dictionary containing all key-value pairs in the specified section.
         """
         section_data = {}
         for key in self.config.options(section):
@@ -41,17 +48,14 @@ class ConfigLoader:
         return section_data
 
     def get(self, section: str, key: str, default: str = None) -> str:
-        """
-        Retrieve a string value from the configuration.
+        """!
+        Retrieve a value from the configuration.
 
-        Args:
-            section (str): The section in the configuration file.
-            key (str): The key within the section to retrieve the string value for.
-            default (str, optional): The default value to return if the section or key 
-                                    is not found.
+        @param section The section in the configuration file.
+        @param key The key within the section to retrieve the value for.
+        @param default The default value to return if the section or key is not found.
 
-        Returns:
-            str: The string value associated with the specified section and key, or the default value if an error occurs.
+        @return The value associated with the specified section and key, or the default value if an error occurs.
         """
 
         try:
@@ -60,17 +64,15 @@ class ConfigLoader:
             return default
     
     def getint(self, section: str, key: str, default: int = None) -> int:
-        """
+        """!
         Retrieve an integer value from the configuration.
 
-        Args:
-            section (str): The section in the configuration file.
-            key (str): The key within the section to retrieve the integer value for.
-            default (int, optional): The default value to return if the section or key 
-                                    is not found, or if the value cannot be converted to an integer.
+        @param section The section in the configuration file.
+        @param key The key within the section to retrieve the integer value for.
+        @param default The default value to return if the section or key is not found, or if the value cannot be converted to an integer.
 
-        Returns:
-            int: The integer value associated with the specified section and key, or the default value if an error occurs.
+        @return The integer value associated with the specified section and key, or the default value if an error occurs.
+    
         """
         try:
             return self.config.getint(section, key)
@@ -78,17 +80,15 @@ class ConfigLoader:
             return default
     
     def getfloat(self, section: str, key: str, default: float = None) -> float:
-        """
+        """!
         Retrieve a float value from the configuration.
 
-        Args:
-            section (str): The section in the configuration file.
-            key (str): The key within the section to retrieve the float value for.
-            default (float, optional): The default value to return if the section or key 
-                                    is not found, or if the value cannot be converted to a float.
+        @param section The section in the configuration file.
+        @param key The key within the section to retrieve the float value for.
+        @param default The default value to return if the section or key is not found, or if the value cannot be converted to a float.
 
-        Returns:
-            float: The float value associated with the specified section and key.
+        @return The float value associated with the specified section and key, or the default value if an error occurs.
+        
         """
         
         try:
@@ -97,18 +97,14 @@ class ConfigLoader:
             return default
     
     def getboolean(self, section: str, key: str, default: bool = None) -> bool:
-        """
+        """!
         Retrieve a boolean value from the configuration.
 
-        Args:
-            section (str): The section in the configuration file.
-            key (str): The key within the section to retrieve the boolean value for.
-            default (bool, optional): The default value to return if the section or key 
-                                    is not found, or if the value cannot be converted to a boolean.
+        @param section The section in the configuration file.
+        @param key The key within the section to retrieve the boolean value for.
+        @param default The default value to return if the section or key is not found, or if the value cannot be converted to a boolean.
 
-        Returns:
-            bool: The boolean value associated with the specified section and key, or 
-                the default value if an error occurs.
+        @return The boolean value associated with the specified section and key, or the default value if an error occurs.
         """
 
         try:
@@ -117,19 +113,14 @@ class ConfigLoader:
             return default
     
     def set(self, section: str, key: str, value: str) -> None:
-        """
+        """!
         Set a value in the configuration.
 
-        Args:
-            section (str): The section in the configuration file.
-            key (str): The key within the section to set the value for.
-            value (str): The value to associate with the specified section and key.
-
-        Raises:
-            None
-
-        Returns:
-            None
+        @param section The section in the configuration file.
+        @param key The key within the section to set the value for.
+        @param value The value to set.
+        
+        @return None
         """
 
         if not self.config.has_section(section):
@@ -138,11 +129,13 @@ class ConfigLoader:
     
     def save(self) -> None:
         
-        """
-        Save the current configuration to a file.
+        """!
+        Save the configuration to the file.
         
-        This method writes the current configuration to the file specified in the
-        `config_file` attribute. The file is opened in text mode with UTF-8 encoding.
+        This method saves the current configuration to the file specified in `self.config_file`.
+        The configuration is written to the file in the format specified in the `ConfigParser`
+
+        @return None
         """
         
         with open(self.config_file, 'w', encoding='utf-8') as file:
@@ -150,13 +143,11 @@ class ConfigLoader:
     
     def print_config(self) -> None:
         
-        """
-        Print the current configuration to the console.
+        """!
+        Print the configuration to the console.
         
-        This method prints the current configuration to the console. The output is
-        formatted like a configuration file, with each section on a line by itself
-        and each key-value pair on a separate line, with the key and value separated
-        by an equals sign.
+        @return None
+        
         """
         for section in self.config.sections():
             print(f"[{section}]")
