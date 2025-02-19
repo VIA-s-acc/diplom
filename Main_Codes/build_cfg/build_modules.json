@@ -1,0 +1,17 @@
+{
+    "modules":
+    {
+
+    },
+
+    "settings":
+    {
+        "check_cython": true,
+        "check_setuptools": true,
+        "create_if_not_exist": false,
+        "run_tests": true,
+        "print_result": true,
+        "traceback": true,
+        "prefix": ""
+    }
+}
