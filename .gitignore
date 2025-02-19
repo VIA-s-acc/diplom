@@ -8,3 +8,5 @@ __pycache__/
 media/
 co/
 /optimization-methods
+/.build/
+build/
