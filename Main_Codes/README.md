@@ -1,5 +1,5 @@
-# REPOSITORY
-[GitHub](https://github.com/VIA-s-acc/builder)
+### REPOSITROY
+[GitHub](https://github.com/VIA-s-acc/builder/tree/main)
 
 #### WINDOWS REQ
 >[!NOTE]
@@ -15,10 +15,15 @@
 - Go to Main_Codes directory and run `build.py` script
 
 ```ruby
-usage: build.py [-h] [--modules MODULES [MODULES ...]] [--create CREATE [CREATE ...]]
+usage: build.py [-h] [--modules MODULES [MODULES ...]] [--create CREATE [CREATE ...]] [--reset]
+
+Build and manage modules in the project.
 
 options:
   -h, --help            show this help message and exit
   --modules MODULES [MODULES ...], -m MODULES [MODULES ...]
+                        Specify the modules to build. Use 'all' to build everything.
   --create CREATE [CREATE ...], -c CREATE [CREATE ...]
+                        Create new modules. Format: module.submodule (e.g., utils.parser).
+  --reset, -r           Reset the build configuration.
 ```
