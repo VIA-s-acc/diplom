@@ -69,18 +69,18 @@ template_module = lambda m, s: f'''\
 #==========================================================
 
 from ..build.{s} import (
-    call_basic_function
+    call_basic_function as raw_basic_function
 )
 
 class {s.capitalize()}Module:
     def __init__(self):
         pass
 
-    def basic_function(self):
-        return call_basic_function()
+    def call_basic_function(self):
+        return raw_basic_function()
 
 def sample_function():
     instance = {s.capitalize()}Module()
-    instance.basic()
+    instance.call_basic_function()
     return "basic_function worked."
 '''
