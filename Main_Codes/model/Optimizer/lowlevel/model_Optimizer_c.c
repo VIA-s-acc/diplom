@@ -1,7 +1,7 @@
 /*==========================================================
 BASE C TEMPLATE
 ==========================================================*/
-#include "modules_Funcs_c.h"
+#include "model_Optimizer_c.h"
 
 int basic_function() {
     return 1;

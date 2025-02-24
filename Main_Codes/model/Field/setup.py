@@ -7,17 +7,17 @@ from setuptools import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-sourceFiles = ['modules/Optimizer/Optimizer.pyx', 'modules/Optimizer/lowlevel/modules_Optimizer_c.c']
+sourceFiles = ['model/Field/Field.pyx', 'model/Field/lowlevel/model_Field_c.c']
 
 ext_modules = [
-    Extension("Optimizer", 
+    Extension("Field", 
             sources=sourceFiles),
 ]
 
 for e in ext_modules:
     e.cython_directives = {"language_level": "3str"} 
 
-setup(name = 'Optimizer',
+setup(name = 'Field',
     cmdclass={'build_ext': build_ext},
     ext_modules=ext_modules
     )

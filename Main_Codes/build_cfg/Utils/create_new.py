@@ -41,7 +41,17 @@ def create_module(m, s):
 # WRITE YOUR GLOBAL {m} TESTS HERE
 # ==========================================================''')
             f.close()
-        
+            
+    if os.path.exists(f'{m}/TEST/test.py'):
+        with open(f"{m}/TEST/test.py", 'r') as f:
+            lines = f.readlines()
+            print(lines)
+        with open(f"{m}/TEST/test.py", 'a') as f:
+            if f"from ..{s}.Module.{s} import *\n" not in lines:
+                print('aass')
+                f.write(f'from ..{s}.Module.{s} import *\n')
+                f.close()
+                
     res = recreate_or_create(m, s)
     if res == -1:
         print(f"\n🔴 {m}.{s} cannot be created | check access")

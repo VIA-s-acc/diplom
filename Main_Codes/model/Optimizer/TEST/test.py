@@ -1,3 +1,3 @@
 #==========================================================
-# WRITE YOUR GLOBAL modules TESTS HERE
+# WRITE YOUR model.Optimizer TESTS HERE
 # ==========================================================
