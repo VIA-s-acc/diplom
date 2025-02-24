@@ -80,7 +80,14 @@ def main():
                 pass
             create_module(m, s)
         save_cfg(cfg)
-        return
+        print('\n🟢 Modules created.\n')
+        flag = input("🟢 run build? (Y/N):\t").lower()
+        print()
+        if flag == 'y':
+            pass
+        else:
+            return
+      
         
             
         
