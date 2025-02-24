@@ -14,3 +14,6 @@ class FuncsModule:
         return raw_basic_function()
 
 def sample_function():
+    instance = FuncsModule()
+    instance.call_basic_function()
+    return "basic_function worked."

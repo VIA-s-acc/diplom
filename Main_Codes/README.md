@@ -58,42 +58,43 @@ A configuration file must be created at `build_cfg/build_modules.json` in the ro
   - `run_tests`: Runs tests after building.
   - `print_result`: Displays the build results.
   - `auto_import`: auto-imports functions detected in the `.pyx` file to `Module.submodule.py` as `raw_func_name` after building also auto-creating functions for class `module` if class exists. 
-  - >[!Note]
-    >(as 1 line, be careful not to lose anything in this line during the build).
 
-    - Example:
+>[!Note]
+>(as 1 line, be careful not to lose anything in this line during the build).
+
+  - Example:
       - `.pyx` file: 
         ```python
-        #==========================================================
-        # BASE PYX TEMPLATE
-        #==========================================================
+          #==========================================================
+          # BASE PYX TEMPLATE
+          #==========================================================
 
-        from libc.stdlib cimport malloc, free
+          from libc.stdlib cimport malloc, free
 
-        cdef extern from "lowlevel/modules_Funcs_c.h" nogil:
-            int basic_function()
+          cdef extern from "lowlevel/modules_Funcs_c.h" nogil:
+              int basic_function()
 
-        def call_basic_function():
-            return basic_function()
+          def call_basic_function():
+              return basic_function()
 
 
-        def test_2_func(test):
-            return "test_2_func"
+          def test_2_func(test):
+              return "test_2_func"
 
-        def test_3_func():
-            return "test_3_func"
-        ```
-      - auto created `Module.submodule.py`:
-        ```python
-        from ..build.Funcs import (call_basic_function as raw_call_basic_function, test_2_func as raw_test_2_func, test_3_func as raw_test_3_func)
-        # BASE MODULE TEMPLATE
-        #==========================================================
+          def test_3_func():
+              return "test_3_func"
+          ```
+        - auto created `Module.submodule.py`:
+          ```python
+          from ..build.Funcs import (call_basic_function as raw_call_basic_function, test_2_func as raw_test_2_func, test_3_func as raw_test_3_func)
+          # BASE MODULE TEMPLATE
+          #==========================================================
 
-        from ..build.Funcs import (
-            call_basic_function as raw_basic_function
-        )
+          from ..build.Funcs import (
+              call_basic_function as raw_basic_function
+          )
 
-        class FuncsModule:
+          class FuncsModule:
             def __init__(self):
                 pass
 

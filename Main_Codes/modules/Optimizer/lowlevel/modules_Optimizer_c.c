@@ -6,3 +6,4 @@ BASE C TEMPLATE
 int basic_function() {
     return 1;
 }
+

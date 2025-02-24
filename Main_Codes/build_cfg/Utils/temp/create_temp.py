@@ -63,7 +63,7 @@ int basic_function() {{
 """
 
 
-template_module = lambda m, s: f'''\
+template_module = lambda m, s: f'''\ \n
 #==========================================================
 # BASE MODULE TEMPLATE
 #==========================================================
