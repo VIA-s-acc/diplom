@@ -88,7 +88,20 @@ def create_module(m, s):
     with open(f"{m}/{s}/TEST/test.py", "a") as f:
         if f"from ..Module.{s} import *\n" not in lines:
             f.write(f'from ..Module.{s} import *\n')
-        
+    
+    if not os.path.exists(f"{m}/__init__.py"): 
+        with open(f"{m}/__init__.py", 'w') as f:
+            f.write(f"from .{s}.Module.{s} import *\n")
+            f.close()
+    else:
+        with open(f"{m}/__init__.py", 'r') as f:
+            lines = f.readlines()
+            f.close()
+        with open(f"{m}/__init__.py", 'a') as f:
+            if f"from .{s}.Module.{s} import *\n" not in lines:
+                f.write(f"from .{s}.Module.{s} import *\n")
+                f.close()
+                
     print(f"\n🟢 {m}.{s} created successfully")
     
     
