@@ -3,6 +3,7 @@
 #==========================================================
 
 from libc.stdlib cimport malloc, free
+from libc.string cimport memcpy
 
 cdef extern from "lowlevel/model_Funcs_c.h" nogil:
     int basic_function()
@@ -35,9 +36,12 @@ def base(field, a, b, c):
     if c_field == NULL:
         raise MemoryError("model.Funcs.base.c_field::alloc_error\nFailed to allocate memory")
     
+    cdef double[:] row_buffer
+
+    cdef int i
     for i in range(c_rows):
-        for j in range(c_cols):
-            c_field[i * c_cols + j] = field[i][j]
+        row_buffer = field[i]  # CBUFF
+        memcpy(&c_field[i * c_cols], &row_buffer[0], c_cols * sizeof(double))
 
     cdef double result = 0
 
@@ -59,9 +63,13 @@ def Gk(field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, rx_cells, ry_cel
     if c_field == NULL:
         raise MemoryError("model.Funcs.base.c_field::alloc_error\nFailed to allocate memory")
     
+
+    cdef double[:] row_buffer
+
+    cdef int i
     for i in range(c_rows):
-        for j in range(c_cols):
-            c_field[i * c_cols + j] = field[i][j]
+        row_buffer = field[i]  # CBUFF
+        memcpy(&c_field[i * c_cols], &row_buffer[0], c_cols * sizeof(double))
 
     cdef double result = 0
 
