@@ -40,8 +40,8 @@ double c_base(double* Field, int rows, int cols, double a, double b, double c)
 
 double c_Gk(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda)
 {
-    int start_col = fmax(0, x_cur);
-    int end_col = fmin(cols, x_cur + rx_cells + 1);
+    int start_col = MAX(0, x_cur);
+    int end_col = MIN(cols, x_cur + rx_cells + 1);
 
     double Base = 0;
     double Time = -gamma * t_k * exp(-gamma * v);
@@ -54,8 +54,8 @@ double c_Gk(double* field, int rows, int cols, int x_cur, double w, double v, do
         start_col = rx_cells;
     }
 
-    int range_min = fmax(0, line - ry_cells);
-    int range_max = fmin(rows, line + ry_cells + 1);
+    int range_min = MAX(0, line - ry_cells);
+    int range_max = MIN(rows, line + ry_cells + 1);
 
     for (int r = range_min; r < range_max; r++)
     {
@@ -75,3 +75,83 @@ double c_Gk(double* field, int rows, int cols, int x_cur, double w, double v, do
     }
     return Base - Time - Water;
 }
+
+
+double c_dGkdw(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda)
+{
+    int start_col = MAX(0, x_cur);
+    int end_col = MIN(cols, x_cur + rx_cells + 1);
+
+    double Base = 0;
+    double time = 0;
+    double Water = 4*eta*Wm*Deltat*exp(-delta*v)*rx*ry;
+
+    double exp_alpha_v = exp(-alpha*v);
+
+    if (start_col == end_col)
+    {
+        start_col -= rx_cells;
+    };
+
+    int range_min = MAX(0, line - ry_cells);
+    int range_max = MIN(rows, line + ry_cells + 1);
+
+    for (int r = range_min; r < range_max; r++)
+    {
+        for (int c_ = start_col; c_ < end_col; c_++)
+        {
+            if (field[r*cols+c_] == -1)
+            {
+                continue;
+            }
+            else
+            {
+                double d_rc = pow(pow(r-line, 2) + pow(c_ - x_cur, 2), 0.5);
+                double term = (Wm * Deltat)/pow((pow(d_rc, 2) + 1), beta) * exp_alpha_v;
+                Base += -2 * a * (field[r*cols+c_] + w*term - b) * term;
+            }
+        }
+    }
+    return Base - Water;
+}
+
+double c_dGkdv(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda)
+{
+    int start_col = MAX(0, x_cur);
+    int end_col = MIN(cols, x_cur + rx_cells + 1);
+
+    double Base = 0;
+    double Time = -gamma * lmbda * t_k * exp(-gamma*v);
+    double Water = -delta * 4 * eta * rx * ry * w * Wm * Deltat * exp(-delta*v);
+
+    double exp_alpha_v = exp(-alpha*v);
+
+    if (start_col == end_col)
+    {
+        start_col -= rx_cells;
+    };
+
+    int range_min = MAX(0, line - ry_cells);
+    int range_max = MIN(rows, line + ry_cells + 1);
+
+    for (int r = range_min; r < range_max; r++)
+    {
+        for (int c_ = start_col; c_ < end_col; c_++)
+        {
+            if (field[r*cols+c_] == -1)
+            {
+                continue;
+            }
+            else
+            {
+                double d_rc = pow(pow(r-line, 2) + pow(c_ - x_cur, 2), 0.5);
+                double term = (Wm * Deltat)/pow((pow(d_rc, 2) + 1), beta) * exp_alpha_v;
+                Base += -2*a*(field[r * cols + c_] + w * ((Wm * Deltat)/pow(pow(d_rc, 2)+ 1, beta)) * exp_alpha_v - b) * (-alpha*Deltat*w*Wm*exp_alpha_v/pow((pow(d_rc, 2) + 1), beta));
+            }
+        }
+    }
+    return Base - Time - Water;
+}
+    
+
+

@@ -1,8 +1,5 @@
-
-# === IMPORTS ===
-from Funcs import *
-from ConfigLoader import ConfigLoader
-from Field import Field
+import model as md
+import time
 import time
 from copy import deepcopy
   
@@ -112,14 +109,16 @@ class GradientOptimizer:
             # print(f"Iteration {i}: w = {w}, v = {v}")
             
             # dgkdw, dgkdv
-            dgkdw, Water1 = dGkdw(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, Water1)
-            dgkdv, Water2 = dGkdv(Field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.ry_cells, Field.line, a, b, Field.alpha, Field.beta, gamma, lmbda, Water2)
-            
+            dgkdw = md.FuncsModule.dGkdw(Field.field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.rx_cells, Field.ry_cells, Field.line, a, b, self.params['c'], Field.alpha, Field.beta, gamma, lmbda)
+            dgkdv = md.FuncsModule.dGkdv(Field.field, x_cur, w, v, t_k, eta, Field.Wm, Field.Deltat, delta, Field.rx, Field.ry, Field.rx_cells, Field.ry_cells, Field.line, a, b, self.params['c'], Field.alpha, Field.beta, gamma, lmbda)
+            #def dGkdw(field, x_cur, w, v, t_k, eta, Wm, Deltat, delta, rx, ry, rx_cells, ry_cells, line, a, b, c, alpha, beta, gamma, lmbda):
+
             # w_new = w + dgkdw * poly_step(self.l_r, i)
             # v_new = v + dgkdv * poly_step(self.l_r, i)
             
-            w_new = w + dgkdw * exp_step(self.l_r, i)
-            v_new = v + dgkdv * exp_step(self.l_r, i)
+            step = md.FuncsModule.exp_step(self.l_r, i)
+            w_new = w + dgkdw * step
+            v_new = v + dgkdv * step
             
             # w_new = w + dgkdw * self.l_r
             # v_new = v + dgkdv * self.l_r
@@ -190,7 +189,7 @@ class GradientOptimizer:
             end_col = min(cols, x + 1)
             if start_col == end_col:
                 start_col -= Field.rx_cells
-             
+
             res = Field.parallel_update_field(x, w, v)
             
             Water+=sum(res)
@@ -240,7 +239,7 @@ class GradientOptimizer:
 
 
 if __name__ == "__main__":
-    Loader = ConfigLoader('../config.ini')   
+    Loader = md.ConfigloaderModule('config.ini')   
     Loader.print_config() 
     a,b,c,wp,v,ms,mr,wm,alpha,beta,lmbda,eta,gamma,delta = Loader.getfloat("Model", "a"), Loader.getfloat("Model", "b"), Loader.getfloat("Model", "c"), Loader.getfloat("Model", "wp"), Loader.getfloat("Model", "v"), Loader.getfloat("Model", "ms"), Loader.getfloat("Model", "mr"), Loader.getfloat("Model", "wm"), Loader.getfloat("Model", "alpha"), Loader.getfloat("Model", "beta"), Loader.getfloat("Model", "lmbda"), Loader.getfloat("Model", "eta"), Loader.getfloat("Model", "gamma"), Loader.getfloat("Model", "delta"), 
     
@@ -249,7 +248,7 @@ if __name__ == "__main__":
     Deltat = Loader.getfloat("Model", "deltat")
     
 
-    field = Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+    field = md.FieldModule(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
 
     field.randomize_field(MAX_V=0.412, MIN_V=0.07694)
 
@@ -257,10 +256,9 @@ if __name__ == "__main__":
     
     l_r, eps, max_iter = Loader.getfloat("Optimization", "l_r"), Loader.getfloat("Optimization", "eps"), Loader.getint("Optimization", "max_iter")
     
-    gd = GradientOptimizer(l_r, eps, max_iter, save=False, field = field, a = a, b = b, c = c, base = base)
+    gd = GradientOptimizer(l_r, eps, max_iter, save=False, field = field, a = a, b = b, c = c, base = md.FuncsModule.base)
     st = time.time()  
     # print(field.calc_base(base))
-    
     gd.Gradien_max_Field(field, 0, 0, 0, 0, mr, ms, eta, delta,a,b, gamma, lmbda)
     
     print(time.time() - st)
@@ -291,3 +289,6 @@ if __name__ == "__main__":
     
     
     
+
+
+

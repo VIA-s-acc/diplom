@@ -1,4 +1,4 @@
 #==========================================================
-# WRITE YOUR model.Optimizer TESTS HERE
+# WRITE YOUR model.ConfigLoader TESTS HERE
 # ==========================================================
-from ..Module.Optimizer import *
+from ..Module.ConfigLoader import *

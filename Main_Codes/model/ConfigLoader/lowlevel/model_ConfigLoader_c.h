@@ -1,10 +1,10 @@
 /*==========================================================
 BASE HEADER TEMPLATE
 ==========================================================*/
-#ifndef OPTIMIZER_H
-#define OPTIMIZER_H
+#ifndef CONFIGLOADER_H
+#define CONFIGLOADER_H
 
 
 int basic_function();
 
-#endif // OPTIMIZER_H
+#endif // CONFIGLOADER_H

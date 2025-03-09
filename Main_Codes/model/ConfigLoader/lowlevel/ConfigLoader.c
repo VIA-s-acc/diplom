@@ -4,18 +4,18 @@
 {
     "distutils": {
         "depends": [
-            "model\\Optimizer\\lowlevel\\model_Optimizer_c.h"
+            "model\\ConfigLoader\\lowlevel\\model_ConfigLoader_c.h"
         ],
         "include_dirs": [
-            "model/Optimizer"
+            "model/ConfigLoader"
         ],
-        "name": "Optimizer",
+        "name": "ConfigLoader",
         "sources": [
-            "model/Optimizer/Optimizer.pyx",
-            "model/Optimizer/lowlevel/model_Optimizer_c.c"
+            "model/ConfigLoader/ConfigLoader.pyx",
+            "model/ConfigLoader/lowlevel/model_ConfigLoader_c.c"
         ]
     },
-    "module_name": "Optimizer"
+    "module_name": "ConfigLoader"
 }
 END: Cython Metadata */
 
@@ -1235,12 +1235,12 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__Optimizer
-#define __PYX_HAVE_API__Optimizer
+#define __PYX_HAVE__ConfigLoader
+#define __PYX_HAVE_API__ConfigLoader
 /* Early includes */
 #include <string.h>
 #include <stdlib.h>
-#include "lowlevel/model_Optimizer_c.h"
+#include "lowlevel/model_ConfigLoader_c.h"
 #ifdef _OPENMP
 #include <omp.h>
 #endif /* _OPENMP */
@@ -1489,7 +1489,7 @@ static const char *__pyx_filename;
 /* #### Code section: filename_table ### */
 
 static const char *__pyx_f[] = {
-  "model\\\\Optimizer\\\\Optimizer.pyx",
+  "model\\\\ConfigLoader\\\\ConfigLoader.pyx",
 };
 /* #### Code section: utility_code_proto_before_types ### */
 /* ForceInitThreads.proto */
@@ -1971,28 +1971,28 @@ static int __Pyx_InitStrings(__Pyx_StringTabEntry *t);
 
 /* Module declarations from "libc.stdlib" */
 
-/* Module declarations from "Optimizer" */
+/* Module declarations from "ConfigLoader" */
 /* #### Code section: typeinfo ### */
 /* #### Code section: before_global_var ### */
-#define __Pyx_MODULE_NAME "Optimizer"
-extern int __pyx_module_is_main_Optimizer;
-int __pyx_module_is_main_Optimizer = 0;
+#define __Pyx_MODULE_NAME "ConfigLoader"
+extern int __pyx_module_is_main_ConfigLoader;
+int __pyx_module_is_main_ConfigLoader = 0;
 
-/* Implementation of "Optimizer" */
+/* Implementation of "ConfigLoader" */
 /* #### Code section: global_var ### */
 /* #### Code section: string_decls ### */
 static const char __pyx_k__2[] = "?";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
 static const char __pyx_k_test[] = "__test__";
-static const char __pyx_k_Optimizer[] = "Optimizer";
+static const char __pyx_k_ConfigLoader[] = "ConfigLoader";
 static const char __pyx_k_is_coroutine[] = "_is_coroutine";
 static const char __pyx_k_asyncio_coroutines[] = "asyncio.coroutines";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_call_basic_function[] = "call_basic_function";
-static const char __pyx_k_model_Optimizer_Optimizer_pyx[] = "model\\Optimizer\\Optimizer.pyx";
+static const char __pyx_k_model_ConfigLoader_ConfigLoader[] = "model\\ConfigLoader\\ConfigLoader.pyx";
 /* #### Code section: decls ### */
-static PyObject *__pyx_pf_9Optimizer_call_basic_function(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
+static PyObject *__pyx_pf_12ConfigLoader_call_basic_function(CYTHON_UNUSED PyObject *__pyx_self); /* proto */
 /* #### Code section: late_includes ### */
 /* #### Code section: module_state ### */
 typedef struct {
@@ -2026,14 +2026,14 @@ typedef struct {
   #endif
   #if CYTHON_USE_MODULE_STATE
   #endif
-  PyObject *__pyx_n_s_Optimizer;
+  PyObject *__pyx_n_s_ConfigLoader;
   PyObject *__pyx_n_s__2;
   PyObject *__pyx_n_s_asyncio_coroutines;
   PyObject *__pyx_n_s_call_basic_function;
   PyObject *__pyx_n_s_cline_in_traceback;
   PyObject *__pyx_n_s_is_coroutine;
   PyObject *__pyx_n_s_main;
-  PyObject *__pyx_kp_s_model_Optimizer_Optimizer_pyx;
+  PyObject *__pyx_kp_s_model_ConfigLoader_ConfigLoader;
   PyObject *__pyx_n_s_name;
   PyObject *__pyx_n_s_test;
   PyObject *__pyx_codeobj_;
@@ -2079,14 +2079,14 @@ static int __pyx_m_clear(PyObject *m) {
   #ifdef __Pyx_FusedFunction_USED
   Py_CLEAR(clear_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_CLEAR(clear_module_state->__pyx_n_s_Optimizer);
+  Py_CLEAR(clear_module_state->__pyx_n_s_ConfigLoader);
   Py_CLEAR(clear_module_state->__pyx_n_s__2);
   Py_CLEAR(clear_module_state->__pyx_n_s_asyncio_coroutines);
   Py_CLEAR(clear_module_state->__pyx_n_s_call_basic_function);
   Py_CLEAR(clear_module_state->__pyx_n_s_cline_in_traceback);
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
   Py_CLEAR(clear_module_state->__pyx_n_s_main);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_model_Optimizer_Optimizer_pyx);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_model_ConfigLoader_ConfigLoader);
   Py_CLEAR(clear_module_state->__pyx_n_s_name);
   Py_CLEAR(clear_module_state->__pyx_n_s_test);
   Py_CLEAR(clear_module_state->__pyx_codeobj_);
@@ -2110,14 +2110,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #ifdef __Pyx_FusedFunction_USED
   Py_VISIT(traverse_module_state->__pyx_FusedFunctionType);
   #endif
-  Py_VISIT(traverse_module_state->__pyx_n_s_Optimizer);
+  Py_VISIT(traverse_module_state->__pyx_n_s_ConfigLoader);
   Py_VISIT(traverse_module_state->__pyx_n_s__2);
   Py_VISIT(traverse_module_state->__pyx_n_s_asyncio_coroutines);
   Py_VISIT(traverse_module_state->__pyx_n_s_call_basic_function);
   Py_VISIT(traverse_module_state->__pyx_n_s_cline_in_traceback);
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
   Py_VISIT(traverse_module_state->__pyx_n_s_main);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_model_Optimizer_Optimizer_pyx);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_model_ConfigLoader_ConfigLoader);
   Py_VISIT(traverse_module_state->__pyx_n_s_name);
   Py_VISIT(traverse_module_state->__pyx_n_s_test);
   Py_VISIT(traverse_module_state->__pyx_codeobj_);
@@ -2155,20 +2155,20 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #if CYTHON_USE_MODULE_STATE
 #endif
-#define __pyx_n_s_Optimizer __pyx_mstate_global->__pyx_n_s_Optimizer
+#define __pyx_n_s_ConfigLoader __pyx_mstate_global->__pyx_n_s_ConfigLoader
 #define __pyx_n_s__2 __pyx_mstate_global->__pyx_n_s__2
 #define __pyx_n_s_asyncio_coroutines __pyx_mstate_global->__pyx_n_s_asyncio_coroutines
 #define __pyx_n_s_call_basic_function __pyx_mstate_global->__pyx_n_s_call_basic_function
 #define __pyx_n_s_cline_in_traceback __pyx_mstate_global->__pyx_n_s_cline_in_traceback
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
 #define __pyx_n_s_main __pyx_mstate_global->__pyx_n_s_main
-#define __pyx_kp_s_model_Optimizer_Optimizer_pyx __pyx_mstate_global->__pyx_kp_s_model_Optimizer_Optimizer_pyx
+#define __pyx_kp_s_model_ConfigLoader_ConfigLoader __pyx_mstate_global->__pyx_kp_s_model_ConfigLoader_ConfigLoader
 #define __pyx_n_s_name __pyx_mstate_global->__pyx_n_s_name
 #define __pyx_n_s_test __pyx_mstate_global->__pyx_n_s_test
 #define __pyx_codeobj_ __pyx_mstate_global->__pyx_codeobj_
 /* #### Code section: module_code ### */
 
-/* "Optimizer.pyx":10
+/* "ConfigLoader.pyx":11
  *     int basic_function()
  * 
  * def call_basic_function():             # <<<<<<<<<<<<<<
@@ -2176,22 +2176,22 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_9Optimizer_1call_basic_function(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
-static PyMethodDef __pyx_mdef_9Optimizer_1call_basic_function = {"call_basic_function", (PyCFunction)__pyx_pw_9Optimizer_1call_basic_function, METH_NOARGS, 0};
-static PyObject *__pyx_pw_9Optimizer_1call_basic_function(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
+static PyObject *__pyx_pw_12ConfigLoader_1call_basic_function(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused); /*proto*/
+static PyMethodDef __pyx_mdef_12ConfigLoader_1call_basic_function = {"call_basic_function", (PyCFunction)__pyx_pw_12ConfigLoader_1call_basic_function, METH_NOARGS, 0};
+static PyObject *__pyx_pw_12ConfigLoader_1call_basic_function(PyObject *__pyx_self, CYTHON_UNUSED PyObject *unused) {
   CYTHON_UNUSED PyObject *const *__pyx_kwvalues;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("call_basic_function (wrapper)", 0);
   __pyx_kwvalues = __Pyx_KwValues_VARARGS(__pyx_args, __pyx_nargs);
-  __pyx_r = __pyx_pf_9Optimizer_call_basic_function(__pyx_self);
+  __pyx_r = __pyx_pf_12ConfigLoader_call_basic_function(__pyx_self);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_9Optimizer_call_basic_function(CYTHON_UNUSED PyObject *__pyx_self) {
+static PyObject *__pyx_pf_12ConfigLoader_call_basic_function(CYTHON_UNUSED PyObject *__pyx_self) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -2200,19 +2200,19 @@ static PyObject *__pyx_pf_9Optimizer_call_basic_function(CYTHON_UNUSED PyObject 
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("call_basic_function", 1);
 
-  /* "Optimizer.pyx":11
+  /* "ConfigLoader.pyx":12
  * 
  * def call_basic_function():
  *     return basic_function()             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __Pyx_PyInt_From_int(basic_function()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(basic_function()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "Optimizer.pyx":10
+  /* "ConfigLoader.pyx":11
  *     int basic_function()
  * 
  * def call_basic_function():             # <<<<<<<<<<<<<<
@@ -2222,7 +2222,7 @@ static PyObject *__pyx_pf_9Optimizer_call_basic_function(CYTHON_UNUSED PyObject 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("Optimizer.call_basic_function", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("ConfigLoader.call_basic_function", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -2246,14 +2246,14 @@ static PyMethodDef __pyx_methods[] = {
 
 static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
-    {&__pyx_n_s_Optimizer, __pyx_k_Optimizer, sizeof(__pyx_k_Optimizer), 0, 0, 1, 1},
+    {&__pyx_n_s_ConfigLoader, __pyx_k_ConfigLoader, sizeof(__pyx_k_ConfigLoader), 0, 0, 1, 1},
     {&__pyx_n_s__2, __pyx_k__2, sizeof(__pyx_k__2), 0, 0, 1, 1},
     {&__pyx_n_s_asyncio_coroutines, __pyx_k_asyncio_coroutines, sizeof(__pyx_k_asyncio_coroutines), 0, 0, 1, 1},
     {&__pyx_n_s_call_basic_function, __pyx_k_call_basic_function, sizeof(__pyx_k_call_basic_function), 0, 0, 1, 1},
     {&__pyx_n_s_cline_in_traceback, __pyx_k_cline_in_traceback, sizeof(__pyx_k_cline_in_traceback), 0, 0, 1, 1},
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
     {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
-    {&__pyx_kp_s_model_Optimizer_Optimizer_pyx, __pyx_k_model_Optimizer_Optimizer_pyx, sizeof(__pyx_k_model_Optimizer_Optimizer_pyx), 0, 0, 1, 0},
+    {&__pyx_kp_s_model_ConfigLoader_ConfigLoader, __pyx_k_model_ConfigLoader_ConfigLoader, sizeof(__pyx_k_model_ConfigLoader_ConfigLoader), 0, 0, 1, 0},
     {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
     {&__pyx_n_s_test, __pyx_k_test, sizeof(__pyx_k_test), 0, 0, 1, 1},
     {0, 0, 0, 0, 0, 0, 0}
@@ -2270,13 +2270,13 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "Optimizer.pyx":10
+  /* "ConfigLoader.pyx":11
  *     int basic_function()
  * 
  * def call_basic_function():             # <<<<<<<<<<<<<<
  *     return basic_function()
  */
-  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_model_Optimizer_Optimizer_pyx, __pyx_n_s_call_basic_function, 10, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_codeobj_ = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 0, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_model_ConfigLoader_ConfigLoader, __pyx_n_s_call_basic_function, 11, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj_)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2366,10 +2366,10 @@ static int __Pyx_modinit_function_import_code(void) {
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_Optimizer(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_ConfigLoader(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_Optimizer},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_ConfigLoader},
   {0, NULL}
 };
 #endif
@@ -2382,7 +2382,7 @@ namespace {
   #endif
   {
       PyModuleDef_HEAD_INIT,
-      "Optimizer",
+      "ConfigLoader",
       0, /* m_doc */
     #if CYTHON_PEP489_MULTI_PHASE_INIT
       0, /* m_size */
@@ -2430,11 +2430,11 @@ namespace {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initOptimizer(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initOptimizer(void)
+__Pyx_PyMODINIT_FUNC initConfigLoader(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC initConfigLoader(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_Optimizer(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_Optimizer(void)
+__Pyx_PyMODINIT_FUNC PyInit_ConfigLoader(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_ConfigLoader(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -2515,7 +2515,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_Optimizer(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_ConfigLoader(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -2532,7 +2532,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_Optimizer(PyObject *__pyx_pyinit_m
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'Optimizer' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'ConfigLoader' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -2544,13 +2544,13 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_Optimizer(PyObject *__pyx_pyinit_m
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("Optimizer", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("ConfigLoader", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
   __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
-    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "Optimizer" pseudovariable */
+    __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "ConfigLoader" pseudovariable */
     if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
@@ -2574,7 +2574,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_Optimizer(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_ConfigLoader(void)", 0);
   if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -2612,14 +2612,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_Optimizer) {
+  if (__pyx_module_is_main_ConfigLoader) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "Optimizer")) {
-      if (unlikely((PyDict_SetItemString(modules, "Optimizer", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "ConfigLoader")) {
+      if (unlikely((PyDict_SetItemString(modules, "ConfigLoader", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -2640,18 +2640,18 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "Optimizer.pyx":10
+  /* "ConfigLoader.pyx":11
  *     int basic_function()
  * 
  * def call_basic_function():             # <<<<<<<<<<<<<<
  *     return basic_function()
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_9Optimizer_1call_basic_function, 0, __pyx_n_s_call_basic_function, NULL, __pyx_n_s_Optimizer, __pyx_d, ((PyObject *)__pyx_codeobj_)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_12ConfigLoader_1call_basic_function, 0, __pyx_n_s_call_basic_function, NULL, __pyx_n_s_ConfigLoader, __pyx_d, ((PyObject *)__pyx_codeobj_)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_call_basic_function, __pyx_t_2) < 0) __PYX_ERR(0, 10, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_call_basic_function, __pyx_t_2) < 0) __PYX_ERR(0, 11, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "Optimizer.pyx":1
+  /* "ConfigLoader.pyx":1
  * #==========================================================             # <<<<<<<<<<<<<<
  * # BASE PYX TEMPLATE
  * #==========================================================
@@ -2668,7 +2668,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d && stringtab_initialized) {
-      __Pyx_AddTraceback("init Optimizer", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init ConfigLoader", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     #if !CYTHON_USE_MODULE_STATE
     Py_CLEAR(__pyx_m);
@@ -2682,7 +2682,7 @@ if (!__Pyx_RefNanny) {
     }
     #endif
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init Optimizer");
+    PyErr_SetString(PyExc_ImportError, "init ConfigLoader");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

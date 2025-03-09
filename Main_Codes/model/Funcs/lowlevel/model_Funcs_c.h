@@ -4,6 +4,14 @@ BASE HEADER TEMPLATE
 #ifndef FUNCS_H
 #define FUNCS_H
 
+#ifndef MAX 
+#define MAX(a, b) (((a) > (b)) ? (a) : (b))
+#endif
+
+#ifndef MIN
+#define MIN(a, b) (((a) < (b)) ? (a) : (b))
+#endif
+
 /*
 \file
 \brief header file for basic functions (G_k, G_K_dw, etc.)
@@ -73,6 +81,62 @@ G_k function
 \return value of G_k function
 */
 double c_Gk(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda);
+
+
+/*!
+derivative of G_k function by w
+\param[in] Field array of values
+\param[in] x_cur current position
+\param[in] w parameter
+\param[in] v parameter
+\param[in] t_k parameter
+\param[in] eta parameter
+\param[in] Wm parameter
+\param[in] Deltat parameter
+\param[in] delta parameter
+\param[in] rx parameter
+\param[in] ry parameter
+\param[in] rx_cells parameter
+\param[in] ry_cells parameter
+\param[in] line parameter
+\param[in] a parameter
+\param[in] b parameter
+\param[in] c parameter
+\param[in] alpha parameter
+\param[in] beta parameter
+\param[in] gamma parameter
+\param[in] lmbda parameter
+\return value of G_k function
+*/
+double c_dGkdw(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda);
+
+
+/*!
+derivative of G_k function by v
+\param[in] Field array of values
+\param[in] x_cur current position
+\param[in] w parameter
+\param[in] v parameter
+\param[in] t_k parameter
+\param[in] eta parameter
+\param[in] Wm parameter
+\param[in] Deltat parameter
+\param[in] delta parameter
+\param[in] rx parameter
+\param[in] ry parameter
+\param[in] rx_cells parameter
+\param[in] ry_cells parameter
+\param[in] line parameter
+\param[in] a parameter
+\param[in] b parameter
+\param[in] c parameter
+\param[in] alpha parameter
+\param[in] beta parameter
+\param[in] gamma parameter
+\param[in] lmbda parameter
+\return value of G_k function
+*/
+double c_dGkdv(double* field, int rows, int cols, int x_cur, double w, double v, double t_k, double eta, double Wm, double Deltat, double delta, double rx, double ry, int rx_cells, int ry_cells, int line, double a, double b, double c, double alpha, double beta, double gamma, double lmbda);
 
 
 

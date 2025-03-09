@@ -3,8 +3,9 @@
 #==========================================================
 
 from libc.stdlib cimport malloc, free
+from libc.string cimport memcpy
 
-cdef extern from "lowlevel/model_Optimizer_c.h" nogil:
+cdef extern from "lowlevel/model_ConfigLoader_c.h" nogil:
     int basic_function()
 
 def call_basic_function():

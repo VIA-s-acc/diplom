@@ -7,17 +7,17 @@ from setuptools import setup
 from distutils.extension import Extension
 from Cython.Distutils import build_ext
 
-sourceFiles = ['model/Optimizer/Optimizer.pyx', 'model/Optimizer/lowlevel/model_Optimizer_c.c']
+sourceFiles = ['model/ConfigLoader/ConfigLoader.pyx', 'model/ConfigLoader/lowlevel/model_ConfigLoader_c.c']
 
 ext_modules = [
-    Extension("Optimizer", 
+    Extension("ConfigLoader", 
             sources=sourceFiles),
 ]
 
 for e in ext_modules:
     e.cython_directives = {"language_level": "3str"} 
 
-setup(name = 'Optimizer',
+setup(name = 'ConfigLoader',
     cmdclass={'build_ext': build_ext},
     ext_modules=ext_modules
     )

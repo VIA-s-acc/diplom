@@ -85,8 +85,6 @@ class Field:
         else:
             row, col = index
             self.field[row][col] = value
-        
-    
     
     def __str__(self):
         base = f"Field with {self.rows} rows and {self.cols} columns\n" + f"Cell length: {self.cell_length_m} m, Cell width: {self.cell_width_m} m\n" + \
