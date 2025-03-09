@@ -5,7 +5,6 @@ from build_cfg.Utils.build import build
 from build_cfg.Utils.test import run_tests
 from build_cfg.Utils.create_new import create_module
 from build_cfg.Utils.download_cfg import download
-import copy
 import traceback
 import argparse
 import os
@@ -19,9 +18,9 @@ def parse():
 
     parser.add_argument(
         '--modules', '-m',
-        nargs='+',
+        nargs='*',
         required=False,
-        default='default',
+        default=['all'],
         help="Specify the modules to build. Use 'all' to build everything."
     )
 
@@ -36,6 +35,15 @@ def parse():
         action='store_true',
         help="Reset the build configuration."
     )
+    
+    parser.add_argument(
+        '--test', '-t',
+        action='store_true',
+        required=False,
+        help="Test modules (all if not specified by -m (--modules) )."
+    )
+    
+    
     
     args = parser.parse_args()
 
@@ -57,6 +65,7 @@ def main():
     error message and exits.
     """
     args = parse()
+        
     
     if args.reset:
         reset_configuration()
@@ -64,6 +73,13 @@ def main():
     
     cfg = load_cfg()
     settings = cfg['settings']
+    
+    if args.test:
+        print("🟢 Testing...")
+        modules = select_modules(args.modules, cfg)
+        test_libs = [lib for lib in modules.keys()]
+        run_tests(cfg['settings'], test_libs, modules)
+        return
     
     if args.create:
         modules = handle_module_creation(args.create, cfg)
@@ -126,12 +142,32 @@ def prompt_for_build():
 
 def select_modules(module_args, cfg):
     """Determine which modules to build based on command line arguments."""
-    if module_args == 'default' or module_args[0] == 'all':
+    print(f"\n🟢 Selected modules: {module_args}")
+    if len(module_args) == 0:
+        module_args = ['all']
+    if module_args[0] == 'all':
         return cfg['modules']
-    
+    all_modules = cfg['modules']
     modules = {}
     for module_name in module_args:
-        module, submodule = module_name.split('.', 1)
+        try:
+            module, submodule = module_name.split('.', 1)
+        except ValueError:
+            module = module_name
+            if module in list(all_modules.keys()):
+                submodules = all_modules[module_name]
+                print(f"\n🟡 Submodules for {module} not specified - taking from configuration.\n\tSubmodules: {submodules}")
+                for submodule in submodules:
+                    if module not in modules:
+                        modules[module] = []
+                    if submodule not in modules[module]:
+                        modules[module].append(submodule)
+            else:
+                print(f"\n🟡 Module {module_name} does not exist. Skipping...")
+            continue
+        except Exception as e:
+            handle_error(e, cfg['settings'])
+        
         if module not in modules:
             modules[module] = []
         if submodule not in modules[module]:
@@ -158,7 +194,7 @@ def handle_missing_modules(modules, settings):
                     print(f"\n🟢 Module {module_name}.{submodule} does not exist. Creating base module...")
                     create_module(module_name, submodule)
                 else:
-                    print(f"\n🔴 Module {module_name}.{submodule} does not exist. "
+                    print(f"\n🟡 Module {module_name}.{submodule} does not exist. "
                             f"Skipping (create_if_not_exist = False).")
 
 
