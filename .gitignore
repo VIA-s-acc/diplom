@@ -11,3 +11,10 @@ co/
 /.build/
 build/
 backup/
+*.vsidx
+*.sln
+*.db*
+*.ipch
+*.vcxproj*
+cppCode/DIPLIM_console/.vs/DIPLIM_console/v17/Browse.VC.opendb
+cppCode/DIPLIM_console/.vs/DIPLIM_console/v17/.suo
