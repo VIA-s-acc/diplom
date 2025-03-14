@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ModelParams" Collapsed="true">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIQAAAAAAAAAAAEAABEAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelParams.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Optimizer" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Field" FixedFromPoint="true">
+      <Path>
+        <Point X="4.938" Y="2.191" />
+        <Point X="4.938" Y="2.375" />
+        <Point X="3.25" Y="2.375" />
+        <Point X="3.25" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Optimizer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Field" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Field.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
