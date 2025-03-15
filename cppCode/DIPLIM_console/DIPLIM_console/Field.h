@@ -4,6 +4,7 @@
 #include <map>
 #include <vector>
 
+class Func;
 
 #define MAX(x,y) ((double)(x) > (double)(y)) ? x : y
 #define MIN(x,y) ((double)(x) < (double)(y)) ? x : y
@@ -78,7 +79,7 @@ public:
 
 		@return term - The value by which the cell is updated
 	*/
-	double update_cell(int i, int j, int x, double w, double v);
+	double update_cell(int i, int j, int x, double w, double v, Func& f);
 
 	/*
 	* Field::update_field - used to Update the field
@@ -87,7 +88,7 @@ public:
 	* @param v - The speed of machine
 	* @return vector - The updated cells term values ( in whic they are updated)
 	* */
-	std::vector<double> update_field(int x, double w, double v);
+	std::vector<double> update_field(int x, double w, double v, Func& f);
 
 	void setField2D_ij(int i, int j, double value) {FieldMap2D[i][j] = value;};
 	

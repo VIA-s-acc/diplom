@@ -67,23 +67,23 @@ void ModelParams::InitParametrs()
 	std::map<std::string, std::any> ModeLParamsMMap
 	{
 		// all double
-		{"a", 2.0}, {"b", 0.3}, {"c", 3.0}, {"w", 0.0},
+		{"a", 2.0}, {"b", 0.3412}, {"c", 3.0}, {"w", 0.0},
 		{"Wp", 0.0}, {"v", 0.0}, {"Ms", 10.0},
-		{"Mr", 0.1}, {"Wm", 10.0}, {"alpha", 0.25},
+		{"Mr", 1.0}, {"Wm", 50.0}, {"alpha", 0.25},
 		{"beta", 0.01}, {"lambda", 0.5}, {"eta", 0.01},
-		{"gamma", 0.3}, {"delta", 0.1}, {"Deltat", 0.1}
+		{"gamma", 0.3}, {"delta", 0.1}, {"Deltat", 0.05	}
 	};
 
 	std::map<std::string, std::any> ModelParamsOMap
 	{
-		{"l_r", 0.1}, {"eps", 0.001}, {"max_iter", 100}
+		{"l_r", 0.1}, {"eps", 1e-3}, {"max_iter", 500}
 	};
 	std::map<std::string, std::any> ModelParamsFMap
 	{
 		// length_m, width_m, rx, ry - doubles
 		// other int
-		{"length_m", 100.0}, {"width_m", 100.0}, {"rows", 100}, 
-		{"cols", 100}, {"rx", 0.1}, {"ry", 50.0}, {"line", 50}
+		{"length_m", 1000.0}, {"width_m", 100.0}, {"rows", 100}, 
+		{"cols", 1000}, {"rx", 0.1}, {"ry", 50.0}, {"line", 50}
 	};
 
 	ModelParamsMap["M"] = ModeLParamsMMap;

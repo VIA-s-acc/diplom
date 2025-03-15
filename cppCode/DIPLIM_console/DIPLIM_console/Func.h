@@ -21,6 +21,11 @@ public:
 	int rows, cols, rx_cells, ry_cells, line;
 	double eta, Wm, Deltat, rx, ry, a, b, c, alpha, beta, gamma, lambda, delta;
 
+	void setField(Field F_) { F = F_; };
+	void setFieldEl(int i, int j, double val) { F(i,j) = val; };
+
+	double getFieldEl(int i, int j) { return Func::F(i, j); };
+
 	Func(ModelParams MP_, Field F_) :
 		MP(MP_), F(F_),
 		ParamsM(MP.getModelParams("M")), ParamsF(MP.getModelParams("F")), ParamsO(MP.getModelParams("O")),

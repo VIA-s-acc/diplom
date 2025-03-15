@@ -1,10 +1,10 @@
 #include "Field.h"
+#include "Func.h"
 #include "ModelParams.h"
 #include <cmath>
 #include <thread>
 #include <future>
 #include <algorithm>
-#include "Func.h"
 
 
 Field::Field(ModelParams& Mparams)
@@ -85,11 +85,12 @@ double Field::avgerageField()
 
 double Field::minField()
 {
-	double min = 0;
+	double min = 1;
 	int rows = std::any_cast<int>(Field::FieldMap["rows"]);
 	int cols = std::any_cast<int>(Field::FieldMap["cols"]);
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < cols; j++) {
+			if ((*this)(i, j) == -1) continue;
 			double el = (*this)(i, j);
 			if (el < min) min = el;
 		}
@@ -120,7 +121,7 @@ std::vector<double> Field::DataField()
 	return res;
 }
 
-double Field::update_cell(int i, int j, int x, double w, double v)
+double Field::update_cell(int i, int j, int x, double w, double v, Func& f)
 {
 	if ((*this)(i, j) == -1.0) return 0.0;
 	double Wm = std::any_cast<double>(Field::FieldParams.getParam("M", "Wm"));
@@ -128,14 +129,17 @@ double Field::update_cell(int i, int j, int x, double w, double v)
 	double beta = std::any_cast<double>(Field::FieldParams.getParam("M", "beta"));
 	double alpha = std::any_cast<double>(Field::FieldParams.getParam("M", "alpha"));
 
-	double d_ij = pow(pow(i - std::any_cast<int>(Field::FieldMap["line"]), 2) + pow((j - x), 2), 0.5);
-	double term = w * (Wm * Dt / pow((pow(d_ij, 2) + 1), beta)) * exp(-alpha * v);
+	double d_ij = sqrt(pow(i - std::any_cast<int>(Field::FieldMap["line"]), 2) + pow((j - x), 2));
+	double term = w * ((Wm * Dt) / (pow( (pow(d_ij, 2) + 1), beta))) * exp(-alpha * v);
+	
 
 	(*this)(i, j) += term;
+	//std::cout << "i: " << i << " j: " << j << " d_ij: " << d_ij << " term: " << term << " W: " << w << " F: " <<f.getFieldEl(i, j) << "\n";
+	f.setFieldEl(i, j, (*this)(i, j));
 
 	return term;
 }
-std::vector<double> Field::update_field(int x, double w, double v)
+std::vector<double> Field::update_field(int x, double w, double v, Func& f)
 {
 	int rows = std::any_cast<int>(Field::FieldMap["rows"]);
 	int cols = std::any_cast<int>(Field::FieldMap["cols"]);
@@ -161,7 +165,7 @@ std::vector<double> Field::update_field(int x, double w, double v)
 	// parallel update
 	for (int i = start_row; i < end_row; i++) {
 		for (int j = start_col; j < end_col; j++) {
-			futures.push_back(std::async(std::launch::async, &Field::update_cell, this, i, j, x, w, v));
+			futures.push_back(std::async(std::launch::async, &Field::update_cell, this, i, j, x, w, v, std::ref(f)));
 		}
 	}
 

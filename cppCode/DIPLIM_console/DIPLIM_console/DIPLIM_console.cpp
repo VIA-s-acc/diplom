@@ -59,7 +59,10 @@ int main(int argc, char* argv[])
 
 	GDOptimizer GD(Params, field, false, true);
 	GD.GD_Max(0);
-	std::cout << field(42,12) << std::endl;
+	GD.GD_Max(0);
+	GD.GD_Max(0);
+	GD.GD_Max(0);
+	GD.GD_Max(0);
 
 
 	return 0;

@@ -12,7 +12,7 @@ class GDOptimizer :
 {
 public:
 	GDOptimizer(ModelParams params, Field field, bool save = false, bool log = false) : Optimizer(params, field, save, log){};
-	Vector2D GD_step(int x_cur, double w, double v, double t_k);
+	Vector2D GD_step(int x_cur, double w, double v, double t_k, double Mr_Deltat);
 	/*
 		void GD_Max(int x); used to optimize Gk function in Field;
 
