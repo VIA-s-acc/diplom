@@ -7,12 +7,24 @@
 #include <iostream>
 #include <regex>
 
-
+/**
+ * Checks if a given string represents an integer.
+ *
+ * @param str the input string to be checked
+ *
+ * @return true if the string is an integer, false otherwise
+ */
 bool isInteger(const std::string& str) {
     static const std::regex intRegex(R"(^-?\d+$)");
     return std::regex_match(str, intRegex);
 }
-
+/**
+ * Checks if a given string represents an integer.
+ *
+ * @param str the input string to be checked
+ *
+ * @return true if the string is an integer, false otherwise
+ */
 bool isDouble(const std::string& str) {
     static const std::regex doubleRegex(R"(^-?\d+\.\d+$)");
     return std::regex_match(str, doubleRegex);
@@ -30,6 +42,9 @@ std::string ConfigLoader::trim(const std::string& s) {
     }).base();
     return (start < end ? std::string(start, end) : std::string());
 }
+
+
+
 
 bool ConfigLoader::load(const std::string& filename, Config& config) {
     std::ifstream file(filename);

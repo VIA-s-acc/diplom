@@ -11,8 +11,9 @@ struct Vector4D
 	double w2;
 };
 
-struct Vector5D
+struct Vector6D
 {
+	double t_k;
 	double w;
 	double v;
 	int	   x;
@@ -76,7 +77,7 @@ public:
 			{"Diff", 0}
 		};
 		info["Optimization"] = std::map<double, std::vector<Vector4D>>{};
-		info["Optimization_Detailed"] = std::map<double, std::vector<Vector5D>>{};
+		info["Optimization_Detailed"] = std::map<double, std::vector<Vector6D>>{};
 
 		
 	};
