@@ -17,7 +17,7 @@
   <Class Name="Field">
     <Position X="6" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAEQAARAEAAAAEAAAAAIAAACAAAAABIAgBAACkAA=</HashCode>
+      <HashCode>AAEAAEQQARAEAAAAEAAAAAIAAACAAAAABIAgBAACkAA=</HashCode>
       <FileName>Field.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,14 +31,14 @@
   <Class Name="GDOptimizer">
     <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAIAAQBAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAQBAAAAAAAA=</HashCode>
       <FileName>GDOptimizer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Func">
     <Position X="11.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>QAEAAEAIRAAAAAAgAIBABAAAggWCAACgAQkREEAAAQA=</HashCode>
+      <HashCode>aAEAAEAIRAAAAAAgAIBABAAAggWCAACgAQkREEAAAQA=</HashCode>
       <FileName>Func.h</FileName>
     </TypeIdentifier>
   </Class>
