@@ -1,11 +1,70 @@
 ﻿// DIPLIM_console.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
 #include <iostream>
+#include "Field.h"
+#include "ModelParams.h"
+#include "ConfigLoader.h"
+#include "Optimizer.h">
+#include "GDOptimizer.h"
 
-int main()
+constexpr bool DEBUG = true;
+
+void debug_print(std::map<std::string, std::map<std::string, std::any>> ParamsMap, char* argv[], std::map <std::string, std::string> ParamLabels)
 {
-    std::cout << "Hello World!\n";
+if (DEBUG) {
+	for (const auto& Params : ParamsMap) {
+		bool kf = false;
+		for (const auto& [key, value] : Params.second)
+		{
+			if (!kf) {
+				std::cout << ParamLabels[Params.first] << std::endl;
+				kf = true;
+			}
+			if (value.type() == typeid(int))	std::cout << key << ": " << std::any_cast<int>(value) << std::endl;
+			else if (value.type() == typeid(double))	std::cout << key << ": " << std::any_cast<double>(value) << std::endl;
+		}
+		std::cout << std::endl;
+	}
+}
+}
+
+
+int main(int argc, char* argv[])
+{
+
+
+	ModelParams Params;
+	std::map <std::string, std::string> ParamLabels{
+				{"M", "[Model]"}, {"O", "[Optimizer]"}, {"F", "[Field]"}
+	};
+	if (argc != 2) {
+		std::cout << "Usage: " << argv[0] << " <config_file_path>" << std::endl;
+		std::cout << "Config file not specified." << std::endl;
+		std::cout << "Will used default config" << std::endl;
+		std::map<std::string, std::map<std::string, std::any>> ParamsMap = Params.getParms();
+		debug_print(ParamsMap, argv, ParamLabels);
+	}
+
+	if (argc == 2) {
+		
+		std::string file_path = argv[1];
+		Params.LoadModelFromFile(file_path);
+		std::map<std::string, std::map<std::string, std::any>> ParamsMap = Params.getParms();
+		debug_print(ParamsMap, argv, ParamLabels);
+	}
+  
+	Field field(Params);
+
+	field.randomizeField(0.0, 0.0);
+
+	GDOptimizer GD(Params, field, false, true);
+	GD.GD_Max(0);
+	std::cout << field(42,12) << std::endl;
+
+
+	return 0;
+    //std::cout << "Config file path: " << file_path << std::endl;
+    
 }
 
 

@@ -1,0 +1,6049 @@
+AutoGen Definitions dummy;
+class = {
+  cp-id     = 'db/dd3/class_config_loader_1_1_config_loader';
+  cp-name   = 'ConfigLoader::ConfigLoader';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a7a6155c2098004d5ab0b8f2d3af3e113';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__init__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'config_file';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '18';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Constructor.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param config_file Path to the configuration file.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1abed0cf7656247d034889dcc21ef8c6a0';
+        sec-mem-ref-line = '37';
+        sec-mem-ref-name = 'ConfigLoader::_get_section';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a2641cd749faa7d9b3a3234ee40007adf';
+        sec-mem-ref-line = '30';
+        sec-mem-ref-name = 'ConfigLoader::config_file';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a7d154bd053db94b568c798db781cfd5f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'get';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'key';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'default';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '50';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieve a value from the configuration.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section in the configuration file.
+@param key The key within the section to retrieve the value for.
+@param default The default value to return if the section or key is not found.
+
+@return The value associated with the specified section and key, or the default value if an error occurs.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7d154bd053db94b568c798db781cfd5f';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'ConfigLoader::get';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1abed0cf7656247d034889dcc21ef8c6a0';
+        sec-mem-ref-line = '37';
+        sec-mem-ref-name = 'ConfigLoader::_get_section';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7d154bd053db94b568c798db781cfd5f';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'ConfigLoader::get';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a67be17ee9918ab4d6d7f69b5cc278c96';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'getint';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'key';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'default';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '66';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieve an integer value from the configuration.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section in the configuration file.
+@param key The key within the section to retrieve the integer value for.
+@param default The default value to return if the section or key is not found, or if the value cannot be converted to an integer.
+
+@return The integer value associated with the specified section and key, or the default value if an error occurs.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a67be17ee9918ab4d6d7f69b5cc278c96';
+        sec-mem-ref-line = '66';
+        sec-mem-ref-name = 'ConfigLoader::getint';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a67be17ee9918ab4d6d7f69b5cc278c96';
+        sec-mem-ref-line = '66';
+        sec-mem-ref-name = 'ConfigLoader::getint';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a2a14fa245a24ab133db7b55ea8685749';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'getfloat';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'key';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+float
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'default';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '82';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieve a float value from the configuration.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section in the configuration file.
+@param key The key within the section to retrieve the float value for.
+@param default The default value to return if the section or key is not found, or if the value cannot be converted to a float.
+
+@return The float value associated with the specified section and key, or the default value if an error occurs.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a2a14fa245a24ab133db7b55ea8685749';
+        sec-mem-ref-line = '82';
+        sec-mem-ref-name = 'ConfigLoader::getfloat';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a2a14fa245a24ab133db7b55ea8685749';
+        sec-mem-ref-line = '82';
+        sec-mem-ref-name = 'ConfigLoader::getfloat';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a09c74ea531b0cec9eb946584f410edb5';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'getboolean';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'key';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+bool
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'default';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '99';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieve a boolean value from the configuration.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section in the configuration file.
+@param key The key within the section to retrieve the boolean value for.
+@param default The default value to return if the section or key is not found, or if the value cannot be converted to a boolean.
+
+@return The boolean value associated with the specified section and key, or the default value if an error occurs.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a09c74ea531b0cec9eb946584f410edb5';
+        sec-mem-ref-line = '99';
+        sec-mem-ref-name = 'ConfigLoader::getboolean';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a09c74ea531b0cec9eb946584f410edb5';
+        sec-mem-ref-line = '99';
+        sec-mem-ref-name = 'ConfigLoader::getboolean';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a9a826d3e8bc5862608b2d01f20b7fa4e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'set';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'key';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'value';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '115';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Set a value in the configuration.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section in the configuration file.
+@param key The key within the section to set the value for.
+@param value The value to set.
+
+@return None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a9a826d3e8bc5862608b2d01f20b7fa4e';
+        sec-mem-ref-line = '115';
+        sec-mem-ref-name = 'ConfigLoader::set';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a9a826d3e8bc5862608b2d01f20b7fa4e';
+        sec-mem-ref-line = '115';
+        sec-mem-ref-name = 'ConfigLoader::set';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1acae62ea8352c83867d959d43d4ab9f4c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'save';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '130';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Save the configuration to the file.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+This method saves the current configuration to the file specified in <tt>self.config_file</tt>.
+The configuration is written to the file in the format specified in the <tt>ConfigParser</tt>
+
+@return None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a2641cd749faa7d9b3a3234ee40007adf';
+        sec-mem-ref-line = '30';
+        sec-mem-ref-name = 'ConfigLoader::config_file';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a1a78dec9873122811bcdf77fc7d24008';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'print_config';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '144';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Print the configuration to the console.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@return None
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1a2641cd749faa7d9b3a3234ee40007adf';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'config_file';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  config_file
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '30';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7a6155c2098004d5ab0b8f2d3af3e113';
+        sec-mem-ref-line = '18';
+        sec-mem-ref-name = 'ConfigLoader::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1acae62ea8352c83867d959d43d4ab9f4c';
+        sec-mem-ref-line = '130';
+        sec-mem-ref-name = 'ConfigLoader::save';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1ad2256458892609d0533df5d72a7257ad';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'config';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigParser()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '31';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7a6155c2098004d5ab0b8f2d3af3e113';
+        sec-mem-ref-line = '18';
+        sec-mem-ref-name = 'ConfigLoader::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1abed0cf7656247d034889dcc21ef8c6a0';
+        sec-mem-ref-line = '37';
+        sec-mem-ref-name = 'ConfigLoader::_get_section';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7d154bd053db94b568c798db781cfd5f';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'ConfigLoader::get';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a09c74ea531b0cec9eb946584f410edb5';
+        sec-mem-ref-line = '99';
+        sec-mem-ref-name = 'ConfigLoader::getboolean';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a2a14fa245a24ab133db7b55ea8685749';
+        sec-mem-ref-line = '82';
+        sec-mem-ref-name = 'ConfigLoader::getfloat';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a67be17ee9918ab4d6d7f69b5cc278c96';
+        sec-mem-ref-line = '66';
+        sec-mem-ref-name = 'ConfigLoader::getint';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a1a78dec9873122811bcdf77fc7d24008';
+        sec-mem-ref-line = '144';
+        sec-mem-ref-name = 'ConfigLoader::print_config';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1acae62ea8352c83867d959d43d4ab9f4c';
+        sec-mem-ref-line = '130';
+        sec-mem-ref-name = 'ConfigLoader::save';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a9a826d3e8bc5862608b2d01f20b7fa4e';
+        sec-mem-ref-line = '115';
+        sec-mem-ref-name = 'ConfigLoader::set';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'protected-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'db/dd3/class_config_loader_1_1_config_loader_1abed0cf7656247d034889dcc21ef8c6a0';
+      sec-mem-virt = normal;
+      sec-mem-prot = protected;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '_get_section';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+str
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'section';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      sec-mem-desc-line = '37';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Retrieve all key-value pairs in a section of the configuration file.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param section The section name to retrieve the key-value pairs for.
+
+@return A dictionary containing all key-value pairs in the specified section.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1ad2256458892609d0533df5d72a7257ad';
+        sec-mem-ref-line = '31';
+        sec-mem-ref-name = 'ConfigLoader::config';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7d154bd053db94b568c798db781cfd5f';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'ConfigLoader::get';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/d28/_config_loader_8py_1a7a6155c2098004d5ab0b8f2d3af3e113';
+        sec-mem-ref-line = '18';
+        sec-mem-ref-name = 'ConfigLoader::__init__';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+  cp-fileline  = '11';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+ConfigLoader class.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+Class for loading and managing configuration files.
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'd5/db6/class_field_1_1_field';
+  cp-name   = 'Field::Field';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1aa17a3741b6e63e63486b25bb33f3a815';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__init__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+length_m
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'length_m';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+width_m
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'width_m';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rows
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'rows';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+cols
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'cols';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'rx';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'ry';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'alpha';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'beta';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Wm';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Deltat';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+line
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'line';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+field
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'field';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '21';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Constructor for Field class.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param length_m Length of the field in meters.
+@param width_m Width of the field in meters.
+@param rows Number of rows in the field.
+@param cols Number of columns in the field.
+@param rx Radius of watering in meters.
+@param ry Radius of watering in meters.
+@param alpha Coefficient for watering.
+@param beta Coefficient for watering.
+@param Wm Maximum watering in meters.
+@param Deltat Time step.
+@param line Line index of watering machine.
+@param field 2D np.array, optional
+ \ilinebr\ilinebr Initializes the field with the given parameters and sets the moisture level of each cell to a random value between 0 and 1.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a62197192f0fbf4e0675eb37be1c4c175';
+        sec-mem-ref-line = '48';
+        sec-mem-ref-name = 'Field::alpha';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ab146b9cbab6e73e7588b240dc709fe01';
+        sec-mem-ref-line = '49';
+        sec-mem-ref-name = 'Field::beta';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a740a397cf313a669e46c437f3dc93856';
+        sec-mem-ref-line = '56';
+        sec-mem-ref-name = 'Field::cell_length_m';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a80362c7cea52fc527aa6a11fc4779590';
+        sec-mem-ref-line = '57';
+        sec-mem-ref-name = 'Field::cell_width_m';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aaed057ed424ced7429016ec18c2edbb6';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'Field::cols';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a3b64b79b66d63d36333c250fa32eeb32';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'Field::Deltat';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ad62af17df5486963eef933792624216d';
+        sec-mem-ref-line = '53';
+        sec-mem-ref-name = 'Field::field';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aafb872fd0652cd371ec28b8053b6cec5';
+        sec-mem-ref-line = '54';
+        sec-mem-ref-name = 'Field::length_m';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a41ebd28ef1d7c6ade45642cb6acc1039';
+        sec-mem-ref-line = '52';
+        sec-mem-ref-name = 'Field::line';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a6809f4824137194e937c06f271daa55c';
+        sec-mem-ref-line = '98';
+        sec-mem-ref-name = 'Field::randomize_field';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a74742cb5c8e2ac354a60cb73383d8176';
+        sec-mem-ref-line = '44';
+        sec-mem-ref-name = 'Field::rows';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a8e5b33bf1e98bb467edc31c48fde245f';
+        sec-mem-ref-line = '46';
+        sec-mem-ref-name = 'Field::rx';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a2ec4e03516e45951524ac89aec22c9ad';
+        sec-mem-ref-line = '58';
+        sec-mem-ref-name = 'Field::rx_cells';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a44e6641f3ca0341724a1e46d2883529d';
+        sec-mem-ref-line = '47';
+        sec-mem-ref-name = 'Field::ry';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a4b6ac60d8a6461733096f1606fc321fc';
+        sec-mem-ref-line = '59';
+        sec-mem-ref-name = 'Field::ry_cells';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a06211f93b6ee4a017b04f095fe476f5c';
+        sec-mem-ref-line = '55';
+        sec-mem-ref-name = 'Field::width_m';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a93bb0eb2a89bbfff7c072421091d7a1e';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'Field::Wm';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a5a273656ad067ac653b517c8d75f7c56';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'calc_base';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+func
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'func';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'a';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+2
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'b';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.3
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'c';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+3
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '63';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Calculate the base value of the field.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param func Function to calculate the base value.
+@param a Parameter a.
+@param b Parameter b.
+@param c Parameter c.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ad62af17df5486963eef933792624216d';
+        sec-mem-ref-line = '53';
+        sec-mem-ref-name = 'Field::field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a4a3d091289c5d4a7ed11e07ab4886155';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__getitem__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+index
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'index';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '76';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a5828487ae7a7d6a5ad234e6a8b0a1cfd';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__setitem__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+index
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'index';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+value
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'value';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '82';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a40b37c981a056437fd94276341c63fe8';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__str__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '91';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a6809f4824137194e937c06f271daa55c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'randomize_field';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+MAX_V
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'MAX_V';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.4123
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+MIN_V
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'MIN_V';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.0
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '98';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Randomize the field.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param MAX_V Maximum water level.
+@param MIN_V Minimum water level.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aaed057ed424ced7429016ec18c2edbb6';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'Field::cols';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ad62af17df5486963eef933792624216d';
+        sec-mem-ref-line = '53';
+        sec-mem-ref-name = 'Field::field';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a41ebd28ef1d7c6ade45642cb6acc1039';
+        sec-mem-ref-line = '52';
+        sec-mem-ref-name = 'Field::line';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a74742cb5c8e2ac354a60cb73383d8176';
+        sec-mem-ref-line = '44';
+        sec-mem-ref-name = 'Field::rows';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1af132f622b4525c23598a68f1440d512b';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'avg_field';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+field
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'field';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '111';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Calculate the average water level in the field.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param field 2D np.array, optional
+ \ilinebr\ilinebr Calculates the average water level in the field.
+
+@return float
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ad62af17df5486963eef933792624216d';
+        sec-mem-ref-line = '53';
+        sec-mem-ref-name = 'Field::field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a808f5711a554c73d39a75245924d311e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'update_cell';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+r
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'r';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'c';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'x';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'v';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '126';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Update the moisture level of a cell in the field.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param r Row index of the cell.
+@param c Column index of the cell.
+@param x Current position of watering machine.
+@param w Watering intensity.
+@param v Water level.
+
+@return float
+ \ilinebr\ilinebr Updates the moisture level of a cell in the field based on the current position of the watering machine, the watering intensity, and the water level.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a62197192f0fbf4e0675eb37be1c4c175';
+        sec-mem-ref-line = '48';
+        sec-mem-ref-name = 'Field::alpha';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ab146b9cbab6e73e7588b240dc709fe01';
+        sec-mem-ref-line = '49';
+        sec-mem-ref-name = 'Field::beta';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a3b64b79b66d63d36333c250fa32eeb32';
+        sec-mem-ref-line = '51';
+        sec-mem-ref-name = 'Field::Deltat';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1ad62af17df5486963eef933792624216d';
+        sec-mem-ref-line = '53';
+        sec-mem-ref-name = 'Field::field';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a41ebd28ef1d7c6ade45642cb6acc1039';
+        sec-mem-ref-line = '52';
+        sec-mem-ref-name = 'Field::line';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a93bb0eb2a89bbfff7c072421091d7a1e';
+        sec-mem-ref-line = '50';
+        sec-mem-ref-name = 'Field::Wm';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1aa71bd10a6ea401f2ede55df99644b2ba';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'parallel_update_field';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'x';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'v';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '148';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@iverbatim 
+
+@param x Current position of watering machine.
+@param w Watering intensity.
+@param v Water level.
+@return List of changes in the field.
+@details Updates the moisture level of cells in the field based on the current position of the watering machine, the watering intensity, and the water level.
+
+@endiverbatim 
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aaed057ed424ced7429016ec18c2edbb6';
+        sec-mem-ref-line = '45';
+        sec-mem-ref-name = 'Field::cols';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a41ebd28ef1d7c6ade45642cb6acc1039';
+        sec-mem-ref-line = '52';
+        sec-mem-ref-name = 'Field::line';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a74742cb5c8e2ac354a60cb73383d8176';
+        sec-mem-ref-line = '44';
+        sec-mem-ref-name = 'Field::rows';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a2ec4e03516e45951524ac89aec22c9ad';
+        sec-mem-ref-line = '58';
+        sec-mem-ref-name = 'Field::rx_cells';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a4b6ac60d8a6461733096f1606fc321fc';
+        sec-mem-ref-line = '59';
+        sec-mem-ref-name = 'Field::ry_cells';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a74742cb5c8e2ac354a60cb73383d8176';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'rows';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  rows
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '44';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a6809f4824137194e937c06f271daa55c';
+        sec-mem-ref-line = '98';
+        sec-mem-ref-name = 'Field::randomize_field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1aaed057ed424ced7429016ec18c2edbb6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'cols';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  cols
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '45';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a6809f4824137194e937c06f271daa55c';
+        sec-mem-ref-line = '98';
+        sec-mem-ref-name = 'Field::randomize_field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a8e5b33bf1e98bb467edc31c48fde245f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'rx';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  rx
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '46';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a44e6641f3ca0341724a1e46d2883529d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ry';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ry
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '47';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a62197192f0fbf4e0675eb37be1c4c175';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'alpha';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  alpha
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '48';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1ab146b9cbab6e73e7588b240dc709fe01';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'beta';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  beta
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '49';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a93bb0eb2a89bbfff7c072421091d7a1e';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Wm';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Wm
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '50';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a3b64b79b66d63d36333c250fa32eeb32';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Deltat';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Deltat
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '51';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a41ebd28ef1d7c6ade45642cb6acc1039';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+int
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'line';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  line if line is not None else self.rows // 2
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '52';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a6809f4824137194e937c06f271daa55c';
+        sec-mem-ref-line = '98';
+        sec-mem-ref-name = 'Field::randomize_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1ad62af17df5486963eef933792624216d';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'field';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  field if field is not None else self.randomize_field()
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '53';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1af132f622b4525c23598a68f1440d512b';
+        sec-mem-ref-line = '111';
+        sec-mem-ref-name = 'Field::avg_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a5a273656ad067ac653b517c8d75f7c56';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'Field::calc_base';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a6809f4824137194e937c06f271daa55c';
+        sec-mem-ref-line = '98';
+        sec-mem-ref-name = 'Field::randomize_field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1a808f5711a554c73d39a75245924d311e';
+        sec-mem-ref-line = '126';
+        sec-mem-ref-name = 'Field::update_cell';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1aafb872fd0652cd371ec28b8053b6cec5';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'length_m';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  length_m
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '54';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a06211f93b6ee4a017b04f095fe476f5c';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'width_m';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  width_m
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '55';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a740a397cf313a669e46c437f3dc93856';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'cell_length_m';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  length_m / cols
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '56';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a80362c7cea52fc527aa6a11fc4779590';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'cell_width_m';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  width_m / rows
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '57';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a2ec4e03516e45951524ac89aec22c9ad';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'rx_cells';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  int(self.rx / self.cell_length_m)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '58';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd5/db6/class_field_1_1_field_1a4b6ac60d8a6461733096f1606fc321fc';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'ry_cells';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  int(self.ry / self.cell_width_m)
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Field.py';
+      sec-mem-desc-line = '59';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa17a3741b6e63e63486b25bb33f3a815';
+        sec-mem-ref-line = '21';
+        sec-mem-ref-name = 'Field::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd4/def/_field_8py_1aa71bd10a6ea401f2ede55df99644b2ba';
+        sec-mem-ref-line = '148';
+        sec-mem-ref-name = 'Field::parallel_update_field';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/GIT/diplom/Code/Classes/Field.py';
+  cp-fileline  = '14';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+Field class.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+Class for representing a field with a grid of cells.
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+class = {
+  cp-id     = 'd1/db9/class_optimizer_1_1_gradient_optimizer';
+  cp-name   = 'Optimizer::GradientOptimizer';
+  cp-section = {
+    sec-kind = 'public-func';
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1aebcc184bc32a45e1d88f7171cd8ac62f';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = '__init__';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+l_r
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'l_r';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eps
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'eps';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+max_iter
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'max_iter';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+save
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'save';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+False
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+**
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-declname = 'params';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '41';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Constructor.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param l_r Learning rate.
+@param eps Epsilon.
+@param max_iter Maximum number of iterations.
+@param save Save optimization info.
+@param params Parameters for optimization. - Field, a, b, c, base
+@Field Field
+@a a
+@b b
+@c c
+@base base function
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1adc2185da0dc4b67332d77d61d41d56c5';
+        sec-mem-ref-line = '61';
+        sec-mem-ref-name = 'GradientOptimizer::eps';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1abe0c056baaf5ec25fcd2ff61a7550fff';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'GradientOptimizer::info';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a1174d6d41f90c8ffd5b2f84154bdadd3';
+        sec-mem-ref-line = '60';
+        sec-mem-ref-name = 'GradientOptimizer::l_r';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a2288708f1e379fb721b4b374ce4dece6';
+        sec-mem-ref-line = '62';
+        sec-mem-ref-name = 'GradientOptimizer::max_iter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a41000f175dc0115080e2a682cc06dbe9';
+        sec-mem-ref-line = '75';
+        sec-mem-ref-name = 'GradientOptimizer::params';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1afe343e9c5415974b74f2804f52eaaaab';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'GradientOptimizer::save';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1a9db35f33facd7619f29a4a76b7e091af';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Gradient_Max_step';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Field';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'x_cur';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'v';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 't_k';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Ms
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Ms';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Mr
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Mr';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'eta';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'delta';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'b';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'gamma';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'lmbda';
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '87';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gradient Max step.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w Current w.
+@param v Current v.
+@param t_k Current t_k.
+@param Ms Maximum value for v.
+@param Mr Maximum relative change for v.
+@param eta Eta.
+@param delta Delta.
+@param a A.
+@param b B.
+@param gamma Gamma.
+@param lmbda Lambda.
+@return New w and v.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/d7f/_funcs_8py_1a80b93b6b7e1123f89ffad64a72acbc06';
+        sec-mem-ref-line = '150';
+        sec-mem-ref-name = 'Funcs::dGkdv';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/d7f/_funcs_8py_1ae5c9974d6e485df93dd2249ed6cd801a';
+        sec-mem-ref-line = '105';
+        sec-mem-ref-name = 'Funcs::dGkdw';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1adc2185da0dc4b67332d77d61d41d56c5';
+        sec-mem-ref-line = '61';
+        sec-mem-ref-name = 'GradientOptimizer::eps';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd4/d7f/_funcs_8py_1a9b2b0e99d261b02ee529c42d8ab7814f';
+        sec-mem-ref-line = '13';
+        sec-mem-ref-name = 'Funcs::exp_step';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1abe0c056baaf5ec25fcd2ff61a7550fff';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'GradientOptimizer::info';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a1174d6d41f90c8ffd5b2f84154bdadd3';
+        sec-mem-ref-line = '60';
+        sec-mem-ref-name = 'GradientOptimizer::l_r';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a2288708f1e379fb721b4b374ce4dece6';
+        sec-mem-ref-line = '62';
+        sec-mem-ref-name = 'GradientOptimizer::max_iter';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1afe343e9c5415974b74f2804f52eaaaab';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'GradientOptimizer::save';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a4212b4d9598608078ee64da50f2b90ab';
+        sec-mem-ref-line = '165';
+        sec-mem-ref-name = 'GradientOptimizer::Gradien_max_Field';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'function';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1a4212b4d9598608078ee64da50f2b90ab';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'Gradien_max_Field';
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+self
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'self';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Field';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'x';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'w';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'v';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 't_k';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Mr
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Mr';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Ms
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Ms';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'eta';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'delta';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'a';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'b';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'gamma';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'lmbda';
+      }; /*        sec-mem-param--param */
+      sec-mem-param = {
+        sec-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        sec-mem-param-defname = 'Water';
+        sec-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        sec-mem-param--param */
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '165';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Gradient max field.
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x Current x.
+@param w Current w.
+@param v Current v.
+@param t_k Current t_k.
+@param Mr Maximum relative change for v.
+@param Ms Maximum value for v.
+@param eta Eta.
+@param delta Delta.
+@param a A.
+@param b B.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param Water Water.
+@return Water
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1abe0c056baaf5ec25fcd2ff61a7550fff';
+        sec-mem-ref-line = '63';
+        sec-mem-ref-name = 'GradientOptimizer::info';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a41000f175dc0115080e2a682cc06dbe9';
+        sec-mem-ref-line = '75';
+        sec-mem-ref-name = 'GradientOptimizer::params';
+    };
+      sec-mem-referenceto = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1afe343e9c5415974b74f2804f52eaaaab';
+        sec-mem-ref-line = '64';
+        sec-mem-ref-name = 'GradientOptimizer::save';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-section = {
+    sec-kind = 'public-attrib';
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1a1174d6d41f90c8ffd5b2f84154bdadd3';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'l_r';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  l_r
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '60';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1adc2185da0dc4b67332d77d61d41d56c5';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'eps';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  eps
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '61';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1a2288708f1e379fb721b4b374ce4dece6';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'max_iter';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  max_iter
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '62';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1abe0c056baaf5ec25fcd2ff61a7550fff';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+dict
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'info';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  {}
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '63';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a4212b4d9598608078ee64da50f2b90ab';
+        sec-mem-ref-line = '165';
+        sec-mem-ref-name = 'GradientOptimizer::Gradien_max_Field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1afe343e9c5415974b74f2804f52eaaaab';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'save';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  save
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '64';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a4212b4d9598608078ee64da50f2b90ab';
+        sec-mem-ref-line = '165';
+        sec-mem-ref-name = 'GradientOptimizer::Gradien_max_Field';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        sec-mem-ref-line = '87';
+        sec-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* sec-member */
+    sec-member = {
+      sec-mem-kind = 'variable';
+      sec-mem-id   = 'd1/db9/class_optimizer_1_1_gradient_optimizer_1a41000f175dc0115080e2a682cc06dbe9';
+      sec-mem-virt = normal;
+      sec-mem-prot = public;
+      sec-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-name = 'params';
+      sec-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  params
+_EnD_oF_dEf_TeXt_;
+      sec-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      sec-mem-desc-line = '75';
+      sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1aebcc184bc32a45e1d88f7171cd8ac62f';
+        sec-mem-ref-line = '41';
+        sec-mem-ref-name = 'GradientOptimizer::__init__';
+    };
+      sec-mem-referencedby = {
+        sec-mem-ref-id = 'd7/de0/_optimizer_8py_1a4212b4d9598608078ee64da50f2b90ab';
+        sec-mem-ref-line = '165';
+        sec-mem-ref-name = 'GradientOptimizer::Gradien_max_Field';
+    };
+    }; /* sec-member */
+  }; /* cp-section */
+  cp-filename  = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+  cp-fileline  = '35';
+  cp-briefdesc = <<_EnD_oF_dEf_TeXt_
+GradientOptimizer class.
+_EnD_oF_dEf_TeXt_;
+  cp-documentation = <<_EnD_oF_dEf_TeXt_
+Class for gradient optimization.
+_EnD_oF_dEf_TeXt_;
+}; /* class */
+file = {
+  file-id   = 'd7/d28/_config_loader_8py';
+  file-name = 'ConfigLoader.py';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'dc/d07/namespace_config_loader_1af29c17a491542dd42f84d71566eb0ca8';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader("../config.ini")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      var-mem-desc-line = '160';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the ConfigLoader class, which is used to load and manage configuration files.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version v1a
+@date 15.02.2025
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'd4/def/_field_8py';
+  file-name = 'Field.py';
+  file-full-name  = 'D:/GIT/diplom/Code/Classes/Field.py';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains the Field class, which is used to represent a field with a grid of cells.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version v1a
+@date 15.02.2025
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'd4/d7f/_funcs_8py';
+  file-name = 'Funcs.py';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a9b2b0e99d261b02ee529c42d8ab7814f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'exp_step';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+l_0
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'l_0';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+step
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'step';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.05
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '13';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Exponential step.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param l_0 Initial value.
+@param step Step.
+@param lmbda Lambda.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a12f0b5c7405890358431b8a83a82819f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'poly_step';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+l_0
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'l_0';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+step
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'step';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.5
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+1
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Polynomial step.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param l_0 Initial value.
+@param step Step.
+@param alpha Alpha.
+@param beta Beta.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a91667077074ca6ae6e541474cd832ffa';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'base';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '36';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Base function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param a A.
+@param b B.
+@param c C.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a4386136e854f2da3c3f181e880884fb0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'Gk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c_
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c_';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '55';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param c_ C.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param Water Water.
+@return Goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'Funcs::plot_Gk';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1ae5c9974d6e485df93dd2249ed6cd801a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dGkdw';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '105';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param alpha Alpha.
+@param beta Beta.
+@param Water Water.
+@return Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a80b93b6b7e1123f89ffad64a72acbc06';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dGkdv';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '150';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param Water Water.
+@return Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1aed47335ae230f8da8b0b9b068c56d29d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'plot_Gk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c_
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c_';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+points
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'points';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '198';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Plot the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param c_ C.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param points Points to plot.
+@return None.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1a4386136e854f2da3c3f181e880884fb0';
+        func-mem-ref-line = '55';
+        func-mem-ref-name = 'Funcs::Gk';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'Funcs::plot_Gk';
+    };
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'Funcs::plot_Gk';
+    };
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a3bc2d0e8f37ddc0ea3186354712daaed';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader('../config.ini')
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '252';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a4124bc0a9335c27f086f24ba207a4912';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'a';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a21ad0bd836b90d08f4cf640b4c298e7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'b';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ae0323a9039add2978bf5b49550572c7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'c';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1acf832a343a823969c5d60ff6266f5220';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wp';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ac4055e3a20b6b3af3d10590ea446ef6c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'v';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a530ae7f580da3d1bccd408b028226620';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ms';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1af5d4b8680dad54363c7ec1232eb7d21d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'mr';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a9f463fc1e78c10b047a540fae8f7ce20';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wm';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a62197192f0fbf4e0675eb37be1c4c175';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'alpha';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ab146b9cbab6e73e7588b240dc709fe01';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'beta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a526719d1fe61114dd2eed9b78695b6b3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'lmbda';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a28acc4a90fe6ffb907aa145b7b01326a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a8d00631c9622112f1877fdb1222c242e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gamma';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a66db7c5e4e9699c54207ab857ae72cb7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'delta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1aafb872fd0652cd371ec28b8053b6cec5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'length_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a06211f93b6ee4a017b04f095fe476f5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'width_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a74742cb5c8e2ac354a60cb73383d8176';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rows';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1aaed057ed424ced7429016ec18c2edbb6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'cols';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a8e5b33bf1e98bb467edc31c48fde245f';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rx';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a44e6641f3ca0341724a1e46d2883529d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ry';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a3b64b79b66d63d36333c250fa32eeb32';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Deltat';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Loader.getfloat("Model", "deltat")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ad62af17df5486963eef933792624216d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'field';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '261';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+This file contains functions for the optimization of the goal function.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@version v1a
+@date 15.02.2025
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+file = {
+  file-id   = 'd7/de0/_optimizer_8py';
+  file-name = 'Optimizer.py';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a3bc2d0e8f37ddc0ea3186354712daaed';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader('../config.ini')
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '243';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a4124bc0a9335c27f086f24ba207a4912';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'a';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a21ad0bd836b90d08f4cf640b4c298e7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'b';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ae0323a9039add2978bf5b49550572c7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'c';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1acf832a343a823969c5d60ff6266f5220';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wp';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ac4055e3a20b6b3af3d10590ea446ef6c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'v';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a530ae7f580da3d1bccd408b028226620';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ms';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1af5d4b8680dad54363c7ec1232eb7d21d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'mr';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a9f463fc1e78c10b047a540fae8f7ce20';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wm';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a62197192f0fbf4e0675eb37be1c4c175';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'alpha';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ab146b9cbab6e73e7588b240dc709fe01';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'beta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a526719d1fe61114dd2eed9b78695b6b3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'lmbda';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a28acc4a90fe6ffb907aa145b7b01326a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a8d00631c9622112f1877fdb1222c242e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gamma';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a66db7c5e4e9699c54207ab857ae72cb7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'delta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aafb872fd0652cd371ec28b8053b6cec5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'length_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a06211f93b6ee4a017b04f095fe476f5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'width_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a74742cb5c8e2ac354a60cb73383d8176';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rows';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aaed057ed424ced7429016ec18c2edbb6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'cols';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a8e5b33bf1e98bb467edc31c48fde245f';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rx';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a44e6641f3ca0341724a1e46d2883529d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ry';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a3b64b79b66d63d36333c250fa32eeb32';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Deltat';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Loader.getfloat("Model", "deltat")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '249';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ad62af17df5486963eef933792624216d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'field';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '252';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aa1db3e8300e877f58e8a5ece5ac3436a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'MAX_V';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a6c1ad06aff3de18cf7c74f23edfb561c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'MIN_V';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a1174d6d41f90c8ffd5b2f84154bdadd3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'l_r';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1adc2185da0dc4b67332d77d61d41d56c5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eps';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a2288708f1e379fb721b4b374ce4dece6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'max_iter';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ac51a546ca1c65cb823e989df48e88bbd';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gd';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  GradientOptimizer(l_r, eps, max_iter, save=False, field = field, a = a, b = b, c = c, base = base)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '260';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  file-full-name  = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+  file-first-line = '1';
+  file-briefdesc  = <<_EnD_oF_dEf_TeXt_
+Class for gradient optimization.
+_EnD_oF_dEf_TeXt_;
+  file-documentation = <<_EnD_oF_dEf_TeXt_
+@author   Georgii 
+@version v1a
+@date 15.02.2025
+_EnD_oF_dEf_TeXt_;
+}; /* file */
+  namespace = {
+    ns-id   = 'dc/d07/namespace_config_loader';
+    ns-name = 'ConfigLoader';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'dc/d07/namespace_config_loader_1af29c17a491542dd42f84d71566eb0ca8';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader("../config.ini")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+      var-mem-desc-line = '160';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  ns-filename  = 'D:/GIT/diplom/Code/Classes/ConfigLoader.py';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+Class for loading and managing configuration files.
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'd0/dfa/namespace_field';
+    ns-name = 'Field';
+  ns-filename  = 'D:/GIT/diplom/Code/Classes/Field.py';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+Class for representing a field with a grid of cells.
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'da/d82/namespace_funcs';
+    ns-name = 'Funcs';
+    func = {
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a9b2b0e99d261b02ee529c42d8ab7814f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'exp_step';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+l_0
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'l_0';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+step
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'step';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.05
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '13';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Exponential step.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param l_0 Initial value.
+@param step Step.
+@param lmbda Lambda.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a12f0b5c7405890358431b8a83a82819f';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'poly_step';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+l_0
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'l_0';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+step
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'step';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0.5
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+1
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '24';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Polynomial step.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param l_0 Initial value.
+@param step Step.
+@param alpha Alpha.
+@param beta Beta.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a91667077074ca6ae6e541474cd832ffa';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'base';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c';
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '36';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Base function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param a A.
+@param b B.
+@param c C.
+_EnD_oF_dEf_TeXt_;
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a4386136e854f2da3c3f181e880884fb0';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'Gk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c_
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c_';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '55';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param c_ C.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param Water Water.
+@return Goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'plot_Gk';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1ae5c9974d6e485df93dd2249ed6cd801a';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dGkdw';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '105';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param alpha Alpha.
+@param beta Beta.
+@param Water Water.
+@return Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1a80b93b6b7e1123f89ffad64a72acbc06';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'dGkdv';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+w
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'w';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+v
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'v';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Water
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Water';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+0
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '150';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param w W.
+@param v V.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param Water Water.
+@return Derivative of the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd7/de0/_optimizer_8py_1a9db35f33facd7619f29a4a76b7e091af';
+        func-mem-ref-line = '87';
+        func-mem-ref-name = 'GradientOptimizer::Gradient_Max_step';
+    };
+    }; /* func-member */
+    func-member = {
+      func-mem-kind = 'function';
+      func-mem-id   = 'da/d82/namespace_funcs_1aed47335ae230f8da8b0b9b068c56d29d';
+      func-mem-virt = normal;
+      func-mem-prot = public;
+      func-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      func-mem-name = 'plot_Gk';
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Field
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Field';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+x_cur
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'x_cur';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+t_k
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 't_k';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+eta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'eta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Wm
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Wm';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Deltat
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Deltat';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+delta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'delta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+rx
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'rx';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+ry_cells
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'ry_cells';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+Line
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'Line';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+a
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'a';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+b
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'b';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+c_
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'c_';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+alpha
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'alpha';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+beta
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'beta';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+gamma
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'gamma';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+lmbda
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'lmbda';
+      }; /*        func-mem-param--param */
+      func-mem-param = {
+        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
+points
+_EnD_oF_dEf_TeXt_;
+        func-mem-param-defname = 'points';
+        func-mem-param-defval = <<_EnD_oF_dEf_TeXt_
+None
+_EnD_oF_dEf_TeXt_;
+      }; /*        func-mem-param--param */
+      func-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      func-mem-desc-line = '198';
+      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+Plot the goal function.
+_EnD_oF_dEf_TeXt_;
+      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
+@param Field Field.
+@param x_cur Current x.
+@param t_k T_k.
+@param eta Eta.
+@param Wm Wm.
+@param Deltat Delta t.
+@param delta Delta.
+@param rx Rx.
+@param ry Ry.
+@param ry_cells Ry cells.
+@param Line Line.
+@param a A.
+@param b B.
+@param c_ C.
+@param alpha Alpha.
+@param beta Beta.
+@param gamma Gamma.
+@param lmbda Lambda.
+@param points Points to plot.
+@return None.
+_EnD_oF_dEf_TeXt_;
+      func-mem-referenceto = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1a4386136e854f2da3c3f181e880884fb0';
+        func-mem-ref-line = '55';
+        func-mem-ref-name = 'Gk';
+    };
+      func-mem-referenceto = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'plot_Gk';
+    };
+      func-mem-referencedby = {
+        func-mem-ref-id = 'd4/d7f/_funcs_8py_1aed47335ae230f8da8b0b9b068c56d29d';
+        func-mem-ref-line = '198';
+        func-mem-ref-name = 'plot_Gk';
+    };
+    }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a3bc2d0e8f37ddc0ea3186354712daaed';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader('../config.ini')
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '252';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a4124bc0a9335c27f086f24ba207a4912';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'a';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a21ad0bd836b90d08f4cf640b4c298e7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'b';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ae0323a9039add2978bf5b49550572c7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'c';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1acf832a343a823969c5d60ff6266f5220';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wp';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ac4055e3a20b6b3af3d10590ea446ef6c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'v';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a530ae7f580da3d1bccd408b028226620';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ms';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1af5d4b8680dad54363c7ec1232eb7d21d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'mr';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a9f463fc1e78c10b047a540fae8f7ce20';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wm';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a62197192f0fbf4e0675eb37be1c4c175';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'alpha';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ab146b9cbab6e73e7588b240dc709fe01';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'beta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a526719d1fe61114dd2eed9b78695b6b3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'lmbda';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a28acc4a90fe6ffb907aa145b7b01326a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a8d00631c9622112f1877fdb1222c242e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gamma';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a66db7c5e4e9699c54207ab857ae72cb7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'delta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1aafb872fd0652cd371ec28b8053b6cec5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'length_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a06211f93b6ee4a017b04f095fe476f5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'width_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a74742cb5c8e2ac354a60cb73383d8176';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rows';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1aaed057ed424ced7429016ec18c2edbb6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'cols';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a8e5b33bf1e98bb467edc31c48fde245f';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rx';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a44e6641f3ca0341724a1e46d2883529d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ry';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '256';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1a3b64b79b66d63d36333c250fa32eeb32';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Deltat';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Loader.getfloat("Model", "deltat")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'da/d82/namespace_funcs_1ad62af17df5486963eef933792624216d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'field';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+      var-mem-desc-line = '261';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  ns-filename  = 'D:/GIT/diplom/Code/Classes/Funcs.py';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+Functions for the optimization of the goal function.
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+  };
+  namespace = {
+    ns-id   = 'd2/d47/namespace_optimizer';
+    ns-name = 'Optimizer';
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a3bc2d0e8f37ddc0ea3186354712daaed';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Loader';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  ConfigLoader('../config.ini')
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '243';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a4124bc0a9335c27f086f24ba207a4912';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'a';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a21ad0bd836b90d08f4cf640b4c298e7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'b';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ae0323a9039add2978bf5b49550572c7c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'c';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1acf832a343a823969c5d60ff6266f5220';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wp';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ac4055e3a20b6b3af3d10590ea446ef6c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'v';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a530ae7f580da3d1bccd408b028226620';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ms';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1af5d4b8680dad54363c7ec1232eb7d21d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'mr';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a9f463fc1e78c10b047a540fae8f7ce20';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'wm';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a62197192f0fbf4e0675eb37be1c4c175';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'alpha';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ab146b9cbab6e73e7588b240dc709fe01';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'beta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a526719d1fe61114dd2eed9b78695b6b3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'lmbda';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a28acc4a90fe6ffb907aa145b7b01326a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a8d00631c9622112f1877fdb1222c242e';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gamma';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a66db7c5e4e9699c54207ab857ae72cb7';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'delta';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '245';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aafb872fd0652cd371ec28b8053b6cec5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'length_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a06211f93b6ee4a017b04f095fe476f5c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'width_m';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a74742cb5c8e2ac354a60cb73383d8176';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rows';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aaed057ed424ced7429016ec18c2edbb6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'cols';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a8e5b33bf1e98bb467edc31c48fde245f';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'rx';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a44e6641f3ca0341724a1e46d2883529d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'ry';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '247';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a3b64b79b66d63d36333c250fa32eeb32';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'Deltat';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Loader.getfloat("Model", "deltat")
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '249';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ad62af17df5486963eef933792624216d';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'field';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  Field(length_m=length_m, width_m=width_m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '252';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1aa1db3e8300e877f58e8a5ece5ac3436a';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'MAX_V';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a6c1ad06aff3de18cf7c74f23edfb561c';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'MIN_V';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '254';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a1174d6d41f90c8ffd5b2f84154bdadd3';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'l_r';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1adc2185da0dc4b67332d77d61d41d56c5';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'eps';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1a2288708f1e379fb721b4b374ce4dece6';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'max_iter';
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '258';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'd2/d47/namespace_optimizer_1ac51a546ca1c65cb823e989df48e88bbd';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'gd';
+      var-mem-initializer = <<_EnD_oF_dEf_TeXt_
+=  GradientOptimizer(l_r, eps, max_iter, save=False, field = field, a = a, b = b, c = c, base = base)
+_EnD_oF_dEf_TeXt_;
+      var-mem-desc-file = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+      var-mem-desc-line = '260';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
+    };
+  ns-filename  = 'D:/GIT/diplom/Code/Classes/Optimizer.py';
+  ns-fileline  = '1';
+  ns-briefdesc = <<_EnD_oF_dEf_TeXt_
+Class for gradient optimization.
+_EnD_oF_dEf_TeXt_;
+  ns-documentation = <<_EnD_oF_dEf_TeXt_
+@author Georgii
+_EnD_oF_dEf_TeXt_;
+  };

@@ -3,12 +3,35 @@
   "WorkspaceRootPath": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\Func.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\ModelParams.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\GDOptimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\GDOptimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\Field.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Optimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\Optimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\ModelParams.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\Field.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\DIPLIM_console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\DIPLIM_console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.43.34808\\include\\any||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,44 +44,107 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GDOptimizer.cpp",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\GDOptimizer.cpp",
+              "RelativeDocumentMoniker": "DIPLIM_console\\GDOptimizer.cpp",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\GDOptimizer.cpp",
+              "RelativeToolTip": "DIPLIM_console\\GDOptimizer.cpp",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBIAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T21:21:01.193Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Optimizer.h",
-              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Optimizer.h",
-              "RelativeDocumentMoniker": "DIPLIM_console\\Optimizer.h",
-              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Optimizer.h",
-              "RelativeToolTip": "DIPLIM_console\\Optimizer.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Func.cpp",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Func.cpp",
+              "RelativeDocumentMoniker": "DIPLIM_console\\Func.cpp",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Func.cpp",
+              "RelativeToolTip": "DIPLIM_console\\Func.cpp",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAQwCIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-15T00:45:52.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Field.h",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.h",
+              "RelativeDocumentMoniker": "DIPLIM_console\\Field.h",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.h",
+              "RelativeToolTip": "DIPLIM_console\\Field.h",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwFkAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T11:13:20.732Z",
+              "WhenOpened": "2025-03-14T22:23:40.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ModelParams.h",
-              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.h",
-              "RelativeDocumentMoniker": "DIPLIM_console\\ModelParams.h",
-              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.h",
-              "RelativeToolTip": "DIPLIM_console\\ModelParams.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-14T10:18:04.488Z",
+              "Title": "ModelParams.cpp",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.cpp",
+              "RelativeDocumentMoniker": "DIPLIM_console\\ModelParams.cpp",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ModelParams.cpp",
+              "RelativeToolTip": "DIPLIM_console\\ModelParams.cpp",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAEYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T21:31:10.253Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 210,
-          "SelectedChildIndex": -1,
-          "Children": [
+            },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Field.cpp",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.cpp",
+              "RelativeDocumentMoniker": "DIPLIM_console\\Field.cpp",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Field.cpp",
+              "RelativeToolTip": "DIPLIM_console\\Field.cpp",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAQwKwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T21:32:53.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "any",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.43.34808\\include\\any",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Tools\\MSVC\\14.43.34808\\include\\any",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-03-14T21:32:13.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Optimizer.h",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Optimizer.h",
+              "RelativeDocumentMoniker": "DIPLIM_console\\Optimizer.h",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\Optimizer.h",
+              "RelativeToolTip": "DIPLIM_console\\Optimizer.h",
+              "ViewState": "AgIAACYAAAAAAAAAAIAwwCgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T21:23:30.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DIPLIM_console.cpp",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\DIPLIM_console.cpp",
+              "RelativeDocumentMoniker": "DIPLIM_console\\DIPLIM_console.cpp",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\DIPLIM_console.cpp",
+              "RelativeToolTip": "DIPLIM_console\\DIPLIM_console.cpp",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAQwDwAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-14T21:20:17.706Z",
+              "EditorCaption": ""
             }
           ]
         }

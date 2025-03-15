@@ -16,7 +16,7 @@ backup/
 *.db*
 *.ipch
 *.exe
-
+~AutoRecover*
 /cppCode/DIPLIM_console/DIPLIM_console/x64/
 cppCode/DIPLIM_console/.vs/DIPLIM_console/v17/Browse.VC.opendb
 cppCode/DIPLIM_console/.vs/DIPLIM_console/v17/.suo

@@ -1,0 +1,275 @@
+\doxysection{Gradient\+Optimizer Class Reference}
+\hypertarget{class_optimizer_1_1_gradient_optimizer}{}\label{class_optimizer_1_1_gradient_optimizer}\index{GradientOptimizer@{GradientOptimizer}}
+
+
+\doxylink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer} class.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_aebcc184bc32a45e1d88f7171cd8ac62f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, l\+\_\+r, eps, max\+\_\+iter, save=False, \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}params)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_a9db35f33facd7619f29a4a76b7e091af}{Gradient\+\_\+\+Max\+\_\+step}} (self, \mbox{\hyperlink{class_field_1_1_field}{Field}}, x\+\_\+cur, w, v, t\+\_\+k, Ms, Mr, eta, delta, a, b, gamma, lmbda)
+\begin{DoxyCompactList}\small\item\em Gradient Max step. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_a4212b4d9598608078ee64da50f2b90ab}{Gradien\+\_\+max\+\_\+\+Field}} (self, \mbox{\hyperlink{class_field_1_1_field}{Field}}, x, w, v, t\+\_\+k, Mr, Ms, eta, delta, a, b, gamma, lmbda, Water=0)
+\begin{DoxyCompactList}\small\item\em Gradient max field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3}{l\+\_\+r}} = l\+\_\+r
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_adc2185da0dc4b67332d77d61d41d56c5}{eps}} = eps
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_a2288708f1e379fb721b4b374ce4dece6}{max\+\_\+iter}} = max\+\_\+iter
+\item 
+dict \mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_abe0c056baaf5ec25fcd2ff61a7550fff}{info}} = \{\}
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_afe343e9c5415974b74f2804f52eaaaab}{save}} = save
+\item 
+\mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer_a41000f175dc0115080e2a682cc06dbe9}{params}} = params
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer} class. 
+
+Class for gradient optimization. 
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00035}{35}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_aebcc184bc32a45e1d88f7171cd8ac62f}\index{GradientOptimizer@{GradientOptimizer}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_aebcc184bc32a45e1d88f7171cd8ac62f} 
+\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{l\+\_\+r}{, }\item[{}]{eps}{, }\item[{}]{max\+\_\+iter}{, }\item[{}]{save}{ = {\ttfamily False}, }\item[{\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{params}{}\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l\+\_\+r} & Learning rate. \\
+\hline
+{\em eps} & Epsilon. \\
+\hline
+{\em max\+\_\+iter} & Maximum number of iterations. \\
+\hline
+{\em save} & Save optimization info. \\
+\hline
+{\em params} & Parameters for optimization. -\/ \doxylink{namespace_field}{Field}, a, b, c, base @\+Field \doxylink{namespace_field}{Field} {\itshape a} {\bfseries{b}} {\ttfamily c} @base base function \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00041}{41}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+References \mbox{\hyperlink{_optimizer_8py_source_l00061}{eps}}, \mbox{\hyperlink{_optimizer_8py_source_l00063}{info}}, \mbox{\hyperlink{_optimizer_8py_source_l00060}{l\+\_\+r}}, \mbox{\hyperlink{_optimizer_8py_source_l00062}{max\+\_\+iter}}, \mbox{\hyperlink{_optimizer_8py_source_l00075}{params}}, and \mbox{\hyperlink{_optimizer_8py_source_l00064}{save}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_a4212b4d9598608078ee64da50f2b90ab}\index{GradientOptimizer@{GradientOptimizer}!Gradien\_max\_Field@{Gradien\_max\_Field}}
+\index{Gradien\_max\_Field@{Gradien\_max\_Field}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{Gradien\_max\_Field()}{Gradien\_max\_Field()}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_a4212b4d9598608078ee64da50f2b90ab} 
+Gradien\+\_\+max\+\_\+\+Field (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Field}{, }\item[{}]{x}{, }\item[{}]{w}{, }\item[{}]{v}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{Mr}{, }\item[{}]{Ms}{, }\item[{}]{eta}{, }\item[{}]{delta}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{gamma}{, }\item[{}]{lmbda}{, }\item[{}]{Water}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Gradient max field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x} & Current x. \\
+\hline
+{\em w} & Current w. \\
+\hline
+{\em v} & Current v. \\
+\hline
+{\em t\+\_\+k} & Current t\+\_\+k. \\
+\hline
+{\em Mr} & Maximum relative change for v. \\
+\hline
+{\em Ms} & Maximum value for v. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em gamma} & Gamma. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+{\em Water} & Water. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Water 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00165}{165}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+References \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}, \mbox{\hyperlink{_optimizer_8py_source_l00063}{info}}, \mbox{\hyperlink{_optimizer_8py_source_l00075}{params}}, and \mbox{\hyperlink{_optimizer_8py_source_l00064}{save}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_a9db35f33facd7619f29a4a76b7e091af}\index{GradientOptimizer@{GradientOptimizer}!Gradient\_Max\_step@{Gradient\_Max\_step}}
+\index{Gradient\_Max\_step@{Gradient\_Max\_step}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{Gradient\_Max\_step()}{Gradient\_Max\_step()}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_a9db35f33facd7619f29a4a76b7e091af} 
+Gradient\+\_\+\+Max\+\_\+step (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{Field}{, }\item[{}]{x\+\_\+cur}{, }\item[{}]{w}{, }\item[{}]{v}{, }\item[{}]{t\+\_\+k}{, }\item[{}]{Ms}{, }\item[{}]{Mr}{, }\item[{}]{eta}{, }\item[{}]{delta}{, }\item[{}]{a}{, }\item[{}]{b}{, }\item[{}]{gamma}{, }\item[{}]{lmbda}{}\end{DoxyParamCaption})}
+
+
+
+Gradient Max step. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{namespace_field}{Field}} & \doxylink{namespace_field}{Field}. \\
+\hline
+{\em x\+\_\+cur} & Current x. \\
+\hline
+{\em w} & Current w. \\
+\hline
+{\em v} & Current v. \\
+\hline
+{\em t\+\_\+k} & Current t\+\_\+k. \\
+\hline
+{\em Ms} & Maximum value for v. \\
+\hline
+{\em Mr} & Maximum relative change for v. \\
+\hline
+{\em eta} & Eta. \\
+\hline
+{\em delta} & Delta. \\
+\hline
+{\em a} & A. \\
+\hline
+{\em b} & B. \\
+\hline
+{\em gamma} & Gamma. \\
+\hline
+{\em lmbda} & Lambda. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+New w and v. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00087}{87}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+References \mbox{\hyperlink{_funcs_8py_source_l00150}{Funcs.\+d\+Gkdv()}}, \mbox{\hyperlink{_funcs_8py_source_l00105}{Funcs.\+d\+Gkdw()}}, \mbox{\hyperlink{_optimizer_8py_source_l00061}{eps}}, \mbox{\hyperlink{_funcs_8py_source_l00013}{Funcs.\+exp\+\_\+step()}}, \mbox{\hyperlink{_optimizer_8py_source_l00063}{info}}, \mbox{\hyperlink{_optimizer_8py_source_l00060}{l\+\_\+r}}, \mbox{\hyperlink{_optimizer_8py_source_l00062}{max\+\_\+iter}}, and \mbox{\hyperlink{_optimizer_8py_source_l00064}{save}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00165}{Gradien\+\_\+max\+\_\+\+Field()}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_adc2185da0dc4b67332d77d61d41d56c5}\index{GradientOptimizer@{GradientOptimizer}!eps@{eps}}
+\index{eps@{eps}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{eps}{eps}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_adc2185da0dc4b67332d77d61d41d56c5} 
+eps = eps}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00061}{61}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_abe0c056baaf5ec25fcd2ff61a7550fff}\index{GradientOptimizer@{GradientOptimizer}!info@{info}}
+\index{info@{info}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{info}{info}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_abe0c056baaf5ec25fcd2ff61a7550fff} 
+dict info = \{\}}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00063}{63}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, \mbox{\hyperlink{_optimizer_8py_source_l00165}{Gradien\+\_\+max\+\_\+\+Field()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3}\index{GradientOptimizer@{GradientOptimizer}!l\_r@{l\_r}}
+\index{l\_r@{l\_r}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{l\_r}{l\_r}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3} 
+l\+\_\+r = l\+\_\+r}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00060}{60}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_a2288708f1e379fb721b4b374ce4dece6}\index{GradientOptimizer@{GradientOptimizer}!max\_iter@{max\_iter}}
+\index{max\_iter@{max\_iter}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{max\_iter}{max\_iter}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_a2288708f1e379fb721b4b374ce4dece6} 
+max\+\_\+iter = max\+\_\+iter}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00062}{62}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_a41000f175dc0115080e2a682cc06dbe9}\index{GradientOptimizer@{GradientOptimizer}!params@{params}}
+\index{params@{params}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{params}{params}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_a41000f175dc0115080e2a682cc06dbe9} 
+params = params}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00075}{75}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00165}{Gradien\+\_\+max\+\_\+\+Field()}}.
+
+\Hypertarget{class_optimizer_1_1_gradient_optimizer_afe343e9c5415974b74f2804f52eaaaab}\index{GradientOptimizer@{GradientOptimizer}!save@{save}}
+\index{save@{save}!GradientOptimizer@{GradientOptimizer}}
+\doxysubsubsection{\texorpdfstring{save}{save}}
+{\footnotesize\ttfamily \label{class_optimizer_1_1_gradient_optimizer_afe343e9c5415974b74f2804f52eaaaab} 
+save = save}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00064}{64}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+
+
+Referenced by \mbox{\hyperlink{_optimizer_8py_source_l00041}{\+\_\+\+\_\+init\+\_\+\+\_\+()}}, \mbox{\hyperlink{_optimizer_8py_source_l00165}{Gradien\+\_\+max\+\_\+\+Field()}}, and \mbox{\hyperlink{_optimizer_8py_source_l00087}{Gradient\+\_\+\+Max\+\_\+step()}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_optimizer_8py}{Optimizer.\+py}}\end{DoxyCompactItemize}

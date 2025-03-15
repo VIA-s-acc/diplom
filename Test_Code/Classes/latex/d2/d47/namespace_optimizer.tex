@@ -1,0 +1,374 @@
+\doxysection{Optimizer Namespace Reference}
+\hypertarget{namespace_optimizer}{}\label{namespace_optimizer}\index{Optimizer@{Optimizer}}
+
+
+Class for gradient optimization.  
+
+
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer}}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a3bc2d0e8f37ddc0ea3186354712daaed}{Loader}} = \mbox{\hyperlink{class_config_loader_1_1_config_loader}{Config\+Loader}}(\textquotesingle{}../config.\+ini\textquotesingle{})
+\item 
+\mbox{\hyperlink{namespace_optimizer_a4124bc0a9335c27f086f24ba207a4912}{a}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a21ad0bd836b90d08f4cf640b4c298e7c}{b}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_ae0323a9039add2978bf5b49550572c7c}{c}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_acf832a343a823969c5d60ff6266f5220}{wp}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_ac4055e3a20b6b3af3d10590ea446ef6c}{v}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a530ae7f580da3d1bccd408b028226620}{ms}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_af5d4b8680dad54363c7ec1232eb7d21d}{mr}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a9f463fc1e78c10b047a540fae8f7ce20}{wm}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a62197192f0fbf4e0675eb37be1c4c175}{alpha}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_ab146b9cbab6e73e7588b240dc709fe01}{beta}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a526719d1fe61114dd2eed9b78695b6b3}{lmbda}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a28acc4a90fe6ffb907aa145b7b01326a}{eta}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a8d00631c9622112f1877fdb1222c242e}{gamma}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a66db7c5e4e9699c54207ab857ae72cb7}{delta}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_aafb872fd0652cd371ec28b8053b6cec5}{length\+\_\+m}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a06211f93b6ee4a017b04f095fe476f5c}{width\+\_\+m}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a74742cb5c8e2ac354a60cb73383d8176}{rows}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_aaed057ed424ced7429016ec18c2edbb6}{cols}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a8e5b33bf1e98bb467edc31c48fde245f}{rx}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a44e6641f3ca0341724a1e46d2883529d}{ry}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a3b64b79b66d63d36333c250fa32eeb32}{Deltat}} = Loader.\+getfloat("{}Model"{}, "{}deltat"{})
+\item 
+\mbox{\hyperlink{namespace_optimizer_ad62af17df5486963eef933792624216d}{field}} = \mbox{\hyperlink{class_field_1_1_field}{Field}}(length\+\_\+m=length\+\_\+m, width\+\_\+m=width\+\_\+m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)
+\item 
+\mbox{\hyperlink{namespace_optimizer_aa1db3e8300e877f58e8a5ece5ac3436a}{MAX\+\_\+V}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a6c1ad06aff3de18cf7c74f23edfb561c}{MIN\+\_\+V}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3}{l\+\_\+r}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_adc2185da0dc4b67332d77d61d41d56c5}{eps}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_a2288708f1e379fb721b4b374ce4dece6}{max\+\_\+iter}}
+\item 
+\mbox{\hyperlink{namespace_optimizer_ac51a546ca1c65cb823e989df48e88bbd}{gd}} = \mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer}}(l\+\_\+r, eps, max\+\_\+iter, save=False, field = field, a = a, b = b, c = c, \mbox{\hyperlink{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}{base}} = \mbox{\hyperlink{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}{base}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for gradient optimization. 
+
+\begin{DoxyAuthor}{Author}
+Georgii 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespace_optimizer_a4124bc0a9335c27f086f24ba207a4912}\index{Optimizer@{Optimizer}!a@{a}}
+\index{a@{a}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a4124bc0a9335c27f086f24ba207a4912} 
+a}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a62197192f0fbf4e0675eb37be1c4c175}\index{Optimizer@{Optimizer}!alpha@{alpha}}
+\index{alpha@{alpha}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{alpha}{alpha}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a62197192f0fbf4e0675eb37be1c4c175} 
+alpha}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a21ad0bd836b90d08f4cf640b4c298e7c}\index{Optimizer@{Optimizer}!b@{b}}
+\index{b@{b}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a21ad0bd836b90d08f4cf640b4c298e7c} 
+b}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_ab146b9cbab6e73e7588b240dc709fe01}\index{Optimizer@{Optimizer}!beta@{beta}}
+\index{beta@{beta}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{beta}{beta}}
+{\footnotesize\ttfamily \label{namespace_optimizer_ab146b9cbab6e73e7588b240dc709fe01} 
+beta}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_ae0323a9039add2978bf5b49550572c7c}\index{Optimizer@{Optimizer}!c@{c}}
+\index{c@{c}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{c}{c}}
+{\footnotesize\ttfamily \label{namespace_optimizer_ae0323a9039add2978bf5b49550572c7c} 
+c}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_aaed057ed424ced7429016ec18c2edbb6}\index{Optimizer@{Optimizer}!cols@{cols}}
+\index{cols@{cols}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{cols}{cols}}
+{\footnotesize\ttfamily \label{namespace_optimizer_aaed057ed424ced7429016ec18c2edbb6} 
+cols}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a66db7c5e4e9699c54207ab857ae72cb7}\index{Optimizer@{Optimizer}!delta@{delta}}
+\index{delta@{delta}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{delta}{delta}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a66db7c5e4e9699c54207ab857ae72cb7} 
+delta}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a3b64b79b66d63d36333c250fa32eeb32}\index{Optimizer@{Optimizer}!Deltat@{Deltat}}
+\index{Deltat@{Deltat}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{Deltat}{Deltat}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a3b64b79b66d63d36333c250fa32eeb32} 
+Deltat = Loader.\+getfloat("{}Model"{}, "{}deltat"{})}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00249}{249}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_adc2185da0dc4b67332d77d61d41d56c5}\index{Optimizer@{Optimizer}!eps@{eps}}
+\index{eps@{eps}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{eps}{eps}}
+{\footnotesize\ttfamily \label{namespace_optimizer_adc2185da0dc4b67332d77d61d41d56c5} 
+eps}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00258}{258}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a28acc4a90fe6ffb907aa145b7b01326a}\index{Optimizer@{Optimizer}!eta@{eta}}
+\index{eta@{eta}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{eta}{eta}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a28acc4a90fe6ffb907aa145b7b01326a} 
+eta}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_ad62af17df5486963eef933792624216d}\index{Optimizer@{Optimizer}!field@{field}}
+\index{field@{field}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{field}{field}}
+{\footnotesize\ttfamily \label{namespace_optimizer_ad62af17df5486963eef933792624216d} 
+field = \mbox{\hyperlink{class_field_1_1_field}{Field}}(length\+\_\+m=length\+\_\+m, width\+\_\+m=width\+\_\+m, rows = rows, cols = cols, rx = rx, ry = ry, alpha = alpha, beta = beta, Wm = wm, Deltat = Deltat)}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00252}{252}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a8d00631c9622112f1877fdb1222c242e}\index{Optimizer@{Optimizer}!gamma@{gamma}}
+\index{gamma@{gamma}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{gamma}{gamma}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a8d00631c9622112f1877fdb1222c242e} 
+gamma}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_ac51a546ca1c65cb823e989df48e88bbd}\index{Optimizer@{Optimizer}!gd@{gd}}
+\index{gd@{gd}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{gd}{gd}}
+{\footnotesize\ttfamily \label{namespace_optimizer_ac51a546ca1c65cb823e989df48e88bbd} 
+gd = \mbox{\hyperlink{class_optimizer_1_1_gradient_optimizer}{Gradient\+Optimizer}}(l\+\_\+r, eps, max\+\_\+iter, save=False, field = field, a = a, b = b, c = c, \mbox{\hyperlink{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}{base}} = \mbox{\hyperlink{namespace_funcs_a91667077074ca6ae6e541474cd832ffa}{base}})}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00260}{260}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3}\index{Optimizer@{Optimizer}!l\_r@{l\_r}}
+\index{l\_r@{l\_r}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{l\_r}{l\_r}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a1174d6d41f90c8ffd5b2f84154bdadd3} 
+l\+\_\+r}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00258}{258}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_aafb872fd0652cd371ec28b8053b6cec5}\index{Optimizer@{Optimizer}!length\_m@{length\_m}}
+\index{length\_m@{length\_m}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{length\_m}{length\_m}}
+{\footnotesize\ttfamily \label{namespace_optimizer_aafb872fd0652cd371ec28b8053b6cec5} 
+length\+\_\+m}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a526719d1fe61114dd2eed9b78695b6b3}\index{Optimizer@{Optimizer}!lmbda@{lmbda}}
+\index{lmbda@{lmbda}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{lmbda}{lmbda}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a526719d1fe61114dd2eed9b78695b6b3} 
+lmbda}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a3bc2d0e8f37ddc0ea3186354712daaed}\index{Optimizer@{Optimizer}!Loader@{Loader}}
+\index{Loader@{Loader}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{Loader}{Loader}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a3bc2d0e8f37ddc0ea3186354712daaed} 
+Loader = \mbox{\hyperlink{class_config_loader_1_1_config_loader}{Config\+Loader}}(\textquotesingle{}../config.\+ini\textquotesingle{})}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00243}{243}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a2288708f1e379fb721b4b374ce4dece6}\index{Optimizer@{Optimizer}!max\_iter@{max\_iter}}
+\index{max\_iter@{max\_iter}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{max\_iter}{max\_iter}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a2288708f1e379fb721b4b374ce4dece6} 
+max\+\_\+iter}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00258}{258}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_aa1db3e8300e877f58e8a5ece5ac3436a}\index{Optimizer@{Optimizer}!MAX\_V@{MAX\_V}}
+\index{MAX\_V@{MAX\_V}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{MAX\_V}{MAX\_V}}
+{\footnotesize\ttfamily \label{namespace_optimizer_aa1db3e8300e877f58e8a5ece5ac3436a} 
+MAX\+\_\+V}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00254}{254}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a6c1ad06aff3de18cf7c74f23edfb561c}\index{Optimizer@{Optimizer}!MIN\_V@{MIN\_V}}
+\index{MIN\_V@{MIN\_V}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{MIN\_V}{MIN\_V}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a6c1ad06aff3de18cf7c74f23edfb561c} 
+MIN\+\_\+V}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00254}{254}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_af5d4b8680dad54363c7ec1232eb7d21d}\index{Optimizer@{Optimizer}!mr@{mr}}
+\index{mr@{mr}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{mr}{mr}}
+{\footnotesize\ttfamily \label{namespace_optimizer_af5d4b8680dad54363c7ec1232eb7d21d} 
+mr}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a530ae7f580da3d1bccd408b028226620}\index{Optimizer@{Optimizer}!ms@{ms}}
+\index{ms@{ms}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{ms}{ms}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a530ae7f580da3d1bccd408b028226620} 
+ms}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a74742cb5c8e2ac354a60cb73383d8176}\index{Optimizer@{Optimizer}!rows@{rows}}
+\index{rows@{rows}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{rows}{rows}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a74742cb5c8e2ac354a60cb73383d8176} 
+rows}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a8e5b33bf1e98bb467edc31c48fde245f}\index{Optimizer@{Optimizer}!rx@{rx}}
+\index{rx@{rx}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{rx}{rx}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a8e5b33bf1e98bb467edc31c48fde245f} 
+rx}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a44e6641f3ca0341724a1e46d2883529d}\index{Optimizer@{Optimizer}!ry@{ry}}
+\index{ry@{ry}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{ry}{ry}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a44e6641f3ca0341724a1e46d2883529d} 
+ry}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_ac4055e3a20b6b3af3d10590ea446ef6c}\index{Optimizer@{Optimizer}!v@{v}}
+\index{v@{v}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily \label{namespace_optimizer_ac4055e3a20b6b3af3d10590ea446ef6c} 
+v}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a06211f93b6ee4a017b04f095fe476f5c}\index{Optimizer@{Optimizer}!width\_m@{width\_m}}
+\index{width\_m@{width\_m}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{width\_m}{width\_m}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a06211f93b6ee4a017b04f095fe476f5c} 
+width\+\_\+m}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00247}{247}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_a9f463fc1e78c10b047a540fae8f7ce20}\index{Optimizer@{Optimizer}!wm@{wm}}
+\index{wm@{wm}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{wm}{wm}}
+{\footnotesize\ttfamily \label{namespace_optimizer_a9f463fc1e78c10b047a540fae8f7ce20} 
+wm}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+
+\Hypertarget{namespace_optimizer_acf832a343a823969c5d60ff6266f5220}\index{Optimizer@{Optimizer}!wp@{wp}}
+\index{wp@{wp}!Optimizer@{Optimizer}}
+\doxysubsubsection{\texorpdfstring{wp}{wp}}
+{\footnotesize\ttfamily \label{namespace_optimizer_acf832a343a823969c5d60ff6266f5220} 
+wp}
+
+
+
+Definition at line \mbox{\hyperlink{_optimizer_8py_source_l00245}{245}} of file \mbox{\hyperlink{_optimizer_8py_source}{Optimizer.\+py}}.
+

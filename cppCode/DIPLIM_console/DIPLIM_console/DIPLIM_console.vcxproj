@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -119,6 +120,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,15 +131,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConfigLoader.cpp" />
     <ClCompile Include="DIPLIM_console.cpp" />
     <ClCompile Include="Field.cpp" />
+    <ClCompile Include="Func.cpp" />
+    <ClCompile Include="GDOptimizer.cpp" />
     <ClCompile Include="ModelParams.cpp" />
     <ClCompile Include="Optimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ConfigLoader.h" />
     <ClInclude Include="Field.h" />
+    <ClInclude Include="Func.h" />
+    <ClInclude Include="GDOptimizer.h" />
     <ClInclude Include="ModelParams.h" />
     <ClInclude Include="Optimizer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

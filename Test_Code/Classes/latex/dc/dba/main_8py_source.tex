@@ -1,0 +1,128 @@
+\doxysection{D\+:/\+GIT/diplom/\+Code/main.py}
+\hypertarget{main_8py_source}{}\label{main_8py_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00001}00001\ \textcolor{keyword}{from}\ .Classes.Field\ \textcolor{keyword}{import}\ Field}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00002}00002\ \textcolor{keyword}{from}\ math\ \textcolor{keyword}{import}\ e}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00005}00005\ \textcolor{keyword}{def\ }Gk(Field,\ x\_cur,\ w,\ v,\ t\_k,\ eta,\ Wm,\ Deltat,\ delta,\ rx,\ ry,\ ry\_cells,\ Line,\ a,\ b,\ c\_,\ alpha,\ beta,\ gamma,\ lmbda,\ Water\ =\ 0):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00006}00006\ \ \ \ \ \textcolor{stringliteral}{"{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00007}00007\ \textcolor{stringliteral}{\ \ \ \ The\ function\ Gk\ calculates\ a\ component\ of\ the\ gradient\ of\ the\ goal\ function.}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00008}00008\ \textcolor{stringliteral}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00009}00009\ \textcolor{stringliteral}{\ \ \ \ Parameters}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00010}00010\ \textcolor{stringliteral}{\ \ \ \ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00011}00011\ \textcolor{stringliteral}{\ \ \ \ Field\ :\ Field}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00012}00012\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ field\ object}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00013}00013\ \textcolor{stringliteral}{\ \ \ \ x\_cur\ :\ int}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00014}00014\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ current\ x-\/coordinate\ of\ the\ machine}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00015}00015\ \textcolor{stringliteral}{\ \ \ \ w\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00016}00016\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ watering\ intensity}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00017}00017\ \textcolor{stringliteral}{\ \ \ \ v\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00018}00018\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ machine\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00019}00019\ \textcolor{stringliteral}{\ \ \ \ t\_k\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00020}00020\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ time\ step}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00021}00021\ \textcolor{stringliteral}{\ \ \ \ eta\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00022}00022\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ water\ price\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00023}00023\ \textcolor{stringliteral}{\ \ \ \ Wm\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00024}00024\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ water\ supply\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00025}00025\ \textcolor{stringliteral}{\ \ \ \ Deltat\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00026}00026\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ time\ step}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00027}00027\ \textcolor{stringliteral}{\ \ \ \ delta\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00028}00028\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ water\ price\ intensity\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00029}00029\ \textcolor{stringliteral}{\ \ \ \ rx\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00030}00030\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ horizontal\ radius\ of\ watering\ in\ meters}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00031}00031\ \textcolor{stringliteral}{\ \ \ \ ry\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00032}00032\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ vertical\ radius\ of\ watering\ in\ meters}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00033}00033\ \textcolor{stringliteral}{\ \ \ \ ry\_cells\ :\ int}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00034}00034\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ number\ of\ rows\ in\ the\ vertical\ radius\ of\ watering}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00035}00035\ \textcolor{stringliteral}{\ \ \ \ Line\ :\ int}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00036}00036\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ line\ number\ of\ the\ machine}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00037}00037\ \textcolor{stringliteral}{\ \ \ \ a\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00038}00038\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ watering\ intensity\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00039}00039\ \textcolor{stringliteral}{\ \ \ \ b\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00040}00040\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ desired\ moisture\ level}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00041}00041\ \textcolor{stringliteral}{\ \ \ \ c\_\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00042}00042\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ constant\ term\ in\ the\ goal\ function}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00043}00043\ \textcolor{stringliteral}{\ \ \ \ alpha\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00044}00044\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ watering\ range\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00045}00045\ \textcolor{stringliteral}{\ \ \ \ beta\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00046}00046\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ watering\ intensity\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00047}00047\ \textcolor{stringliteral}{\ \ \ \ gamma\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00048}00048\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ time\ intensity\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00049}00049\ \textcolor{stringliteral}{\ \ \ \ lmbda\ :\ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00050}00050\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ time\ penalty\ coefficient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00051}00051\ \textcolor{stringliteral}{\ \ \ \ Water\ :\ float,\ optional}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00052}00052\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ water\ usage\ at\ the\ previous\ time\ step}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00053}00053\ \textcolor{stringliteral}{\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00054}00054\ \textcolor{stringliteral}{\ \ \ \ Returns}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00055}00055\ \textcolor{stringliteral}{\ \ \ \ -\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00056}00056\ \textcolor{stringliteral}{\ \ \ \ float}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00057}00057\ \textcolor{stringliteral}{\ \ \ \ \ \ \ \ The\ value\ of\ the\ Gk\ component\ of\ the\ gradient}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00058}00058\ \textcolor{stringliteral}{\ \ \ \ "{}"{}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00060}00060\ \ \ \ \ start\_col\ =\ max(0,\ x\_cur)\ \textcolor{comment}{\#+1}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00061}00061\ \ \ \ \ end\_col\ =\ min(Field.cols,\ x\_cur\ +\ Field.rx\_cells\ +\ 1)\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00062}00062\ \ \ \ \ Base\ =\ 0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00063}00063\ \ \ \ \ Time\ =\ -\/gamma*t\_k*e**(-\/gamma\ *\ v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00064}00064\ \ \ \ \ Water\ +=\ 4*eta*rx*ry*w*Wm*Deltat*e**(-\/delta*v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00066}00066\ \ \ \ \ exp\_alpha\_v\ =\ e**(-\/alpha*v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ start\_col\ ==\ end\_col:\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00068}00068\ \ \ \ \ \ \ \ \ start\_col\ -\/=\ Field.rx\_cells\ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{for}\ r\ \textcolor{keywordflow}{in}\ range(max(0,\ Line\ -\/\ ry\_cells),\ min(Field.rows,\ Line\ +\ ry\_cells\ +\ 1)):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00071}00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ c\ \textcolor{keywordflow}{in}\ range(start\_col,\ end\_col):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ Field[r,\ c]\ ==\ -\/1:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\_rc\ =\ ((r\ -\/\ Line)\ **\ 2\ +\ (c\ -\/\ x\_cur)\ **\ 2)\ **\ 0.5}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ term\ =\ Wm*Deltat/(d\_rc**2+1)**beta\ *\ exp\_alpha\_v}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Base\ +=\ -\/a*(Field[r,\ c]\ +\ w*term\ -\/\ b)\ **\ 2\ +\ c\_}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00078}00078\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ Base\ -\/\ Time\ -\/\ Water}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00082}00082\ \textcolor{keyword}{def\ }dGkdw(Field,\ x\_cur,\ w,\ v,\ t\_k,\ eta,\ Wm,\ Deltat,\ delta,\ rx,\ ry,\ ry\_cells,\ Line,\ a,\ b,\ alpha,\ beta,\ Water\ =\ 0):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00083}00083\ \ \ \ \ start\_col\ =\ max(0,\ x\_cur)\ \textcolor{comment}{\#+1}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00084}00084\ \ \ \ \ end\_col\ =\ min(Field.cols,\ x\_cur\ +\ Field.rx\_cells\ +\ 1)\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00085}00085\ \ \ \ \ Base\ =\ 0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00086}00086\ \ \ \ \ Time\ =\ 0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00087}00087\ \ \ \ \ Water\ +=\ 4*eta*Wm*Deltat*e**(-\/delta*v)\ *rx*ry}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00088}00088\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00089}00089\ \ \ \ \ exp\_alpha\_v\ =\ e**(-\/alpha*v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{if}\ start\_col\ ==\ end\_col:\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00091}00091\ \ \ \ \ \ \ \ \ start\_col\ -\/=\ Field.rx\_cells\ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{for}\ r\ \textcolor{keywordflow}{in}\ range(max(0,\ Line\ -\/\ ry\_cells),\ min(Field.rows,\ Line\ +\ ry\_cells\ +\ 1)):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ c\ \textcolor{keywordflow}{in}\ range(start\_col,\ end\_col):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ Field[r,\ c]\ ==\ -\/1:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\_rc\ =\ ((r\ -\/\ Line)\ **\ 2\ +\ (c\ -\/\ x\_cur)\ **\ 2)\ **\ 0.5}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ term\ =\ Wm*Deltat/(d\_rc**2+1)**beta\ *\ exp\_alpha\_v}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Base\ +=\ -\/2*a*(Field[r,\ c]\ +\ w*term\ -\/\ b)\ *\ term}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00101}00101\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{return}\ Base\ -\/\ Water,\ Water}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00104}00104\ \textcolor{keyword}{def\ }dGkdv(Field,\ x\_cur,\ w,\ v,\ t\_k,\ eta,\ Wm,\ Deltat,\ delta,\ rx,\ ry,\ ry\_cells,\ Line,\ a,\ b,\ alpha,\ beta,\ gamma,\ lmbda,\ Water\ =\ 0):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00105}00105\ \ \ \ \ start\_col\ =\ max(0,\ x\_cur\ -\/\ Field.rx\_cells)\ \textcolor{comment}{\#+1}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00106}00106\ \ \ \ \ end\_col\ =\ min(Field.cols,\ x\_cur\ +\ 1)\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}\ start\_col\ ==\ end\_col:\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00108}00108\ \ \ \ \ \ \ \ \ start\_col\ -\/=\ Field.rx\_cells\ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00109}00109\ \ \ \ \ Base\ =\ 0}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00110}00110\ \ \ \ \ Time\ =\ -\/gamma\ *\ lmbda\ *\ t\_k\ *\ e**(-\/gamma*v)\ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00111}00111\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00112}00112\ \ \ \ \ Water\ +=\ -\/delta\ *\ 4\ *\ eta\ *\ rx\ *\ ry\ *\ w\ *\ Wm\ *\ Deltat\ *\ e**(-\/delta*v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00113}00113\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00114}00114\ \ \ \ \ exp\_alpha\_v\ =\ e**(-\/alpha*v)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{for}\ r\ \textcolor{keywordflow}{in}\ range(max(0,\ Line\ -\/\ ry\_cells),\ min(Field.rows,\ Line\ +\ ry\_cells\ +\ 1)):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00116}00116\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ c\ \textcolor{keywordflow}{in}\ range(start\_col,\ end\_col):}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ Field[r,\ c]\ ==\ -\/1:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue}}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}:}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ d\_rc\ =\ ((r\ -\/\ Line)\ **\ 2\ +\ (c\ -\/\ x\_cur)\ **\ 2)\ **\ 0.5}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Base\ +=\ -\/2*a*(Field[r,\ c]\ +\ w\ *\ ((Wm\ *\ Deltat)/(d\_rc**2+1)**beta)\ *\ exp\_alpha\_v\ -\/\ b)\ *\ (-\/alpha*Deltat*w*Wm*exp\_alpha\_v/(d\_rc**2+1)**beta)}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{return}\ Base\ -\/\ Time\ -\/\ Water,\ Water}
+\DoxyCodeLine{\Hypertarget{main_8py_source_l00123}00123\ \ \ \ \ }
+
+\end{DoxyCode}

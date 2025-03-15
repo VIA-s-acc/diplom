@@ -1,5 +1,5 @@
 #include "ModelParams.h"
-
+#include <vector>
 ModelParams::ModelParams()
 {
 	InitParametrs();
@@ -7,61 +7,99 @@ ModelParams::ModelParams()
 
 ModelParams::~ModelParams()
 {
-	for (auto it = ModelParams::ModelParamsMap.begin(); it != ModelParams::ModelParamsMap.end(); it++)
+	for (auto& element : ModelParamsMap)
 	{
-		it = ModelParams::ModelParamsMap.erase(it);
+		element.second.clear();
 	}
-	ModelParams::ModelParamsMap.clear();
+	ModelParamsMap.clear();
+	
 }
 
-void ModelParams::setModelParams(std::string KeyWord, std::map<std::string, std::any> params)
+void ModelParams::LoadModelSectionParams(std::string KeyWord, std::map<std::string, std::any> params)
 {
-	if (ModelParams::ModelParamsMap.find(KeyWord) == ModelParams::ModelParamsMap.end()) // Если ключа нет в словаре
+	if (ModelParamsMap.find(KeyWord) == ModelParamsMap.end()) // Если ключа нет в словаре
 	{
 		throw std::invalid_argument("KeyWord not found in ModelParamsMap."); // Выбрасвыаем исключение неверного аргумента
 	}
 	else {
-		ModelParams::ModelParamsMap[KeyWord] = params;
+		ModelParamsMap[KeyWord] = params;
 	}
 	
 }
 
-void ModelParams::InitParametrs()
+void ModelParams::LoadModelParams(std::map<std::string, std::any> paramsM, std::map<std::string, std::any> paramsO, std::map<std::string, std::any> paramsF)
 {
+	std::vector<std::map<std::string, std::any>> ParamsVec{paramsM, paramsO, paramsF};
+	std::vector<std::string> LabelsVec{"M", "O", "F"};
+	for (size_t i = 0; i < 3; ++i)
+	{
+		std::map<std::string, std::any> param = ParamsVec[i];
+		auto& label = LabelsVec[i];
+
+		ModelParamsMap[label] = param;
+	}
+}
+
+void ModelParams::LoadModelFromFile(std::string filename)
+{
+	Config config;
+	ConfigLoader loader;
+
+	if (loader.load(filename, config))
+	{
+		std::map<std::string, Section> Params = config.sections;
+		ModelParams::LoadModelParams(Params["Model"], Params["Optimization"], Params["Field"]);
+	}
+	else throw std::invalid_argument("Check config file");
+}
+
+std::any ModelParams::getParam(std::string KeyWord, std::string ParamName)
+{
+	auto& element = ModelParams::ModelParamsMap[KeyWord][ParamName];
+	if (element.type() == typeid(int)) return std::any_cast<int>(element);
+	if (element.type() == typeid(double)) return std::any_cast<double>(element);
+	else throw std::invalid_argument("Unsupported type");
+}
+
+void ModelParams::InitParametrs()
+{	
+	
 	std::map<std::string, std::any> ModeLParamsMMap
 	{
-		{"a", 2}, {"b", 0.3}, {"c", 3},
-		{"Wp", 0}, {"v", 0}, {"Ms", 10},
-		{"Mr", 0.1}, {"Wm", 10}, {"alpha", 0.25},
-		{"beta", 0.01}, {"lmbda", 0.5}, {"eta", 0.01},
+		// all double
+		{"a", 2.0}, {"b", 0.3}, {"c", 3.0}, {"w", 0.0},
+		{"Wp", 0.0}, {"v", 0.0}, {"Ms", 10.0},
+		{"Mr", 0.1}, {"Wm", 10.0}, {"alpha", 0.25},
+		{"beta", 0.01}, {"lambda", 0.5}, {"eta", 0.01},
 		{"gamma", 0.3}, {"delta", 0.1}, {"Deltat", 0.1}
 	};
 
 	std::map<std::string, std::any> ModelParamsOMap
 	{
-		{"l_r", 1e-1}, {"eps", 1e-3}, {"max_iter", 1000}
+		{"l_r", 0.1}, {"eps", 0.001}, {"max_iter", 100}
 	};
 	std::map<std::string, std::any> ModelParamsFMap
 	{
-		{"l_m", 1000}, {"w_m", 100}, {"rows", 400}, 
-		{"cols", 1000}, {"rx", 0.1}, {"ry", 0.1}
+		// length_m, width_m, rx, ry - doubles
+		// other int
+		{"length_m", 100.0}, {"width_m", 100.0}, {"rows", 100}, 
+		{"cols", 100}, {"rx", 0.1}, {"ry", 50.0}, {"line", 50}
 	};
 
-	ModelParams::ModelParamsMap["M"] = ModeLParamsMMap;
-	ModelParams::ModelParamsMap["O"] = ModelParamsOMap;
-	ModelParams::ModelParamsMap["F"] = ModelParamsFMap;
+	ModelParamsMap["M"] = ModeLParamsMMap;
+	ModelParamsMap["O"] = ModelParamsOMap;
+	ModelParamsMap["F"] = ModelParamsFMap;
 
 }
 
 
-std::map<std::string, std::any> ModelParams::getModelParams(std::string KeyWord) 
-{
-	if (ModelParams::ModelParamsMap.find(KeyWord) == ModelParams::ModelParamsMap.end()) // Если ключа нет в словаре
+std::map<std::string, std::any>  ModelParams::getModelParams(std::string KeyWord)  {
+	if (ModelParamsMap.find(KeyWord) == ModelParamsMap.end()) // Если ключа нет в словаре
 	{
 		throw std::invalid_argument("KeyWord not found in ModelParamsMap."); // Выбрасвыаем исключение неверного аргумента
 	}
 	else // иначче возвращаем словарь
 	{
-		return ModelParams::ModelParamsMap[KeyWord]; 
+		return ModelParamsMap[KeyWord]; 
 	}	
 }
