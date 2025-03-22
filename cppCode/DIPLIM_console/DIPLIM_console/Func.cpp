@@ -3,6 +3,40 @@
 
 
 
+double Func::Gk(int x_cur, double w, double v, double t_k)
+{
+    int start_col = MAX(0, x_cur - Func::rx_cells);
+    int end_col = MIN(cols, x_cur + Func::rx_cells + 1);
+
+    //std::cout << "start_col: " << start_col << " end_col: " << end_col << std::endl;
+    //std::cout << "X_cur: " << x_cur <<" w: " << floor(w * 100000) / 100000 << " v: " << v << " t_k: " << t_k << std::endl;
+    double result = 0;
+    double Water = -4 * Func::eta * Func::rx * Func::ry * w * Func::Wm * Func::Deltat * exp(-Func::delta * v);
+    double time = -Func::lambda * t_k * exp(-Func::gamma * v);
+
+
+
+
+    if (start_col == end_col)
+    {
+        start_col -= Func::rx_cells;
+    }
+
+    int row_start = MAX(0, Func::line - Func::ry_cells);
+    int row_end = MIN(Func::rows, Func::line + Func::ry_cells + 1);
+    double exp_alpha_v = exp(-Func::alpha * v);
+    for (int i = row_start; i < row_end; i++) {
+        for (int j = start_col; j < end_col; j++) {
+            if (Func::F(i, j) == -1.0) continue;
+            double d_ij = sqrt(pow(i - Func::line, 2) + pow(j - x_cur, 2));
+            result += -Func::a * pow((Func::F(i, j) + w * ((Func::Wm * Func::Deltat) / pow((pow(d_ij, 2) + 1), Func::beta)) * exp_alpha_v - b), 2) + c;
+            
+        }
+    }
+
+    return result + Water + time;
+}
+
 Res Func::DGkDw(int x_cur, double w, double v, double t_k)
 {
    

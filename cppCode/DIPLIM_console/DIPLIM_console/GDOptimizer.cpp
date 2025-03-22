@@ -9,7 +9,7 @@
 Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double Mr_Deltat)
 {	
 
-	std::vector<Vector4D> steps_progress{ Vector4D(v, w, 0, 0) };
+	std::vector<Vector4D> steps_progress{ Vector4D(w, v, 0, 0) };
 	double start_v = v;
 	int max_iter = std::any_cast<int>(GDOptimizer::getOparams()["max_iter"]);
 	double eps	 = std::any_cast<double>(GDOptimizer::getOparams()["eps"]);
@@ -23,6 +23,9 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 	double dgkdw = 0;
 	double dgkdv = 0;
 	double step  = 0;
+
+	
+
 	for (int i = 0; i < max_iter; i++)
 	{
 		
@@ -66,7 +69,7 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 			//std::cout<<"GD2"<<std::endl;
 			if (GDOptimizer::savef())
 			{
-				steps_progress.push_back(Vector4D(v, w, w1, w2));
+				steps_progress.push_back(Vector4D(w, v, w1, w2));
 				auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(GDOptimizer::info["Optimization"]);
 				optimization_info[t_k] = steps_progress;
 			}
@@ -80,7 +83,7 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 
 			if (GDOptimizer::savef())
 			{
-				steps_progress.push_back(Vector4D(v, w, w1, w2));
+				steps_progress.push_back(Vector4D(w, v, w1, w2));
 			}
 		}
 	}
@@ -89,6 +92,7 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 		auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(GDOptimizer::info["Optimization"]);
 		optimization_info[t_k] = steps_progress;
 	}
+	
 	return Vector2D(w, v);
 }
 
@@ -261,7 +265,7 @@ void GDOptimizer::GD_Max(int x)
 			LPCWSTR wfolderName = wideFolderName.c_str();
 			CreateDirectory(wfolderName, NULL);
 
-			std::string folderName2 = "logs/log" + std::to_string(time.time_since_epoch().count());
+			std::string folderName2 = "logs/log_GD" + std::to_string(time.time_since_epoch().count());
 
 			std::wstring wideFolderName2 = std::wstring(folderName2.begin(), folderName2.end());
 			LPCWSTR wfolderName2 = wideFolderName2.c_str();
@@ -298,7 +302,7 @@ void GDOptimizer::GD_Max(int x)
 				//std::cout << "\t\t\t-------- T_k: " << el.first << " ------- \t\t\t" << std::endl;
 				fprintf(file_prog, "\t\t\t-------- T_k: %f ------- \t\t\t\n", el.first);
 				for (auto& el2 : el.second) {
-					fprintf(file_prog, "\t\tt_k: %f w: %f v: %f x: %f w_met: %f \t\t\t\n", el2.t_k, el2.w, el2.v, el2.x, el2.x_m);
+					fprintf(file_prog, "\t\tt_k: %f w: %f v: %f x: %d w_met: %f \t\t\t\n", el2.t_k, el2.w, el2.v, el2.x, el2.x_m);
 					//std::cout << "\t\t w: " << el2.w << " v: " << el2.v << " x: " << el2.x << " w_met: " << el2.x_m << " \t\t\t" << std::endl;
 				}
 				fprintf(file_prog, "\n\n");

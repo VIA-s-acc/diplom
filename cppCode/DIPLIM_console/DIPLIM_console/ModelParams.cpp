@@ -76,7 +76,7 @@ void ModelParams::InitParametrs()
 
 	std::map<std::string, std::any> ModelParamsOMap
 	{
-		{"l_r", 0.1}, {"eps", 1e-3}, {"max_iter", 500}
+		{"l_r", 0.1}, {"eps", 1e-3}, {"max_iter", 100}
 	};
 	std::map<std::string, std::any> ModelParamsFMap
 	{

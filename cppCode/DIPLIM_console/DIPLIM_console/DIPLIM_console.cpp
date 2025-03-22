@@ -8,6 +8,7 @@
 #include "ConfigLoader.h"
 #include "Optimizer.h">
 #include "GDOptimizer.h"
+#include "CGDOptimizer.h"
 
 constexpr bool DEBUG = true;
 
@@ -31,7 +32,7 @@ if (DEBUG) {
 }
 
 void print_help(const char* program_name) {
-	std::cout << "Usage: " << program_name << " <config_file_path> [-f <config_file_path>] [-Oi <n>] [-h]" << std::endl;
+	std::cout << "Usage: " << program_name << " <config_file_path> [-f <config_file_path>] [-Oi <n>] [-h] [-m <1/2>] [-sf <1/0>] [-lf <1/0>]" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Options:" << std::endl;
 	std::cout << "  -h, --help          Show this help message and exit." << std::endl;
@@ -39,6 +40,7 @@ void print_help(const char* program_name) {
 	std::cout << "  -Oi, --optimization-iterations <n>  Run optimization for n iterations (default is 1)." << std::endl;
 	std::cout << "  -sf, --save-flag <1/0>   Enable or disable save flag (1 = true, 0 = false)." << std::endl;
 	std::cout << "  -lf, --log-flag <1/0>    Enable or disable log flag (1 = true, 0 = false)." << std::endl;
+	std::cout << "  -m,  --method   <1/2>    Optimization method (1 = CGD, 2 = GD)." << std::endl;
 	std::cout << std::endl;
 	std::cout << "Examples:" << std::endl;
 	std::cout << "  " << program_name << " config.ini              Load the model from config.json and run optimization." << std::endl;
@@ -76,7 +78,7 @@ int main(int argc, char* argv[])
 	int RunOptimizationITimes = 1;
 	bool save_flag = false;
 	bool log_flag  = false;
-
+	int RunOptimizationMethod = 2;
 	if (argc >= 2) {
 
 		std::vector<Argument> arguments;
@@ -124,6 +126,15 @@ int main(int argc, char* argv[])
 				}
 			}
 
+			if (args.name == "-m" or args.name == "--method")
+			{
+				try {
+					RunOptimizationMethod = std::stoi(args.value);
+				}
+				catch ( const std::exception& e) {
+					throw std::runtime_error("RunOptimizationMethod is not integer. (1 = CGD, 2 = GD)");
+				}
+			}
 		}
 
 		if (!Fflag) {
@@ -132,14 +143,22 @@ int main(int argc, char* argv[])
 
 	}
 	Field field(Params);
-
-	field.randomizeField(0.0, 0.0);
-	std::cout << save_flag << " " << log_flag << std::endl;
+	field.randomizeField(0.0, 0.14);
+	CGDOptimizer CGD(Params, field, save_flag, log_flag);
 	GDOptimizer GD(Params, field, save_flag, log_flag);
+
 	for (int i = 1; i < RunOptimizationITimes+1; i++) {
-		std::cout<< "\t\t\t--------- iteration " << i << " ---------\t\t\t" << std::endl;
-		GD.GD_Max(0);
-		std::cout << "\t\t\t--------- iteration " << i << " ---------\t\t\t" << std::endl << std::endl << std::endl;
+		switch (RunOptimizationMethod)
+		{
+		case 1:
+			CGD.CGD_Max(0);
+			break;
+		case 2:
+			GD.GD_Max(0);
+			break;
+		default:
+			throw std::runtime_error("Method not found. Available methods: 1: cgd, 2: gd.");
+		}
 	}
 	//GD.GD_Max(0);
 	//GD.GD_Max(0);

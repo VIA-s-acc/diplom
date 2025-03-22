@@ -136,6 +136,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CGDOptimizer.cpp" />
     <ClCompile Include="ConfigLoader.cpp" />
     <ClCompile Include="DIPLIM_console.cpp" />
     <ClCompile Include="Field.cpp" />
@@ -145,6 +146,7 @@
     <ClCompile Include="Optimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CGDOptimizer.h" />
     <ClInclude Include="ConfigLoader.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="Func.h" />

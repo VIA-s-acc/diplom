@@ -50,7 +50,7 @@ public:
 	{
 	};
 	
-
+	double Gk(int x_cur, double w, double v, double t_k);
 	Res DGkDw(int x_cur, double w, double v, double t_k);
 	Res DGkDv(int x_cur, double w, double v, double t_k);
 	double poly_step(double l_0, int step, double alpha = 0.5, double beta = 1) { return l_0 * pow((beta * step + 1), -alpha); };
