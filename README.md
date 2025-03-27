@@ -2,7 +2,6 @@
 
 
 ### Usage
-Path [.exe](cppCode\DIPLIM_console\x64\Debug\DIPLIM_console.exe)
 
 ```py
 Usage: DIPLIM_console.exe <config_file_path> [-f <config_file_path>] [-Oi <n>] [-h] [-m <1/2>] [-sf <1/0>] [-lf <1/0>]
