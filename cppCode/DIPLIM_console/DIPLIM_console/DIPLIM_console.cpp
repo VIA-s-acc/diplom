@@ -10,7 +10,7 @@
 #include "GDOptimizer.h"
 #include "CGDOptimizer.h"
 #include "NOptimizer.h"
-
+#include "random"
 constexpr bool DEBUG = true;
 
 void debug_print(std::map<std::string, std::map<std::string, std::any>> ParamsMap, char* argv[], std::map <std::string, std::string> ParamLabels)
@@ -43,6 +43,7 @@ void print_help(const char* program_name) {
 	std::cout << "  -lf, --log-flag <1/0>    Enable or disable log flag (1 = true, 0 = false)." << std::endl;
 	std::cout << "  -m,  --method   <1/2/3>    Optimization method (1 = CGD, 2 = GD, 3 = NO)." << std::endl;
 	std::cout << "  -r,  --regularization   <f>   Use Regularization with lambda = f" << std::endl;
+	std::cout << "  -d   --diagnostic  <1/0> Find optimal parametrs for selected method (1 = true, 0 = false)." << std::endl;
 	std::cout << std::endl;
 	std::cout << "Examples:" << std::endl;
 	std::cout << "  " << program_name << " config.ini              Load the model from config.json and run optimization." << std::endl;
@@ -80,8 +81,10 @@ int main(int argc, char* argv[])
 	int RunOptimizationITimes = 1;
 	bool save_flag = false;
 	bool log_flag  = false;
+	bool RunDiagnostic = false;
 	int RunOptimizationMethod = 2;
 	double RunNewtonRegularizationParam = 0;
+	int RunNewtonMaxIterParam = 0;
 	if (argc >= 2) {
 
 		std::vector<Argument> arguments;
@@ -147,18 +150,126 @@ int main(int argc, char* argv[])
 					throw std::runtime_error("RunNewtonRegularizationParam is not double.");
 				}
 			}
+			if (args.name == "-d" or args.name == "--diagnostic")
+			{
+				RunNewtonMaxIterParam = std::any_cast<int>(Params.getParam("O", "max_iter"));
+				RunDiagnostic = true;
+			}
 		}
 
+		if (RunDiagnostic)
+		{
+			switch (RunOptimizationMethod)
+			{
+			case 3: {
+					int step = 1;
+					bool diagnostic_flag = true;
+					double end_avg = 0;
+					double end_min = 0;
+					double end_max = 0;
+					double end_max_new = 0;
+					double end_min_new = 0;
+					double end_avg_new = 0;
+					int prev = RunNewtonMaxIterParam;
+					double optimal_ = std::any_cast<double>(Params.getParam("M", "b"));
+					std::cout << "RunNewtonMaxIterParam set to " << RunNewtonMaxIterParam << "\tFrom Config File" << std::endl;
+					while (diagnostic_flag)
+					{
+						std::cout << "\n\n\n-----Diagnostic Step: " << step << "-----" << std::endl;
+						std::cout << "RunNewtonRegularizationParam: " << RunNewtonRegularizationParam << std::endl;
+						std::cout << "RunNewtonMaxIterParam: " << RunNewtonMaxIterParam << std::endl;
+						Field Dfield(Params);
+						Dfield.randomizeField(0, 0);
+						NOptimizer DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
+						try
+						{
+
+							DiagnosticN.N_Max(0);
+							end_avg_new = DiagnosticN.field.avgerageField();
+							end_min_new = DiagnosticN.field.minField();
+							end_max_new = DiagnosticN.field.maxField();
+
+							prev = RunNewtonMaxIterParam;
+							if (end_max_new > optimal_ * 1.75 && RunNewtonRegularizationParam < 1e-5)
+							{
+								RunNewtonRegularizationParam += 1e-10;
+
+							}
+
+							if (abs(end_avg_new - end_avg) < 0.00000001 && abs(end_min_new - end_min) < 0.00000001 && abs(end_max_new - end_max) < 0.00000001)
+							{
+								RunNewtonMaxIterParam--;
+								diagnostic_flag = false;
+								break;
+							}
+
+							if (end_max_new > end_max && step > 1)
+							{
+								RunNewtonMaxIterParam--;
+							}
+							else
+							{
+								RunNewtonMaxIterParam++;
+							}
+							if (prev != RunNewtonMaxIterParam)
+							{
+								if (prev == RunNewtonMaxIterParam + 1 && end_max_new < optimal_ * 1.75 && step > 1 && RunNewtonRegularizationParam < 1e-5)
+								{
+									diagnostic_flag = false;
+									std::cout << "\n\n\n\t\t\t -----Diagnostic completed. Steps: " << step << "-----" << std::endl;
+									std::cout << "RunNewtonRegularizationParam: " << RunNewtonRegularizationParam << std::endl;
+									std::cout << "RunNewtonMaxIterParam: " << RunNewtonMaxIterParam << std::endl;
+									std::cout << "\t\t\t-----Diagnostic completed. Steps: " << step << "-----" << std::endl;
+									NOptimizer DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
+									DiagnosticN.N_Max(0);
+									break;
+								}
+							}
+							end_avg = end_avg_new;
+							end_min = end_min_new;
+							end_max = end_max_new;
+							step++;
+						}
+
+						catch (const std::exception& e) {
+							std::cout << e.what() << std::endl;
+							const std::string msg = e.what();
+							size_t pos = msg.rfind(":");
+							int extractedInt = 0;
+							if (pos != std::string::npos) {
+								std::string numStr = msg.substr(pos + 1);
+								std::stringstream(numStr) >> extractedInt;
+							}
+							if (RunNewtonMaxIterParam > extractedInt && extractedInt != 0)
+							{
+								RunNewtonMaxIterParam = extractedInt - 1;
+							}
+							else {
+								RunNewtonMaxIterParam--;
+							}
+						}
+					}
+
+
+
+					return 0;
+				}
+			default:
+				std::cerr<<"Diagnostic not available for selected method. Closing..."<<std::endl;
+				return 0;
+			}
+
+		}
 		if (!Fflag) {
 			throw std::runtime_error("Config file not specified.");
 		};
 
 	}
 	Field field(Params);
-	field.randomizeField(0.0, 0.14);
+	field.randomizeField(0.0, 0.0);
 	CGDOptimizer CGD(Params, field, save_flag, log_flag);
 	GDOptimizer GD(Params, field, save_flag, log_flag);
-	NOptimizer NO(Params, field, save_flag, log_flag, RunNewtonRegularizationParam);
+	NOptimizer NO(Params, field, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
 	for (int i = 1; i < RunOptimizationITimes+1; i++) {
 		switch (RunOptimizationMethod)
 		{

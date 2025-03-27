@@ -12,6 +12,7 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 	double start_v = v;
 	int n_dim = 2;
 	int max_iter = std::any_cast<int>(NOptimizer::getOparams()["max_iter"]);
+	if (NOptimizer::max_iter_n != 0) max_iter = NOptimizer::max_iter_n;
 	double eps = std::any_cast<double>(NOptimizer::getOparams()["eps"]);
 	double l_r = std::any_cast<double>(NOptimizer::getOparams()["l_r"]);
 	double Ms = std::any_cast<double>(NOptimizer::getMparams()["Ms"]);
@@ -126,6 +127,7 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 		d_k.v = H_k(1, 0) * g_k.w + H_k(1, 1) * g_k.v;
 		if (std::isnan(d_k.w) || std::isnan(d_k.v)) {
 			std::cerr << "The matrix has become ill-conditioned, and the iterations are terminated. Iteration: " << k << "\nDecrease iterations count or try to use -regularization parametr - current:" << NOptimizer::regularization << std::endl;
+			throw std::runtime_error("NO::MIC::"+std::to_string(k));
 			break;
 		}
 		k++;

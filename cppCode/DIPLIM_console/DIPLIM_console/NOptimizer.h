@@ -28,10 +28,11 @@ class NOptimizer :
     public Optimizer
 {
     double regularization = 0;
+    int max_iter_n = 0;
 
 public:
-    NOptimizer(ModelParams params, Field field, bool save = false, bool log = false, double regularization = 0) : Optimizer(params, field, save, log), regularization(regularization){};
-
+    NOptimizer(ModelParams params, Field field, bool save = false, bool log = false, int max_iter_n = 0, double regularization = 0) : Optimizer(params, field, save, log), max_iter_n(max_iter_n), regularization(regularization){};
+    
     Vector2D N_step(int x_cur, double w, double v, double t_k, double Mr_Deltat);
     void N_Max(int x);
     double FindAlpha(Vector2D grad, int x_cur, double t_k, double w, double v, double a = -1, double b = 1, double tol = 1e-6);
