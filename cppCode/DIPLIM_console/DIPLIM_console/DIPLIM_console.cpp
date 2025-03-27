@@ -9,6 +9,7 @@
 #include "Optimizer.h">
 #include "GDOptimizer.h"
 #include "CGDOptimizer.h"
+#include "NOptimizer.h"
 
 constexpr bool DEBUG = true;
 
@@ -40,7 +41,8 @@ void print_help(const char* program_name) {
 	std::cout << "  -Oi, --optimization-iterations <n>  Run optimization for n iterations (default is 1)." << std::endl;
 	std::cout << "  -sf, --save-flag <1/0>   Enable or disable save flag (1 = true, 0 = false)." << std::endl;
 	std::cout << "  -lf, --log-flag <1/0>    Enable or disable log flag (1 = true, 0 = false)." << std::endl;
-	std::cout << "  -m,  --method   <1/2>    Optimization method (1 = CGD, 2 = GD)." << std::endl;
+	std::cout << "  -m,  --method   <1/2/3>    Optimization method (1 = CGD, 2 = GD, 3 = NO)." << std::endl;
+	std::cout << "  -r,  --regularization   <f>   Use Regularization with lambda = f" << std::endl;
 	std::cout << std::endl;
 	std::cout << "Examples:" << std::endl;
 	std::cout << "  " << program_name << " config.ini              Load the model from config.json and run optimization." << std::endl;
@@ -79,6 +81,7 @@ int main(int argc, char* argv[])
 	bool save_flag = false;
 	bool log_flag  = false;
 	int RunOptimizationMethod = 2;
+	double RunNewtonRegularizationParam = 0;
 	if (argc >= 2) {
 
 		std::vector<Argument> arguments;
@@ -135,6 +138,15 @@ int main(int argc, char* argv[])
 					throw std::runtime_error("RunOptimizationMethod is not integer. (1 = CGD, 2 = GD)");
 				}
 			}
+			if (args.name == "-r" or args.name == "--regularization")
+			{
+				try {
+					RunNewtonRegularizationParam = std::stod(args.value);
+				}
+				catch (const std::exception& e) {
+					throw std::runtime_error("RunNewtonRegularizationParam is not double.");
+				}
+			}
 		}
 
 		if (!Fflag) {
@@ -146,7 +158,7 @@ int main(int argc, char* argv[])
 	field.randomizeField(0.0, 0.14);
 	CGDOptimizer CGD(Params, field, save_flag, log_flag);
 	GDOptimizer GD(Params, field, save_flag, log_flag);
-
+	NOptimizer NO(Params, field, save_flag, log_flag, RunNewtonRegularizationParam);
 	for (int i = 1; i < RunOptimizationITimes+1; i++) {
 		switch (RunOptimizationMethod)
 		{
@@ -156,8 +168,11 @@ int main(int argc, char* argv[])
 		case 2:
 			GD.GD_Max(0);
 			break;
+		case 3:
+			NO.N_Max(0);
+			break;
 		default:
-			throw std::runtime_error("Method not found. Available methods: 1: cgd, 2: gd.");
+			throw std::runtime_error("Method not found. Available methods: 1: cgd, 2: gd, 3: no.");
 		}
 	}
 	//GD.GD_Max(0);

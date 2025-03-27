@@ -46,7 +46,7 @@ Vector2D CGDOptimizer::CGD_step(int x_cur, double w, double v, double t_k, doubl
 	while (k < max_iter && (g_k.norm() > eps))
 	{
 
-		double alpha = CGDOptimizer::FindAlpha(g_k, x_cur, t_k, w_k, v_k, 0, 1, 1e-8);
+		double alpha = CGDOptimizer::FindAlpha(d_k, x_cur, t_k, w_k, v_k, -1, 1, 1e-8);
 		
 		w_v_old.w = w_k;
 		w_v_old.v = v_k;
@@ -99,8 +99,10 @@ Vector2D CGDOptimizer::CGD_step(int x_cur, double w, double v, double t_k, doubl
 			d_new.v = g_new.v;
 		}
 
-		g_k = g_new;
-		d_k = d_new;
+		g_k.w = g_new.w * 1;
+		g_k.v = g_new.v * 1;
+		d_k.w = d_new.w * 1;
+		d_k.v = d_new.v * 1;
 		k++;
 		
 	}
@@ -443,6 +445,9 @@ double CGDOptimizer::FindAlpha(Vector2D grad, int x_cur, double t_k, double w, d
     double gr = (sqrt(5) - 1) / 2;
 	double c = b - gr * (b - a);
 	double d = a + gr * (b - a);
+
+	int max_iter = 1000;  // Максимальное количество итераций
+	int iter = 0;
 	while (abs(c - d) > tol) {
 		if (f(c, x_cur, t_k, w, v, grad) > f(d, x_cur, t_k, w, v, grad)) {
 			b = d;
@@ -453,6 +458,11 @@ double CGDOptimizer::FindAlpha(Vector2D grad, int x_cur, double t_k, double w, d
 
 		c = b - gr * (b - a);
 		d = a + gr * (b - a);
+		iter++;
+		if (iter == max_iter) {
+			std::cout << "Warning: Maximum iterations (1000) reached in FindAlpha" << std::endl;
+			break;
+		}
 	}
 	return (a + b) / 2;
 }
