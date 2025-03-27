@@ -143,7 +143,7 @@
     <ClCompile Include="Func.cpp" />
     <ClCompile Include="GDOptimizer.cpp" />
     <ClCompile Include="ModelParams.cpp" />
-    <ClCompile Include="NOptimizer.cpp" />
+    <ClCompile Include="NOptimizerDFP.cpp" />
     <ClCompile Include="Optimizer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -153,11 +153,11 @@
     <ClInclude Include="Func.h" />
     <ClInclude Include="GDOptimizer.h" />
     <ClInclude Include="ModelParams.h" />
-    <ClInclude Include="NOptimizer.h" />
+    <ClInclude Include="NOptimizerDFP.h" />
     <ClInclude Include="Optimizer.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

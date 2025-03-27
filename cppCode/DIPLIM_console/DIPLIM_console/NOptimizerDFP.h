@@ -24,20 +24,51 @@ struct Matrix
     const double& operator()(int i, int j) const { if (i < 2 && j < 2) {return data[i][j]; } else { throw std::out_of_range("Out of range"); } };
 };
 
-class NOptimizer :
+class NOptimizerDFP :
     public Optimizer
 {
     double regularization = 0;
     int max_iter_n = 0;
 
 public:
-    NOptimizer(ModelParams params, Field field, bool save = false, bool log = false, int max_iter_n = 0, double regularization = 0) : Optimizer(params, field, save, log), max_iter_n(max_iter_n), regularization(regularization){};
+    NOptimizerDFP(ModelParams params, Field field, bool save = false, bool log = false, int max_iter_n = 0, double regularization = 0) : Optimizer(params, field, save, log), max_iter_n(max_iter_n), regularization(regularization){};
     
     Vector2D N_step(int x_cur, double w, double v, double t_k, double Mr_Deltat);
     void N_Max(int x);
     double FindAlpha(Vector2D grad, int x_cur, double t_k, double w, double v, double a = -1, double b = 1, double tol = 1e-6);
     double f(double alpha, int x_cur, double t_k, double w, double v, Vector2D grad);
 
+};
+
+
+#include <stdexcept>
+#include <string>
+#define NE_MATRIX_ILL_COND 0x001
+class NewtonException : public std::exception {
+    int error_code;
+    int value;
+    std::string message;
+
+public:
+    // Конструктор с параметрами
+    NewtonException(int code, const std::string& msg, int value = 0)
+        : error_code(code), value(value), message("Error[" + std::to_string(code) + "]: " + msg) {
+    }
+
+    // Метод для получения кода ошибки
+    int getErrorCode() const noexcept {
+        return error_code;
+    }
+
+    int getValue() const noexcept
+    {
+        return value;
+    }
+
+    // Переопределение метода what()
+    const char* what() const noexcept override {
+        return message.c_str();
+    }
 };
 
 

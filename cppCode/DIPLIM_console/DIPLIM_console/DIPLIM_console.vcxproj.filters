@@ -39,7 +39,7 @@
     <ClCompile Include="CGDOptimizer.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="NOptimizer.cpp">
+    <ClCompile Include="NOptimizerDFP.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -65,12 +65,12 @@
     <ClInclude Include="CGDOptimizer.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="NOptimizer.h">
+    <ClInclude Include="NOptimizerDFP.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
     <None Include="packages.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

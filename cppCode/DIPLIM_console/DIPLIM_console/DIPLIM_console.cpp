@@ -9,7 +9,7 @@
 #include "Optimizer.h">
 #include "GDOptimizer.h"
 #include "CGDOptimizer.h"
-#include "NOptimizer.h"
+#include "NOptimizerDFP.h"
 #include "random"
 constexpr bool DEBUG = true;
 
@@ -41,9 +41,9 @@ void print_help(const char* program_name) {
 	std::cout << "  -Oi, --optimization-iterations <n>  Run optimization for n iterations (default is 1)." << std::endl;
 	std::cout << "  -sf, --save-flag <1/0>   Enable or disable save flag (1 = true, 0 = false)." << std::endl;
 	std::cout << "  -lf, --log-flag <1/0>    Enable or disable log flag (1 = true, 0 = false)." << std::endl;
-	std::cout << "  -m,  --method   <1/2/3>    Optimization method (1 = CGD, 2 = GD, 3 = NO)." << std::endl;
+	std::cout << "  -m,  --method   <1/2/3>    Optimization method (1 = CGD, 2 = GD, 3 = NDFP)." << std::endl;
 	std::cout << "  -r,  --regularization   <f>   Use Regularization with lambda = f" << std::endl;
-	std::cout << "  -d   --diagnostic  <1/0> Find optimal parametrs for selected method (1 = true, 0 = false)." << std::endl;
+	std::cout << "  -d   --diagnostic  <1/0> Find optimal parametrs for selected method (1 = true, 0 = false), need -m param." << std::endl;
 	std::cout << std::endl;
 	std::cout << "Examples:" << std::endl;
 	std::cout << "  " << program_name << " config.ini              Load the model from config.json and run optimization." << std::endl;
@@ -180,7 +180,7 @@ int main(int argc, char* argv[])
 						std::cout << "RunNewtonMaxIterParam: " << RunNewtonMaxIterParam << std::endl;
 						Field Dfield(Params);
 						Dfield.randomizeField(0, 0);
-						NOptimizer DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
+						NOptimizerDFP DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
 						try
 						{
 
@@ -192,7 +192,7 @@ int main(int argc, char* argv[])
 							prev = RunNewtonMaxIterParam;
 							if (end_max_new > optimal_ * 1.75 && RunNewtonRegularizationParam < 1e-5)
 							{
-								RunNewtonRegularizationParam += 1e-10;
+								RunNewtonRegularizationParam += 1e-8;
 
 							}
 
@@ -220,7 +220,7 @@ int main(int argc, char* argv[])
 									std::cout << "RunNewtonRegularizationParam: " << RunNewtonRegularizationParam << std::endl;
 									std::cout << "RunNewtonMaxIterParam: " << RunNewtonMaxIterParam << std::endl;
 									std::cout << "\t\t\t-----Diagnostic completed. Steps: " << step << "-----" << std::endl;
-									NOptimizer DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
+									NOptimizerDFP DiagnosticN(Params, Dfield, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
 									DiagnosticN.N_Max(0);
 									break;
 								}
@@ -231,18 +231,13 @@ int main(int argc, char* argv[])
 							step++;
 						}
 
-						catch (const std::exception& e) {
+						catch (const NewtonException& e) {
 							std::cout << e.what() << std::endl;
-							const std::string msg = e.what();
-							size_t pos = msg.rfind(":");
-							int extractedInt = 0;
-							if (pos != std::string::npos) {
-								std::string numStr = msg.substr(pos + 1);
-								std::stringstream(numStr) >> extractedInt;
-							}
-							if (RunNewtonMaxIterParam > extractedInt && extractedInt != 0)
+							step++;
+							int IterNum = e.getValue();
+							if (RunNewtonMaxIterParam > IterNum && IterNum != 0)
 							{
-								RunNewtonMaxIterParam = extractedInt - 1;
+								RunNewtonMaxIterParam = IterNum - 1;
 							}
 							else {
 								RunNewtonMaxIterParam--;
@@ -269,7 +264,7 @@ int main(int argc, char* argv[])
 	field.randomizeField(0.0, 0.0);
 	CGDOptimizer CGD(Params, field, save_flag, log_flag);
 	GDOptimizer GD(Params, field, save_flag, log_flag);
-	NOptimizer NO(Params, field, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
+	NOptimizerDFP NO(Params, field, save_flag, log_flag, RunNewtonMaxIterParam, RunNewtonRegularizationParam);
 	for (int i = 1; i < RunOptimizationITimes+1; i++) {
 		switch (RunOptimizationMethod)
 		{
@@ -283,7 +278,7 @@ int main(int argc, char* argv[])
 			NO.N_Max(0);
 			break;
 		default:
-			throw std::runtime_error("Method not found. Available methods: 1: cgd, 2: gd, 3: no.");
+			throw std::runtime_error("Method not found. Available methods: 1: cgd, 2: gd, 3: ndfp.");
 		}
 	}
 	//GD.GD_Max(0);

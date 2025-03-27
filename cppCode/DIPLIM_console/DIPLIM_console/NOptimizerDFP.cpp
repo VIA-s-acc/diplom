@@ -1,22 +1,22 @@
-#include "NOptimizer.h"
+#include "NOptimizerDFP.h"
 #include <numeric>  
 #include <algorithm>
 #include <Windows.h>
 #include <nlohmann/json.hpp>
 #include <fstream> 
 
-Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr_Deltat)
+Vector2D NOptimizerDFP::N_step(int x_cur, double w, double v, double t_k, double Mr_Deltat)
 {
 
 	std::vector<Vector4D> steps_progress{ Vector4D(w, v, 0, 0) };
 	double start_v = v;
 	int n_dim = 2;
-	int max_iter = std::any_cast<int>(NOptimizer::getOparams()["max_iter"]);
-	if (NOptimizer::max_iter_n != 0) max_iter = NOptimizer::max_iter_n;
-	double eps = std::any_cast<double>(NOptimizer::getOparams()["eps"]);
-	double l_r = std::any_cast<double>(NOptimizer::getOparams()["l_r"]);
-	double Ms = std::any_cast<double>(NOptimizer::getMparams()["Ms"]);
-	double Mr = std::any_cast<double>(NOptimizer::getMparams()["Mr"]);
+	int max_iter = std::any_cast<int>(NOptimizerDFP::getOparams()["max_iter"]);
+	if (NOptimizerDFP::max_iter_n != 0) max_iter = NOptimizerDFP::max_iter_n;
+	double eps = std::any_cast<double>(NOptimizerDFP::getOparams()["eps"]);
+	double l_r = std::any_cast<double>(NOptimizerDFP::getOparams()["l_r"]);
+	double Ms = std::any_cast<double>(NOptimizerDFP::getMparams()["Ms"]);
+	double Mr = std::any_cast<double>(NOptimizerDFP::getMparams()["Mr"]);
 	double w_k = w;
 	double v_k = v;
 	double w1 = 0;
@@ -29,8 +29,8 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 
 
 	Res dgkdw_r, dgkdv_r;
-	dgkdw_r = NOptimizer::func.DGkDw(x_cur, w, v, t_k);
-	dgkdv_r = NOptimizer::func.DGkDv(x_cur, w, v, t_k);
+	dgkdw_r = NOptimizerDFP::func.DGkDw(x_cur, w, v, t_k);
+	dgkdv_r = NOptimizerDFP::func.DGkDv(x_cur, w, v, t_k);
 
 	Vector2D g_k{ dgkdw_r.res, dgkdv_r.res };
 
@@ -41,11 +41,11 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 	Vector2D d_new{ 0, 0 };
 	Vector2D s_k{ 0, 0 };
 	Vector2D y_k{ 0 , 0 };
-	Matrix H_S(1 + NOptimizer::regularization, 0, 0, 1 + NOptimizer::regularization);
-	Matrix H_T(1 + NOptimizer::regularization, 0, 0, 1 + NOptimizer::regularization);
+	Matrix H_S(1 + NOptimizerDFP::regularization, 0, 0, 1 + NOptimizerDFP::regularization);
+	Matrix H_T(1 + NOptimizerDFP::regularization, 0, 0, 1 + NOptimizerDFP::regularization);
 	Vector2D d_k{ g_k.w, g_k.v };
-	Matrix H_k(1 + NOptimizer::regularization, 0, 0, 1 + NOptimizer::regularization);
-	Matrix H_new(1 + NOptimizer::regularization, 0, 0, 1 + NOptimizer::regularization);
+	Matrix H_k(1 + NOptimizerDFP::regularization, 0, 0, 1 + NOptimizerDFP::regularization);
+	Matrix H_new(1 + NOptimizerDFP::regularization, 0, 0, 1 + NOptimizerDFP::regularization);
 	Vector2D w_v_old{ 0, 0 };
 
 	int k = 0;
@@ -53,7 +53,7 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 	while (k < max_iter && (g_k.norm() > eps))
 	{
 
-		double alpha = NOptimizer::FindAlpha(d_k, x_cur, t_k, w_k, v_k, 0, 1, 1e-8);
+		double alpha = NOptimizerDFP::FindAlpha(d_k, x_cur, t_k, w_k, v_k, 0, 1, 1e-8);
 
 		w_v_old.w = w_k;
 		w_v_old.v = v_k;
@@ -76,14 +76,14 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 			else v_k = start_v - Mr_Deltat;
 		}
 
-		dgkdw_r = NOptimizer::func.DGkDw(x_cur, w_k, v_k, t_k);
-		dgkdv_r = NOptimizer::func.DGkDv(x_cur, w_k, v_k, t_k);
+		dgkdw_r = NOptimizerDFP::func.DGkDw(x_cur, w_k, v_k, t_k);
+		dgkdv_r = NOptimizerDFP::func.DGkDv(x_cur, w_k, v_k, t_k);
 
 		g_new = Vector2D(dgkdw_r.res, dgkdv_r.res);
 		w1 = dgkdw_r.water;
 		w2 = dgkdv_r.water;
 
-		if (NOptimizer::savef())
+		if (NOptimizerDFP::savef())
 		{
 			steps_progress.push_back(Vector4D(w_k, v_k, w1, w2));
 		}
@@ -116,26 +116,26 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 		H_T(1, 0) = ((H_k(1, 0) * y_w_2 + H_k(1, 1) * y_w_v) * H_k(0, 0) + (H_k(1, 0) * y_w_v + H_k(1, 1) * y_v_2) * H_k(0, 1)) / div;
 		H_T(1, 1) = ((H_k(1, 0) * y_w_2 + H_k(1, 1) * y_w_v) * H_k(1, 0) + (H_k(1, 0) * y_w_v + H_k(1, 1) * y_v_2) * H_k(1, 1)) / div;
 
-		H_k(0, 0) =H_k(0, 0) + H_S(0, 0) - H_T(0, 0) + NOptimizer::regularization;
+		H_k(0, 0) =H_k(0, 0) + H_S(0, 0) - H_T(0, 0) + NOptimizerDFP::regularization;
 		H_k(0, 1) =H_k(0, 1) + H_S(0, 1) - H_T(0, 1);
 		H_k(1, 0) =H_k(1, 0) + H_S(1, 0) - H_T(1, 0);
-		H_k(1, 1) =H_k(1, 1) + H_S(1, 1) - H_T(1, 1) + NOptimizer::regularization;
+		H_k(1, 1) =H_k(1, 1) + H_S(1, 1) - H_T(1, 1) + NOptimizerDFP::regularization;
 
 		g_k.w = g_new.w;
 		g_k.v = g_new.v;
 		d_k.w = H_k(0, 0) * g_k.w + H_k(0, 1) * g_k.v;
 		d_k.v = H_k(1, 0) * g_k.w + H_k(1, 1) * g_k.v;
 		if (std::isnan(d_k.w) || std::isnan(d_k.v)) {
-			std::cerr << "The matrix has become ill-conditioned, and the iterations are terminated. Iteration: " << k << "\nDecrease iterations count or try to use -regularization parametr - current:" << NOptimizer::regularization << std::endl;
-			throw std::runtime_error("NO::MIC::"+std::to_string(k));
+			std::cerr << "The matrix has become ill-conditioned, and the iterations are terminated. Iteration: " << k << "\nDecrease iterations count or try to use -regularization parametr - current:" << NOptimizerDFP::regularization << std::endl;
+			throw NewtonException(NE_MATRIX_ILL_COND, "The matrix has become ill-conditioned, and the iterations are terminated.", k);
 			break;
 		}
 		k++;
 
 	}
-	if (NOptimizer::savef())
+	if (NOptimizerDFP::savef())
 	{
-		auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(NOptimizer::info["Optimization"]);
+		auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(NOptimizerDFP::info["Optimization"]);
 		optimization_info[t_k] = steps_progress;
 	}
 
@@ -143,22 +143,22 @@ Vector2D NOptimizer::N_step(int x_cur, double w, double v, double t_k, double Mr
 	return Vector2D(w_k, v_k);
 }
 
-void NOptimizer::N_Max(int x)
+void NOptimizerDFP::N_Max(int x)
 {
-	auto& time_info = std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>&>(NOptimizer::info["Time"]);
+	auto& time_info = std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>&>(NOptimizerDFP::info["Time"]);
 	time_info["Start"] = std::chrono::system_clock::now();
 
-	double avg = NOptimizer::field.avgerageField();
-	double max = NOptimizer::field.maxField();
-	double min = NOptimizer::field.minField();
-	auto& avg_info = std::any_cast<std::map<std::string, double>&>(NOptimizer::info["AVG"]);
+	double avg = NOptimizerDFP::field.avgerageField();
+	double max = NOptimizerDFP::field.maxField();
+	double min = NOptimizerDFP::field.minField();
+	auto& avg_info = std::any_cast<std::map<std::string, double>&>(NOptimizerDFP::info["AVG"]);
 	avg_info["Start"] = avg;
-	auto& max_info = std::any_cast<std::map<std::string, double>&>(NOptimizer::info["MAX"]);
+	auto& max_info = std::any_cast<std::map<std::string, double>&>(NOptimizerDFP::info["MAX"]);
 	max_info["Start"] = max;
-	auto& min_info = std::any_cast<std::map<std::string, double>&>(NOptimizer::info["MIN"]);
+	auto& min_info = std::any_cast<std::map<std::string, double>&>(NOptimizerDFP::info["MIN"]);
 	min_info["Start"] = min;
-	std::any_cast<std::map<double, std::vector<Vector4D>>>(NOptimizer::info["Optimization"]).clear();
-	std::any_cast<std::map<double, std::vector<Vector6D>>>(NOptimizer::info["Optimization_Detailed"]).clear();
+	std::any_cast<std::map<double, std::vector<Vector4D>>>(NOptimizerDFP::info["Optimization"]).clear();
+	std::any_cast<std::map<double, std::vector<Vector6D>>>(NOptimizerDFP::info["Optimization_Detailed"]).clear();
 
 
 	double x_met = 0;
@@ -166,7 +166,7 @@ void NOptimizer::N_Max(int x)
 
 	std::vector<Vector6D> progress{};
 
-	std::map<std::string, std::any> FieldMap = NOptimizer::field.getFieldMap();
+	std::map<std::string, std::any> FieldMap = NOptimizerDFP::field.getFieldMap();
 
 	int rx_cells = std::any_cast<double>(FieldMap["rx_cells"]);
 	int ry_cells = std::any_cast<double>(FieldMap["ry_cells"]);
@@ -175,14 +175,14 @@ void NOptimizer::N_Max(int x)
 	int rows = std::any_cast<int>(FieldMap["rows"]);
 
 	double cell_length = std::any_cast<double>(FieldMap["cell_length_m"]);
-	double lenght_m = std::any_cast<double>(NOptimizer::getFparams()["length_m"]);
+	double lenght_m = std::any_cast<double>(NOptimizerDFP::getFparams()["length_m"]);
 
 
-	double w = std::any_cast<double>(NOptimizer::getMparams()["w"]);
-	double v = std::any_cast<double>(NOptimizer::getMparams()["v"]);
+	double w = std::any_cast<double>(NOptimizerDFP::getMparams()["w"]);
+	double v = std::any_cast<double>(NOptimizerDFP::getMparams()["v"]);
 
-	double Deltat = std::any_cast<double>(NOptimizer::getMparams()["Deltat"]);
-	double Mr = std::any_cast<double>(NOptimizer::getMparams()["Mr"]);
+	double Deltat = std::any_cast<double>(NOptimizerDFP::getMparams()["Deltat"]);
+	double Mr = std::any_cast<double>(NOptimizerDFP::getMparams()["Mr"]);
 
 	double Water = 0;
 
@@ -193,7 +193,7 @@ void NOptimizer::N_Max(int x)
 
 	while (x <= cols + rx_cells)
 	{
-		Vector2D res = NOptimizer::N_step(x, w, v, t_k, MR_Deltat);
+		Vector2D res = NOptimizerDFP::N_step(x, w, v, t_k, MR_Deltat);
 		w = res.w;
 		v = res.v;
 
@@ -201,8 +201,8 @@ void NOptimizer::N_Max(int x)
 		int end_col = MIN(cols, x + 1);
 
 		if (start_col == end_col) start_col -= rx_cells;
-		std::vector<double> res_ = NOptimizer::field.update_field(x, w, v, NOptimizer::func);
-		//NOptimizer::func.setField(NOptimizer::field);
+		std::vector<double> res_ = NOptimizerDFP::field.update_field(x, w, v, NOptimizerDFP::func);
+		//NOptimizerDFP::func.setField(NOptimizerDFP::field);
 		/*	for (auto el : res_) {
 			std::cout << el << " ";
 		}
@@ -211,10 +211,10 @@ void NOptimizer::N_Max(int x)
 		Water += result;
 
 
-		if (NOptimizer::savef())
+		if (NOptimizerDFP::savef())
 		{
 			std::vector<std::vector<double>> destination(rows, std::vector<double>(cols));
-			auto& source = NOptimizer::field.getFieldMap2D();
+			auto& source = NOptimizerDFP::field.getFieldMap2D();
 			if (source.size() != rows || source[0].size() != cols) {
 				std::cout << "Error: source and destination matrices have different sizes." << std::endl;
 			}
@@ -238,7 +238,7 @@ void NOptimizer::N_Max(int x)
 		else counter = 0;
 		x_met += change;
 
-		if (NOptimizer::logf())
+		if (NOptimizerDFP::logf())
 		{
 			if ((int)(t_k) % 25 == 0 || (lenght_m - x_met) < 10) std::cout << "t_k: " << t_k << "  x: " << x << "  w: " << w << "  v: " << v << "  x_met: " << x_met << std::endl;
 		}
@@ -247,39 +247,39 @@ void NOptimizer::N_Max(int x)
 
 
 	}
-	if (NOptimizer::savef())
+	if (NOptimizerDFP::savef())
 	{
-		auto& optimization_info_p = std::any_cast<std::map<double, std::vector<Vector6D>>&>(NOptimizer::info["Optimization_Detailed"]);
+		auto& optimization_info_p = std::any_cast<std::map<double, std::vector<Vector6D>>&>(NOptimizerDFP::info["Optimization_Detailed"]);
 		optimization_info_p[t_k] = progress;
 	}
-	std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizer::info["Time"])["End"] = std::chrono::system_clock::now();
+	std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizerDFP::info["Time"])["End"] = std::chrono::system_clock::now();
 
-	NOptimizer::info["Water"] = Water;
-	double start = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizer::info["Base"])["Start"]);
-	double end = NOptimizer::field.calc_base();
-	auto& base = std::any_cast<std::map<std::string, double>&>(NOptimizer::info["Base"]);
+	NOptimizerDFP::info["Water"] = Water;
+	double start = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["Base"])["Start"]);
+	double end = NOptimizerDFP::field.calc_base();
+	auto& base = std::any_cast<std::map<std::string, double>&>(NOptimizerDFP::info["Base"]);
 	base["Diff"] = end - start;
 	base["End"] = end;
-	double start_avg = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizer::info["AVG"])["Start"]);
-	double end_avg = NOptimizer::field.avgerageField();
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["AVG"])["End"] = end_avg;
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["AVG"])["Diff"] = end_avg - start_avg;
-	double start_max = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizer::info["MAX"])["Start"]);
-	double end_max = NOptimizer::field.maxField();
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["MAX"])["End"] = end_max;
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["MAX"])["Diff"] = end_max - start_max;
-	double start_min = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizer::info["MIN"])["Start"]);
-	double end_min = NOptimizer::field.minField();
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["MIN"])["End"] = end_min;
-	std::any_cast<std::map<std::string, double>>(NOptimizer::info["MIN"])["Diff"] = end_min - start_min;
+	double start_avg = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["AVG"])["Start"]);
+	double end_avg = NOptimizerDFP::field.avgerageField();
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["AVG"])["End"] = end_avg;
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["AVG"])["Diff"] = end_avg - start_avg;
+	double start_max = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MAX"])["Start"]);
+	double end_max = NOptimizerDFP::field.maxField();
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MAX"])["End"] = end_max;
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MAX"])["Diff"] = end_max - start_max;
+	double start_min = std::any_cast<double>(std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MIN"])["Start"]);
+	double end_min = NOptimizerDFP::field.minField();
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MIN"])["End"] = end_min;
+	std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["MIN"])["Diff"] = end_min - start_min;
 
-	auto start_time = std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizer::info["Time"])["Start"];
+	auto start_time = std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizerDFP::info["Time"])["Start"];
 	auto end_time = std::chrono::system_clock::now();
-	std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizer::info["Time"])["End"] = end_time;
+	std::any_cast<std::map<std::string, std::chrono::time_point<std::chrono::system_clock>>>(NOptimizerDFP::info["Time"])["End"] = end_time;
 	//auto time_diff = end_time - start_time;
-	//std::any_cast<std::map<std::string, double>>(NOptimizer::info["Time"])["Diff"] = std::chrono::duration_cast<std::chrono::milliseconds>(time_diff).count();
+	//std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["Time"])["Diff"] = std::chrono::duration_cast<std::chrono::milliseconds>(time_diff).count();
 	//
-	//std::any_cast<std::map<std::string, double>>(NOptimizer::info["Time"])["Diff"] = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+	//std::any_cast<std::map<std::string, double>>(NOptimizerDFP::info["Time"])["Diff"] = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
 
 
 
@@ -301,9 +301,9 @@ void NOptimizer::N_Max(int x)
 	std::string start_time_string = std::to_string(start_time.time_since_epoch().count());
 	std::string end_time_string = std::to_string(end_time.time_since_epoch().count());
 	std::cout << dur_string << std::endl;
-	if (NOptimizer::savef())
+	if (NOptimizerDFP::savef())
 	{
-		if (NOptimizer::logf())
+		if (NOptimizerDFP::logf())
 		{
 
 			auto time = start_time;
@@ -327,8 +327,8 @@ void NOptimizer::N_Max(int x)
 			using json = nlohmann::json;
 
 
-			auto progress_ = std::any_cast<std::map<double, std::vector<Vector6D>>>(NOptimizer::info["Optimization_Detailed"]);
-			auto step_progress = std::any_cast<std::map<double, std::vector<Vector4D>>>(NOptimizer::info["Optimization"]);
+			auto progress_ = std::any_cast<std::map<double, std::vector<Vector6D>>>(NOptimizerDFP::info["Optimization_Detailed"]);
+			auto step_progress = std::any_cast<std::map<double, std::vector<Vector4D>>>(NOptimizerDFP::info["Optimization"]);
 			//std::cout << "\n\t\t\t------ step_progress ------\t\t\t" << std::endl;
 			fprintf(file_step, "\n\t\t\t------ step_progress ------\t\t\t\n");
 			for (auto& el : step_progress) {
@@ -462,12 +462,12 @@ void NOptimizer::N_Max(int x)
 
 
 
-double NOptimizer::f(double alpha, int x_cur, double t_k, double w, double v, Vector2D grad)
+double NOptimizerDFP::f(double alpha, int x_cur, double t_k, double w, double v, Vector2D grad)
 {
-	return NOptimizer::func.Gk(x_cur, w + alpha * grad.w, v + alpha * grad.v, t_k);
+	return NOptimizerDFP::func.Gk(x_cur, w + alpha * grad.w, v + alpha * grad.v, t_k);
 }
 
-double NOptimizer::FindAlpha(Vector2D grad, int x_cur, double t_k, double w, double v, double a, double b, double tol)
+double NOptimizerDFP::FindAlpha(Vector2D grad, int x_cur, double t_k, double w, double v, double a, double b, double tol)
 {
 	double gr = (sqrt(5) - 1) / 2;
 	double c = b - gr * (b - a);

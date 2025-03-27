@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\DIPLIM_console.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\NOptimizer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\NOptimizer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ClassDiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
+      "RelativeMoniker": "D:0:0:{BE3280C8-C440-4C3C-8A78-C9B4CF35440C}|DIPLIM_console\\DIPLIM_console.vcxproj|solutionrelative:DIPLIM_console\\ClassDiagram1.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 190,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NOptimizer.cpp",
-              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.cpp",
-              "RelativeDocumentMoniker": "DIPLIM_console\\NOptimizer.cpp",
-              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.cpp",
-              "RelativeToolTip": "DIPLIM_console\\NOptimizer.cpp",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAoAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-27T17:05:11.784Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -45,22 +28,21 @@
               "RelativeDocumentMoniker": "DIPLIM_console\\DIPLIM_console.cpp",
               "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\DIPLIM_console.cpp",
               "RelativeToolTip": "DIPLIM_console\\DIPLIM_console.cpp",
-              "ViewState": "AgIAALMAAAAAAAAAAAAAAMAAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAANoAAAAAAAAAAAAowOsAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-27T16:29:53.503Z",
+              "WhenOpened": "2025-03-27T18:42:04.05Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NOptimizer.h",
-              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.h",
-              "RelativeDocumentMoniker": "DIPLIM_console\\NOptimizer.h",
-              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\NOptimizer.h",
-              "RelativeToolTip": "DIPLIM_console\\NOptimizer.h",
-              "ViewState": "AgIAABAAAAAAAAAAAIA1wCMAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-27T15:04:29.198Z",
+              "Title": "ClassDiagram1.cd",
+              "DocumentMoniker": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ClassDiagram1.cd",
+              "RelativeDocumentMoniker": "DIPLIM_console\\ClassDiagram1.cd",
+              "ToolTip": "D:\\GIT\\diplom\\cppCode\\DIPLIM_console\\DIPLIM_console\\ClassDiagram1.cd",
+              "RelativeToolTip": "DIPLIM_console\\ClassDiagram1.cd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
+              "WhenOpened": "2025-03-27T18:40:00.801Z",
               "EditorCaption": ""
             }
           ]
