@@ -3,12 +3,13 @@
 #include "Func.h"
 #include <chrono>
 
-struct Vector4D
+struct Vector5D
 {
 	double w;
 	double v;
 	double w1;
 	double w2;
+	double G;
 };
 
 struct Vector6D
@@ -18,6 +19,7 @@ struct Vector6D
 	double v;
 	int	   x;
 	double x_m;
+	double G;
 	std::vector<std::vector<double>> FieldMap2D;
 };
 

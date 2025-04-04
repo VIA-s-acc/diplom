@@ -41,6 +41,6 @@ void Optimizer::initializeInfo()
         {"Diff", 0}
     };
 
-    info["Optimization"] = std::map<double, std::vector<Vector4D>>{};
+    info["Optimization"] = std::map<double, std::vector<Vector5D>>{};
     info["Optimization_Detailed"] = std::map<double, std::vector<Vector6D>>{};
 }

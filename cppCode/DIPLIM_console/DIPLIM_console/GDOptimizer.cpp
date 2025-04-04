@@ -9,8 +9,8 @@
 Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double Mr_Deltat)
 {	
 
-	std::vector<Vector4D> steps_progress{ Vector4D(w, v, 0, 0) };
-	double start_v = v;
+	double G = GDOptimizer::func.Gk(x_cur, w, v, t_k);
+	std::vector<Vector5D> steps_progress{ Vector5D(w, v, 0, 0, G) };	double start_v = v;
 	int max_iter = std::any_cast<int>(GDOptimizer::getOparams()["max_iter"]);
 	double eps	 = std::any_cast<double>(GDOptimizer::getOparams()["eps"]);
 	double l_r   = std::any_cast<double>(GDOptimizer::getOparams()["l_r"]);
@@ -69,8 +69,9 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 			//std::cout<<"GD2"<<std::endl;
 			if (GDOptimizer::savef())
 			{
-				steps_progress.push_back(Vector4D(w, v, w1, w2));
-				auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(GDOptimizer::info["Optimization"]);
+				G = GDOptimizer::func.Gk(x_cur, w, v, t_k);
+				steps_progress.push_back(Vector5D(w, v, w1, w2, G));
+				auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector5D>>&>(GDOptimizer::info["Optimization"]);
 				optimization_info[t_k] = steps_progress;
 			}
 			return Vector2D(w, v);
@@ -83,13 +84,14 @@ Vector2D GDOptimizer::GD_step(int x_cur, double w, double v, double t_k, double 
 
 			if (GDOptimizer::savef())
 			{
-				steps_progress.push_back(Vector4D(w, v, w1, w2));
+				G = GDOptimizer::func.Gk(x_cur, w, v, t_k);
+				steps_progress.push_back(Vector5D(w, v, w1, w2, G));
 			}
 		}
 	}
 	if (GDOptimizer::savef())
 	{
-		auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector4D>>&>(GDOptimizer::info["Optimization"]);
+		auto& optimization_info = std::any_cast<std::map<double, std::vector<Vector5D>>&>(GDOptimizer::info["Optimization"]);
 		optimization_info[t_k] = steps_progress;
 	}
 	
@@ -110,7 +112,7 @@ void GDOptimizer::GD_Max(int x)
 	max_info["Start"] = max;
 	auto& min_info = std::any_cast<std::map<std::string, double>&>(GDOptimizer::info["MIN"]);
 	min_info["Start"] = min;
-	std::any_cast<std::map<double, std::vector<Vector4D>>>(GDOptimizer::info["Optimization"]).clear();
+	std::any_cast<std::map<double, std::vector<Vector5D>>>(GDOptimizer::info["Optimization"]).clear();
 	std::any_cast<std::map<double, std::vector<Vector6D>>>(GDOptimizer::info["Optimization_Detailed"]).clear();
 
 
@@ -175,7 +177,8 @@ void GDOptimizer::GD_Max(int x)
 				std::memcpy(destination[i].data(), source[i].data(), cols * sizeof(double));
 			}
 
-			Vector6D resV5 = Vector6D(t_k, w, v, x, x_met, destination);
+			double G_val = func.Gk(x, w, v, t_k);
+			Vector6D resV5 = Vector6D(t_k, w, v, x, x_met, G_val, destination);
 			progress.push_back(resV5);
 		}
 
@@ -280,7 +283,7 @@ void GDOptimizer::GD_Max(int x)
 			
 
 			auto progress_ = std::any_cast<std::map<double, std::vector<Vector6D>>>(GDOptimizer::info["Optimization_Detailed"]);
-			auto step_progress = std::any_cast<std::map<double, std::vector<Vector4D>>>(GDOptimizer::info["Optimization"]);
+			auto step_progress = std::any_cast<std::map<double, std::vector<Vector5D>>>(GDOptimizer::info["Optimization"]);
 			//std::cout << "\n\t\t\t------ step_progress ------\t\t\t" << std::endl;
 			fprintf(file_step, "\n\t\t\t------ step_progress ------\t\t\t\n");
 			for (auto& el : step_progress) {
@@ -345,6 +348,8 @@ void GDOptimizer::GD_Max(int x)
 					detail["v"] = el2.v;
 					detail["w1"] = el2.w1;
 					detail["w2"] = el2.w2;
+					detail["G"] = el2.G;
+
 					details.push_back(detail);
 				}
 				stepEntry["details"] = details;
@@ -353,7 +358,7 @@ void GDOptimizer::GD_Max(int x)
 
 			for (auto& el : progress_) {
 				json progressEntry;
-				progressEntry["T_k"] = el.first;
+				progressEntry["T"] = el.first;
 
 				std::vector<json> details;
 				for (auto& el2 : el.second) {
@@ -363,6 +368,8 @@ void GDOptimizer::GD_Max(int x)
 					detail["v"] = el2.v;
 					detail["x"] = el2.x;
 					detail["w_met"] = el2.x_m;
+					detail["G"] = el2.G;
+
 					details.push_back(detail);
 				}
 				progressEntry["details"] = details;

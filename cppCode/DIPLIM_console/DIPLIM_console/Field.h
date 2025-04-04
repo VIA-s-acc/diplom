@@ -17,6 +17,8 @@ private:
 	std::vector<std::vector<double>> FieldMap2D;
 public:
 	Field(ModelParams& Mparams);
+	
+	void setField2D(const std::vector<std::vector<double>>& FieldMap2D) { this->FieldMap2D = FieldMap2D; };
 	~Field();
 
 	/*         
